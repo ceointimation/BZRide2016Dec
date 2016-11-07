@@ -33,13 +33,6 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gut-S2-vG5">
-                                <color key="backgroundColor" red="0.063231714849999995" green="0.54584008029999997" blue="0.85010258839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="REGISTER AS RIDER">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ye-zg-kk1">
                                 <color key="backgroundColor" red="0.063231714849999995" green="0.54584008029999997" blue="0.85010258839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="REGEISTER AS DRIVER">
@@ -50,28 +43,47 @@
                                     <segue destination="mWM-qP-bhY" kind="modal" id="Bab-k7-22J"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gut-S2-vG5">
+                                <color key="backgroundColor" red="0.063231714849999995" green="0.54584008029999997" blue="0.85010258839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="REGISTER AS RIDER">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="fineCheck:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CXo-AK-vb9"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" highlightedImage="homeimage" translatesAutoresizingMaskIntoConstraints="NO" id="vo0-fj-fNY"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="8ye-zg-kk1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="Chg-rA-hee"/>
-                            <constraint firstItem="GXt-wO-bpn" firstAttribute="height" secondItem="vHG-Cm-tpJ" secondAttribute="height" id="DjD-lJ-NPD"/>
-                            <constraint firstItem="gut-S2-vG5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="DlQ-Ul-L6H"/>
-                            <constraint firstItem="GXt-wO-bpn" firstAttribute="width" secondItem="gut-S2-vG5" secondAttribute="width" id="ENI-vo-XX7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8ye-zg-kk1" secondAttribute="trailing" constant="37" id="Gpf-u9-buD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gut-S2-vG5" secondAttribute="trailing" constant="37" id="GsC-ay-PWd"/>
-                            <constraint firstItem="GXt-wO-bpn" firstAttribute="height" secondItem="gut-S2-vG5" secondAttribute="height" id="Quc-Zj-LTs"/>
-                            <constraint firstItem="GXt-wO-bpn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="134" id="XFj-Zm-yFq"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gut-S2-vG5" secondAttribute="bottom" constant="154" id="XUX-FW-oHl"/>
-                            <constraint firstItem="GXt-wO-bpn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="Ys3-0D-OMK"/>
-                            <constraint firstItem="vHG-Cm-tpJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="aAH-fs-zIS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vHG-Cm-tpJ" secondAttribute="trailing" constant="37" id="deo-w2-gfy"/>
-                            <constraint firstItem="gut-S2-vG5" firstAttribute="top" secondItem="8ye-zg-kk1" secondAttribute="bottom" constant="30" id="eca-FH-uVK"/>
-                            <constraint firstItem="GXt-wO-bpn" firstAttribute="width" secondItem="8ye-zg-kk1" secondAttribute="width" id="fhe-jd-b50"/>
-                            <constraint firstItem="vHG-Cm-tpJ" firstAttribute="top" secondItem="GXt-wO-bpn" secondAttribute="bottom" constant="25" id="kya-Vs-evE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GXt-wO-bpn" secondAttribute="trailing" constant="37" id="n9C-8g-Uqp"/>
-                            <constraint firstItem="8ye-zg-kk1" firstAttribute="top" secondItem="vHG-Cm-tpJ" secondAttribute="bottom" constant="25" id="ps5-Pl-2sY"/>
-                            <constraint firstItem="GXt-wO-bpn" firstAttribute="width" secondItem="vHG-Cm-tpJ" secondAttribute="width" id="qux-eS-52N"/>
-                            <constraint firstItem="GXt-wO-bpn" firstAttribute="height" secondItem="8ye-zg-kk1" secondAttribute="height" id="tH1-wF-XIU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8ye-zg-kk1" secondAttribute="trailing" constant="37" id="0ak-df-pcH"/>
+                            <constraint firstItem="GXt-wO-bpn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="7WT-rZ-hax"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vHG-Cm-tpJ" secondAttribute="trailing" constant="37" id="7j3-QL-1hR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8ye-zg-kk1" secondAttribute="bottom" constant="101" id="EAX-ae-itQ"/>
+                            <constraint firstItem="vo0-fj-fNY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-2" id="Ex0-p2-Pfd"/>
+                            <constraint firstItem="vHG-Cm-tpJ" firstAttribute="height" secondItem="8ye-zg-kk1" secondAttribute="height" id="GlJ-jL-z6d"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GXt-wO-bpn" secondAttribute="bottom" constant="267" id="H7y-0e-252"/>
+                            <constraint firstItem="gut-S2-vG5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="515" id="LQc-lE-w9i"/>
+                            <constraint firstItem="GXt-wO-bpn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="266" id="M9w-DQ-1Ch"/>
+                            <constraint firstItem="8ye-zg-kk1" firstAttribute="top" secondItem="vHG-Cm-tpJ" secondAttribute="bottom" constant="13" id="MuX-tu-vRR"/>
+                            <constraint firstItem="8ye-zg-kk1" firstAttribute="height" secondItem="gut-S2-vG5" secondAttribute="height" id="OSg-Pp-D4v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vo0-fj-fNY" secondAttribute="trailing" constant="42" id="UCw-1a-9Sb"/>
+                            <constraint firstItem="GXt-wO-bpn" firstAttribute="height" secondItem="vHG-Cm-tpJ" secondAttribute="height" id="UXq-Ki-rbI"/>
+                            <constraint firstItem="vo0-fj-fNY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="33" id="VuS-pH-djL"/>
+                            <constraint firstItem="GXt-wO-bpn" firstAttribute="leading" secondItem="vHG-Cm-tpJ" secondAttribute="trailing" constant="-268" id="XsX-NR-ane"/>
+                            <constraint firstItem="vHG-Cm-tpJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="349" id="dCW-Fa-M3X"/>
+                            <constraint firstItem="gut-S2-vG5" firstAttribute="top" secondItem="8ye-zg-kk1" secondAttribute="bottom" constant="13" id="enJ-WV-lRr"/>
+                            <constraint firstItem="vHG-Cm-tpJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="g8q-z8-W1h"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vo0-fj-fNY" secondAttribute="bottom" constant="337" id="jzz-eQ-XXj"/>
+                            <constraint firstItem="8ye-zg-kk1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="432" id="lZl-yU-wKh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gut-S2-vG5" secondAttribute="trailing" constant="37" id="mLc-OJ-fw0"/>
+                            <constraint firstItem="vHG-Cm-tpJ" firstAttribute="top" secondItem="GXt-wO-bpn" secondAttribute="bottom" constant="13" id="mlU-tc-fyl"/>
+                            <constraint firstItem="8ye-zg-kk1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="nFi-mo-9hQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GXt-wO-bpn" secondAttribute="trailing" constant="37" id="ngg-Cf-WIJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vHG-Cm-tpJ" secondAttribute="bottom" constant="184" id="o7F-y0-yTd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gut-S2-vG5" secondAttribute="bottom" constant="18" id="tQi-Qv-trG"/>
+                            <constraint firstItem="gut-S2-vG5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="yBz-Yg-F5D"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="U6f-xj-duM"/>
@@ -100,7 +112,7 @@
                                     <navigationItem title="BZRIDE - Driver Details" id="xxw-dD-KXB">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="xeS-hW-tu5">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mTr-Pt-ZgU">
-                                                <rect key="frame" x="16" y="7" width="46" height="30"/>
+                                                <rect key="frame" x="16" y="963" width="46" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                 <state key="normal" title="&lt;">
@@ -114,11 +126,219 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pkF-gs-CW0">
+                                <frame key="frameInset" minY="30" width="375" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfo-Dl-ew8">
+                                        <frame key="frameInset" minX="20" minY="15" width="331" height="603"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ySS-7J-gw7">
+                                                <rect key="frame" x="7" y="10" width="324" height="537"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <inset key="scrollIndicatorInsets" minX="2" minY="5" maxX="2" maxY="2"/>
+                                                <string key="text">BZ Ride Terms of Service
+
+ 
+
+May 01, 2016
+
+ 
+
+BZ RIDE is not a Transportation Company that provides Transportation Services and or a Transportation Carrier. BZ Ride is a Company provides technology service (iOS and Android App) for individuals to register and avail services through provided technology. It’s up to the individual’s sole discretion, whether to register or not to register, use the technology to avail services through technology platform provided. Registered individuals are classified in two different categories, which are, user / rider (an individual who register and or request for service), and driver / partner (an individual register to drive and or accept the request to provide service with their own vehicle). It’s up to the individual, to decide at their own risk and capabilities, either to request for service through the provided technology platform or to accept the request comes through the provided technology platform. Whatever the decisions made by the individuals are at their own risk, and BZ Ride will not have any responsibility of such decisions made by the respective categories explained in this paragraph. Once a request is made and or accepted, both parties agree that, it will be executed as per the terms set forth by BZ Ride LLC.
+
+These terms of service constitute a legally binding agreement (“Agreement”) between you (“you, or your”) and BZ Ride, LLC (“BZ Ride, we, us and or our”), an LLC operating under the laws of City / County / and or the State of California, monitoring and or controlling the use of BZ Ride application, website, and technology platform provided (herein after called as “BZ Ride Platform and or BZ Ride App”).
+
+ 
+
+BZ Ride Platform provides technology for registered individuals to seek transportation to certain destinations which will be matched with individuals who are driving to or through those areas. These individuals are classified as Riders (individuals who requests rides), and Drivers / Partners (individuals who are driving to or through willing to accept those requests).  These individuals are collectively referred as Users. Each User shall create a user account in the classifications defined, which enable them to access BZ Ride App.  For purposes of this Agreement, the driving services provided by Drivers to Riders through the use of BZ Ride App shall be collectively referred as “Services and or Trips”.
+
+ 
+
+By creating your User account through the website (bzride.com), and or the BZ Ride App (iOS and Android Applications provided through the respective channels - iTunes Store and Google Play Store), to access and to use the BZ Ride App, you expressly acknowledge that you understand the terms of this Agreement and accept all at your sole discretion. If you do not agree with all and or any part of the terms and conditions of this Agreement, you may not use and or access the BZ Ride App for any Services.
+
+ 
+
+The BZ Ride App is only be used by individuals who can form legally binding contracts under applicable law. BZ Ride App is not available to anyone under the age of 18, or users who have previously registered and had their account temporarily and or permanently deactivated. By downloading and or registering for use and or access to the App, you represent and warrant that you are at least 18 years of age, and have the right, authority and capacity to enter a binding contract, and abide the terms and conditions of this agreement.
+
+ 
+
+General
+
+This Agreement shall be governed by the laws of the State of California, where company was legally formed. If any provision of this agreement is not enforceable, all the remaining provisions will be enforced. These provisions in this agreement may change at any time with or without notice to you in our sole discretion. Any changes made in this agreement will be in full force, as long as your user account is active and or you have access to BZ Ride platform.
+
+ 
+
+Driver Responsibilities
+
+            You acknowledge and agree that, you are at least 21 years of age, and you will have a valid driver’s license and are authorized to operate a vehicle as per the laws of the city, county and or state where you provide service and BZ Ride may not permit you to register as a driver, if you are under the age of 21. You also agree that, you shall obtain any and or necessary approvals, permits and authority required to provide services to riders regardless of jurisdictions. You also agree that, you own or have the legal right of ownership of the vehicle, you provide service, and that vehicle will be in good operating condition and meets the industry safety standards required by the applicable laws of the city, county, state and department of motor vehicle in the respective areas. You agree that you will only provide service using vehicle which has been registered and has been photographed by BZ Ride, and will not modify any features that are not reported while registering. You also agree that, you will not transport passengers beyond the capacity allowed by respective laws. You also agree that, you are responsible to make sure that riders are seated securely before starting the trip. You also agree that, you maintain a valid insurance policy and or coverages legally required and or all applicable laws to operate a vehicle, and that policy should have your name as a policy holder. We may at any time, check the validity of the coverage at our own discretion. You also agree that, you will be responsible for any and all liability that results from or is alleged as a result of any accidents and or any other forms regardless of whose fault, while providing service, including but not limited to personal injuries, death, property damages, and any other kind of law suits. You also acknowledge and agree that, in any such event; you will keep BZ Ride not responsible for any claims, liability and or any other forms of action. In the event of a motor vehicle accident you will be solely responsible for compliance with any applicable, statutory or department of motor vehicles requirements and any other laws, reporting the accident to law enforcement authorities, BZ Ride and your insurer in a timely manner, and for all necessary contacts with your insurance carrier. You also agree that, you will comply with all applicable laws, rules and regulations, and you will be solely responsible for any violation while providing service. You are required to report any and or all income generated, and will pay all applicable federal, state and local taxes based on the payments for services provided. You will pay all applicable federal, state and local taxes based on your provision of Services and any payments received by you. You will not make any misrepresentation regarding BZ Ride, the BZ Ride Platform, the Services or your status as a Driver, or, while providing the Services, operate as a public carrier or taxi service, accept street hails, charge for rides (except as expressly provided in this Agreement), or engage in any other activity in a manner that is inconsistent with your obligations under this Agreement. You will not attempt to defraud BZ Ride or Riders in connection with your provision of Services. If we suspect that you have engaged in fraudulent activity we may withhold applicable Ride Fees or other payments for the ride(s) in question. You will not discriminate or harass anyone on the basis of race, national origin, religion, gender, gender identity, physical or mental disability, medical condition, marital status, age or sexual orientation. You will make reasonable accommodation for service animals. You agree that we may obtain information about you, including your criminal and driving records, and you agree to provide any further necessary authorizations to facilitate our access to such records during the term of the Agreement.
+
+ 
+
+Communications
+
+You agree that, by becoming a User, you expressly consent and agree to accept and receive communications from us, including all forms of available technology. You also agree that, rider information may be provided to the driver without any limitations who accepts your request, and driver information will be provided to the rider who request service without any limitations. This may contain your name, phone number, address, vehicle make, model and color, license plate number and if any other information needed which BZ Ride may think at its sole discretion, necessary for a safe environment to request and or to accept service requests. 
+
+ 
+
+Information
+
+Your Information is any information you provide us through the App or website. This information may be provided to third parties, which may have business relation with BZ Ride. Drivers also, agree that, we may provide your information to complete your background, driving history and record, criminal history if any, and any other information we think to collect necessary, to a third party who conducts these kind of service. You also agree that, BZ Ride has every right to select any company for these kinds of services at its own discretion, and BZ Ride may or may not provide you any details of the outcome. You agree that, you are solely responsible for your Information and your interactions with other members of the public, and we act only as a passive conduit for your online posting of your Information. You agree to provide and maintain accurate, current and complete information that we and other members of the public may rely on. You warrant, acknowledge and represent to us that you are the sole author of your Information, and you grant us a non-exclusive, worldwide, perpetual, irrevocable, royalty-free, sub-licensable (through multiple tiers) right and license to use your information in any matter we may elect to use. You also agree that, BZ Ride does not have any ownership of your information, and you retain full ownership of your data, and have only granted us right to use in any matter we elect to do so. You also agree that, you are the sole authorized user of your account and you are responsible for maintaining the confidentiality of any data entered in the App. This includes user name, password and if any other created by you and or provided by BZ Ride. You also agree that, you are solely responsible for any activities occur under your user account, and if you suspect any unauthorized party using your account, or any suspicious activities, will be notified to us immediately. You also agree that, you are solely and fully responsible for all activities that occur under your User account, and BZ Ride expressly disclaims any liability arising from the unauthorized use of your User account.
+
+ 
+
+Restricted Activities
+
+            With respect to your use of the BZ Ride Platform and your participation in the Services, you agree that, you will not impersonate any person or entity, stalk, threaten, or otherwise harass any person, or carry any weapons, violate any law, statute, ordinance or regulation, interfere with or disrupt the Services or the BZ Ride Platform or the servers or networks connected to the BZ Ride Platform, post Information or interact on the BZ Ride Platform or Services in a manner which is false, inaccurate, misleading (directly or by omission or failure to update information), defamatory, libelous, abusive, obscene, profane, offensive, sexually oriented, threatening, harassing, or illegal, use the BZ Ride Platform in any way that infringes any third party’s rights, including but not limited to: intellectual property rights, copyright, patent, trademark, trade secret or other proprietary rights or rights of publicity or privacy, post, email or otherwise transmit any malicious code, files or programs designed to interrupt, damage, destroy or limit the functionality of any computer software or hardware or telecommunications equipment or surreptitiously intercept or expropriate any system, data or personal information, forge headers or otherwise manipulate identifiers in order to disguise the origin of any information transmitted through the BZ Ride Platform, “frame” or “mirror” any part of the BZ Ride Platform, without our prior written authorization or use meta tags or code or other devices containing any reference to us in order to direct any person to any other web site for any purpose, or modify, adapt, translate, reverse engineer, decipher, decompile or otherwise disassemble any portion of the BZ Ride Platform or any software used on or for the BZ Ride Platform, rent, lease, lend, sell, redistribute, license or sublicense the BZ Ride Platform or access to any portion of the BZ Ride Platform, use any robot, spider, site search/retrieval application, or other manual or automatic device or process to retrieve, index, scrape, “data mine”, or in any way reproduce or circumvent the navigational structure or presentation of the BZ Ride Platform or its contents, create liability for us or cause us to become subject to regulation as a transportation carrier or provider of taxi service, link directly or indirectly to any other web sites, transfer or sell your User account, password and/or identification to any other party, or cause any third party to engage in the restricted activities above. We reserve the right, but we have no obligation, to suspend or deactivate your User account if you do not comply with these prohibitions.
+
+ 
+
+Payments / Fees
+
+Rider - You agree that any amount and or amounts (“Charge”) charged after the completion of a ride request made by you are mandatory and due immediately. Charges include Ride Fees, any other applicable fees, tolls, surcharges, and taxes as set forth on your market by BZ Ride LLC. You may elect to pay any tips to the driver who completed your request. BZ Ride LLC has every right and authority to modify pricing at any time, and it’s your responsibility to review periodic price change that may or may not occur. You understand that, this service may or may not be available in every city and or state. You also agree that, you may not request ride from and to any airports unless otherwise communicated to you stating approval to do so. You are required to verify before doing so, at your sole discretion, and agree that, if such a request is made, you are responsible for any type of fess and or fines associated with it, and BZ Ride LLC will not take any responsibility for such an event. You also agree that, you are responsible for any charges and or requests made under your user account regardless of your awareness.
+
+            Ride Fees - Ride Fees includes a base price and increased based on time and distance of your ride, and for short rides, a standard minimum fee may apply. BZ Ride may or may not provide an estimated charge that you may be charged at the end of the ride as per the pickup address and drop off address provided by you, and you agree and understand that, this charge may not be actual, and it’s just only an estimate. You also agree that it may or may not change, depending on the actual route you may elect for the ride. You also understand and agree that, ride fees may be subject to a multiplier at times of high demand (“Peak Time”), and we may use reasonable efforts to inform you in advance. BZ Ride may or may not assess a “Safety Ride Fee” for expenses related to the promotion of safety, and or any other operational cost of running the App.
+
+Cancellation Fee – You agree that, in the event you cancel a ride request after 5 minutes of such request is made; we may collect a Cancellation Fee against you. You also agree that, if you cancel a request, if the request accepted driver is in 5 minute to reach you for pickup, we may collect a cancellation fee. You also agree that, driver may come and wait for you up to five minutes, and if you do not show up, we may charge a no show or cancellation fee. You also agree that, the same applies, if you make repeated and or frequent trip requests and or cancellations, fail to show up for your ride in a timely manner. You also agree that, BZ Ride may deactivate your user account, if we suspect that, it is intentional at our sole discretion.
+
+Property Damage Fee – You agree that, if a Driver reports that you have intentionally and or accidently damaged the Driver's vehicle and or property, we collect a “Property Damage Fee” up to $200.00 and or up to the exact amount needed to repair, and or replace the damaged property depending on the extent of the damage determined by BZ Ride in its sole discretion. BZ Ride reserves the right to process the damage fee without any obligation to verify and or requiring documentation.
+
+Payment processing – You are agreed to provide payment information (Credit Card and Debit Card) at time of registration, and we use that information to collect payment for your ride. Charges are assessed immediately after the trip, and are collected from the payment information provide. We may use that information to collect any other fees incurred through your user account. All Charges are processed through a third-party payment processing service (e.g., Stripe, or Braintree - a division of PayPal). BZ Ride may change its payment processor at any time without any notice to you. All charges shall only be made through the App. Cash payments are strictly prohibited. You may elect to tip the driver who completed your request at your own discretion. You also agree that, at any time, BZ Ride may review and or require further verification before disbursing such tips you elected for the driver. You agree that, all Charges are non-refundable, and this no-refund policy shall apply at all times regardless of your decision to terminate usage of the BZ Ride App, for any reason. BZ Ride may verify and seek authorization of your selected payment method to ensure the ride cost and or any fess will be covered, and protect against unauthorized behavior. You agree that, this is not a charge, but it may lower your available credit. You also agree that, the amount of our authorization may exceed the total funds and or credit available to you and you may be subject to overdraft and or NSF fess by the financial institution. You also agree that, we cannot be held responsible for such charges, and will not assist you in recovering those fees from the financial institution who issued debit, credit and or check card to you.
+
+Driver - You will receive Ride Fees (net of BZ Ride’s Administrative Fee set forth in this agreement), and any tips provided by Riders to you for the Services you provide. BZ Ride will process all payments due to you through its third party payments processor. You acknowledge and agree that such amounts shall not include any interest and will be net of any amounts that we are required to withhold by law. You also agree that, BZ Ride will pay any amount due to you through direct deposit to the Bank Account information provided at time of registration, and process payments only to the account that are in your name, and will be paid to you on or before Friday on the following week for any earnings you made for the previous week. You also agree that, if Friday falls into a bank holiday, we may pay you on the previous business day or on the next business day at our own discretion. You also agree that, no other forms of payment will be made to you, and it’s your responsibility to provide accurate information, and update it, if any changes are made, and BZ Ride will not be responsible for any loss of money incurred by the inaccurate information provided. You also agree that, BZ Ride reserves the right to withhold all or a portion of Ride Fees, if we believe that you have attempted to defraud or abuse BZ Ride or BZ Ride’s payment systems. You also agree that, we do not provide any insurance to cover your vehicle in which you provide service, yourself as a driver, rider who requested and using your service, and or any third party in case of an accident while you are online or active on our platform, and it’s your responsibility to maintain adequate insurance coverage to cover yourself and any third party, if you involve in any accident. You also agree that, it’s your responsibility to inform your insurance carrier that you are providing ride share service in the vehicle covered by your carrier, and you may need to pay a premium for that, and you will abide by the restrictions set by your insurance carrier if any. You also agree that, BZ Ride has no control of people who register in the App and or perform a background check for those individuals registered to request service, and it’s your own risk and responsibility to provide service to them. You also agree that, you work as an independent contractor, and you have no employment relation with BZ Ride LLC, and you are not entitled for any kind of benefit. You also agree that, in exchange of permitting you to offer your service through the App, you authorize BZ ride to retain a fee of up to 20% of the ride fees paid by riders. This fee may be revised at any time with or without communication to you, and if any changes are made, that information will be provided to you at BZ Ride’s own convenience and discretion, and will only be emailed to you. You also agree that, the fee can be differed in various markets, to cover additional costs. You also understand and agree that, Safety Fee, airport fees, processing fees for split payments if any, or any taxes or state or local fees imposed on and collected by BZ Ride shall be retained solely by BZ Ride. You acknowledge, agree and expressively consent to us that at any time, we may request your service as a rider for the purpose of monitoring your activities while you are active and or online on our platform. This monitoring may include that we suspect or received any complaints against you, or any actions that we may think possible violation of any laws, and that we may inform or report such activities to law enforcement or any other respective agencies, that we may think appropriate to inform or report. You also agree that, at any time you are active or online in BZ Ride platform as a driver, you will be free from drugs, alcohol, or any substances without any exceptions, that may reduce your ability to operate a vehicle. You also agree that, you will only transport or provide service only to the maximum people allowed in the category of vehicle you provide service by any law, and will make sure all the riders are safely secured by seatbelt while driving, and we will not take any responsibility for any type of tickets, fines and or anything not described here by any agency without any exceptions. You also agree that, if any arguments, threatening, fights and or any acts that you may think dangerous to you or the riders, you may stop the service right away or anytime you feel safe to do so, and should contact law enforcement. You also agree that, BZ Ride take no responsibility for any damages caused to you or to your vehicle, or any one in the vehicle in which you provide service, and you are required to report any such incident to BZ Ride without any delay, which may help us to work with the law enforcement and or any other agency in investigation.
+
+ 
+
+Rate Chart
+
+
+Seats
+Minimum
+Pickup
+Per Mile
+Per Minute
+Cancellation
+4
+$4.00
+$0.95
+$0.85
+$0.14
+$5.00
+5 - 6
+$6.00
+$1.60
+$1.45
+$0.25
+$5.00
+
+            You agree that, rate chart shows the maximum people can ride in a vehicle, depending on the capacity of the specified vehicle. You also agree that, there is no guarantee to get a specified vehicle of your choice, and or capacity. You also agree that, this is not a guaranteed rate, and may change at any time, depending on time, city and needs of service. You also agree that a Safety and Trust fee of up to $1.75 will be added to your total charge.
+
+ 
+
+Modification to the Agreement
+
+            We reserve the right to modify the terms and conditions of this Agreement at any time, effective upon posting the amended terms on this site. If we make changes, we will notify you by, at a minimum, revising the “Last Updated” date at the top of this Agreement. You are responsible for regularly reviewing this Agreement. Continued use of the BZ Ride Platform or Services after any such changes shall constitute your consent to such changes. If you do not agree to any such changes you may not use or access the BZ Ride Platform or the Services.
+
+ 
+
+Proprietary Rights and Trademark License
+
+All intellectual property rights in the BZ Ride Platform shall be solely owned by us and or our business partners or affiliates or their respective owners without any exception and these includes, database, copyright, registered or unregistered design rights, and or any other rights which have not explained or detailed in this agreement. You acknowledge and agree that any questions, comments, suggestions, ideas, feedback or other information submitted online through our website and or app, are treated as non-confidential, and will become the sole property of BZ Ride, and we will have exclusive rights of the same, and we may use it at our own discretion without acknowledging to you or giving you any compensation. You also agree that, we only granting you access to the app only for the services offered, and this is not transferrable and may not use with any third party without written permission. You also agree that, you may not use our name in any manner for any reason for your benefit other than the described services in this agreement.   
+
+ 
+
+Disclaimers
+
+            The following disclaimers are made on behalf of BZ Ride, our affiliates, and each of our respective officers, directors, employees, agents, shareholders and suppliers. The BZ Ride Platform is provided as an “as is” basis and without any warranty or condition, express, implied or statutory. We do not guarantee and do not promise any specific results from using our app for the services described in this agreement, which includes the ability to provide or receive services at any tie or any location. We do not agree that our services will be accurate, complete, secure, reliable, uninterrupted, always available, error-free or meet your requirements, or will correct the platform for any issues, and may have viruses or other harmful components which may destroy the device you use and the data entered into that device. We have no control over quality and or safety of the ride service that you may request and or accept through our platform, and rider or driver may complete the ride. We cannot guarantee you any safety, and you shall use the service at your own risk, and it’s your responsibility to make sure that you are providing service to the person requested it for and or receiving service from the person it accepted for. Ro riders, we may or may not provide you vehicle make and model, license plate number of the vehicle and the photo of the driver who accepts your request for service. For drivers, we may only give you the name of the person, and the location address where you need to and pick up the inviduals who requested service. There is no guarantee that, we have information of riders’ destination, which may be provided you at time of pickup, either through the app, or will be by the rider who requested it. BZ Ride is not responsible for the conduct, online or offline, of any User who has access to our app. You are solely responsible for and acknowledge and understand the risks associated with it, and we also do not take any responsibility of your personal belongings or property. We do not take responsibility of any of your personal information you provide us, and information you share or disclose with others through our platform. We do not take any responsibility and or claims for your lost information provided to us, regardless of the form of action in any manner (unauthorized users, hackers, and or any other). We do not take any responsibility and or claims, for the content posted on our platform, and your interactions with those third parties listed in our platform. Location provided by us is for basic purpose only, and is not a guaranteed precise location or intended to be relied on. We do not take any responsibility or guarantee that the data displays on the BZ Ride platform for accuracy, reliability, and or any other not described here. Any information post on BZ Ride platform and or provided to us may be accessible to the public, and we take no responsibility of that. You agree that, BZ Ride platform and or its updates downloaded either from Apple (App store or iTunes store), and Google (Google Play Store), is a third party, and will have no responsibility, obligation and or party in this binding agreement, and this agreement entered is solely between you and BZ Ride. You also agree that, these third parties may have beneficiaries of this agreement, and may have the full right to enforce it against you. Certain jurisdictions may require additional disclosures to you, which we may add, remove, amend, upload and or update any time, and tis your sole responsibility to check with your jurisdiction before accessing the platform, and we take no responsibility of any claim or proceedings against you by any party.
+
+ 
+
+Indemnity
+
+You agree that, you will take full and all responsibility of using and or accessing BZ Ride platform, and will hold us and our affiliates harmless from any suites, claims, actions, losses, costs, liabilities, expenses incurred in any matter without any exclusion arising your use of BZ Ride platform and or service. You also agree that, you will take all and or full responsibility of violation of any law in any jurisdiction, and or the rights of any third party, and or any other as a result your interaction, or your use of the platform for services to accept as a driver, and or request as rider.
+
+ 
+
+Limitation of Liability
+
+In no event, we take any responsibility for any incidental, special, punitive, consequential, direct or indirect damages to any of your property or your information. We also take no responsibility of your negligence, knowingly or without knowingly, that causes damages, bodily injury, physical damage, emotional distress, death and or anything without any exception, to you or any one. You acknowledge, understand and agree that, you are accessing BZ Ride platform as a driver and or as a rider at your own risk. You also agree that, in the event of a dispute with one or more users, you will release BZ Ride and or its associates from all claims, demands of any kind and nature which are known and or unknown. You also waive your right that you may have under any Civil or Criminal code section of any jurisdiction and or state.
+
+ 
+
+Termination
+
+This Agreement is effective on the day you create your user account and valid till you or BZ Ride deactivate, cancel and or terminate your user account. You have the right to cancel, deactivate and or terminate your user account at any time. BZ Ride may terminate and or deactivate your user account any time for any and or no reason with or without informing you. In the event of a termination, you have the right to contact us, and we may or may not at our own discretion provide you the details of your user account termination. We reserve the right to refuse access to BZ Ride platform for any user for any and or no reason, and we suspect that or BZ Ride platform may use for reasons prohibited by law.
+
+ 
+
+Arbitration, Disputes and Legal Claims
+
+            You agree that any claims, arbitration, disputes related to this agreement, we have the right to resolve it informally between two parties in mutually agreeable terms. In any event, if it is not resolved informally, all the disputes, claims and or arbitrations must be filed in the state of California where BZ Ride LLC is formed. You also agree that, if any such action is taken, it will be under your own individual capacity. You also acknowledge and agree that, you waive your right for trial by jury, or to participate in as a member of any class action suits brought against BZ Ride.
+
+ 
+
+Confidentiality
+
+            You agree that you will maintain confidentiality of all the information provided to you without any exception. These are disclosed to you for your own purpose and or accessing BZ Ride platform, and you take all reasonable measures to protect it confidential. .  
+
+ 
+
+No Agency
+
+            You and BZ Ride are independent contractors, and no agency, partnership, joint venture, employee-employer or franchisor-franchisee relationship is intended or created by this Agreement.
+
+ 
+
+Notices, Complaints
+
+You agree that, any notices to BZ Ride shall be given by certified mail, with return receipt. You also agree that, BZ Ride will only respond to your notices through BZ Ride App, or to the email address given at time of registration. BZ Ride will not take any responsibility and or claim for any lost notices provided to you. Any notices to BZ Ride may send to:
+
+BZ Ride LLC
+
+180 Promenade Circle, Suite 300
+
+Sacramento, CA 95834.
+
+You also agree that, BZ Ride may respond to you within thirty days of the receipt of your notice. To resolve a complaint, you may contact our Customer Support Center via email, or on the phone number provided. You also agree that, in such an event, BZ Ride will respond to you within ten business days, excluding Saturday, Sunday, and any other public (federal and state) holidays.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vu0-ma-5sd">
+                                                <rect key="frame" x="191" y="555" width="111" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.063231714849999995" green="0.54584008029999997" blue="0.85010258839999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <size key="titleShadowOffset" width="-1" height="0.0"/>
+                                                <state key="normal" title="Decline">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="declineTappedAction:" destination="mWM-qP-bhY" eventType="touchUpInside" id="1Et-KU-Ace"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZF-MH-DdZ">
+                                                <rect key="frame" x="22" y="555" width="111" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.063231714849999995" green="0.54584008029999997" blue="0.85010258839999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Accept">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="acceptTappedAction:" destination="mWM-qP-bhY" eventType="touchUpInside" id="hJC-cB-hyS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OfU-dL-Ada">
-                                <frame key="frameInset" minY="68" width="372" height="700"/>
+                                <frame key="frameInset" minX="-36" minY="-2" width="372" height="833"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWx-v9-58o">
-                                        <rect key="frame" x="42" y="484" width="240" height="30"/>
+                                        <rect key="frame" x="40" y="620" width="240" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.063231714849999995" green="0.54584008029999997" blue="0.85010258839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="REGISTRATION DETAILS">
@@ -130,7 +350,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R49-kn-Jff">
-                                        <rect key="frame" x="42" y="522" width="240" height="30"/>
+                                        <rect key="frame" x="40" y="660" width="240" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.063231714849999995" green="0.54584008029999997" blue="0.85010258839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="VEHICLE DETAILS">
@@ -142,7 +362,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cns-Wc-Mct">
-                                        <rect key="frame" x="42" y="560" width="240" height="30"/>
+                                        <rect key="frame" x="40" y="700" width="240" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.063231714849999995" green="0.54584008029999997" blue="0.85010258839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="LICENSE DETAILS">
@@ -154,7 +374,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Lk-WG-ONX">
-                                        <rect key="frame" x="42" y="598" width="240" height="30"/>
+                                        <rect key="frame" x="40" y="740" width="240" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.063231714849999995" green="0.54584008029999997" blue="0.85010258839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="INSURANCE DETAILS">
@@ -166,7 +386,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylk-QX-DmC">
-                                        <rect key="frame" x="76" y="640" width="164" height="46"/>
+                                        <rect key="frame" x="80" y="780" width="164" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.063231714849999995" green="0.54584008029999997" blue="0.85010258839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="REGISTER">
@@ -174,131 +394,102 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="SaveDriverWithSender:" destination="mWM-qP-bhY" eventType="touchUpInside" id="BPg-ee-1FL"/>
+                                            <action selector="SaveDriverWithSender:" destination="mWM-qP-bhY" eventType="touchUpInside" id="4AY-WC-V8m"/>
                                         </connections>
                                     </button>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XsU-s5-nuP">
-                                        <rect key="frame" x="10" y="8" width="300" height="450"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dWa-aL-MB1">
+                                        <rect key="frame" x="10" y="10" width="300" height="596"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dWa-aL-MB1">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="900"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="243" verticalCompressionResistancePriority="752" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  firstname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W5M-Qr-TSe">
+                                                <frame key="frameInset" minX="8" minY="8" width="280" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="243" verticalCompressionResistancePriority="752" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  firstname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W5M-Qr-TSe">
-                                                        <frame key="frameInset" minX="8" minY="8" width="280" height="40"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="243" verticalCompressionResistancePriority="752" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  middle Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PIw-gB-v3D" userLabel="tbMidName">
-                                                        <frame key="frameInset" minX="8" minY="56" width="280" height="40"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  lastname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kyQ-uM-nZN">
-                                                        <frame key="frameInset" minX="8" minY="104" width="280" height="40"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oi4-vF-bSY">
-                                                        <frame key="frameInset" minX="8" minY="152" width="280" height="40"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ncj-wh-UGA">
-                                                        <frame key="frameInset" minX="8" minY="200" width="280" height="40"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                    </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  address1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vTA-QP-094">
-                                                        <frame key="frameInset" minX="8" minY="296" width="280" height="40"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  address2" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h4n-nz-A9Z">
-                                                        <frame key="frameInset" minX="8" minY="344" width="280" height="40"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  confirm password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1bX-tF-Es0">
-                                                        <frame key="frameInset" minX="8" minY="248" width="280" height="40"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                    </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  city" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gSl-yg-8Oe">
-                                                        <frame key="frameInset" minX="8" minY="392" width="280" height="40"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  state" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cm8-bM-Gwo">
-                                                        <frame key="frameInset" minX="8" minY="440" width="280" height="40"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  zip" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yPO-Be-B6o">
-                                                        <frame key="frameInset" minX="8" minY="488" width="280" height="40"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  phone number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TDT-5p-I2P">
-                                                        <frame key="frameInset" minX="8" minY="536" width="280" height="40"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  dob" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="diL-cf-RhS">
-                                                        <frame key="frameInset" minX="8" minY="584" width="280" height="40"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cU-dP-gih">
-                                                        <frame key="frameInset" minX="100" minY="632" width="100" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="0.063231714849999995" green="0.54584008029999997" blue="0.85010258839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="DONE">
-                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="DoneRegistrationbtnClick:" destination="mWM-qP-bhY" eventType="touchUpInside" id="HFf-Q5-W5Y"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" red="0.92941176469999998" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            </view>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="243" verticalCompressionResistancePriority="752" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  middle Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PIw-gB-v3D" userLabel="tbMidName">
+                                                <frame key="frameInset" minX="8" minY="56" width="280" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  lastname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kyQ-uM-nZN">
+                                                <frame key="frameInset" minX="8" minY="104" width="280" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oi4-vF-bSY">
+                                                <frame key="frameInset" minX="8" minY="152" width="280" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ncj-wh-UGA">
+                                                <frame key="frameInset" minX="8" minY="200" width="280" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  address1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vTA-QP-094">
+                                                <frame key="frameInset" minX="8" minY="296" width="280" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  address2" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h4n-nz-A9Z">
+                                                <frame key="frameInset" minX="8" minY="344" width="280" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  confirm password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1bX-tF-Es0">
+                                                <frame key="frameInset" minX="8" minY="248" width="280" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  city" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gSl-yg-8Oe">
+                                                <frame key="frameInset" minX="8" minY="392" width="280" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  state" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cm8-bM-Gwo">
+                                                <frame key="frameInset" minX="8" minY="440" width="280" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  zip" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yPO-Be-B6o">
+                                                <frame key="frameInset" minX="8" minY="488" width="280" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  phone number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TDT-5p-I2P">
+                                                <frame key="frameInset" minX="7" minY="536" width="280" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.92941176469999998" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="dWa-aL-MB1" id="kG2-5G-xkZ"/>
-                                        </connections>
-                                    </scrollView>
+                                    </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tl6-Jx-Gp2">
-                                        <rect key="frame" x="10" y="12" width="300" height="450"/>
+                                        <rect key="frame" x="10" y="10" width="300" height="450"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="243" verticalCompressionResistancePriority="752" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  Number Plate Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dag-v5-Hp3">
@@ -321,6 +512,9 @@
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="regDateView:" destination="mWM-qP-bhY" eventType="editingDidBegin" id="Hoz-es-lt5"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  Date of expiry" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cH7-RU-e3b">
                                                 <frame key="frameInset" minX="8" minY="153" width="280" height="40"/>
@@ -328,6 +522,9 @@
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="expiryDateView:" destination="mWM-qP-bhY" eventType="editingDidBegin" id="awG-bP-5N5"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="243" verticalCompressionResistancePriority="752" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  Year of Manufacture" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LJZ-8Z-iGt">
                                                 <frame key="frameInset" minX="8" minY="201" width="280" height="40"/>
@@ -373,7 +570,7 @@
                                         <color key="backgroundColor" red="0.92941176469999998" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lag-wu-Qi1">
-                                        <rect key="frame" x="10" y="12" width="300" height="450"/>
+                                        <rect key="frame" x="10" y="10" width="300" height="450"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="243" verticalCompressionResistancePriority="752" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  Liscense Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Lo-H5-Eso">
@@ -396,6 +593,9 @@
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="licIssDate:" destination="mWM-qP-bhY" eventType="editingDidBegin" id="uVN-u0-P3d"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  Date of expiry" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="15p-rm-BZs">
                                                 <frame key="frameInset" minX="8" minY="153" width="280" height="40"/>
@@ -403,6 +603,9 @@
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="licExpDate:" destination="mWM-qP-bhY" eventType="editingDidBegin" id="nx5-iI-SB9"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy0-xC-shs">
                                                 <frame key="frameInset" minX="97" minY="201" width="100" height="30"/>
@@ -420,7 +623,7 @@
                                         <color key="backgroundColor" red="0.92941176469999998" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wb8-MG-RdT">
-                                        <rect key="frame" x="10" y="12" width="300" height="450"/>
+                                        <rect key="frame" x="10" y="10" width="300" height="450"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="243" verticalCompressionResistancePriority="752" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  Insurance Company" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DSP-n6-vkh">
@@ -443,6 +646,9 @@
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="insuIssDate:" destination="mWM-qP-bhY" eventType="editingDidBegin" id="CjC-lM-iXU"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="  Date of expiry" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Usm-kc-4Sj">
                                                 <frame key="frameInset" minX="8" minY="165" width="280" height="40"/>
@@ -450,9 +656,12 @@
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="insuExpDate:" destination="mWM-qP-bhY" eventType="editingDidBegin" id="2b3-dz-h2A"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugl-yq-i0Z">
-                                                <frame key="frameInset" minX="97" minY="214" width="100" height="30"/>
+                                                <frame key="frameInset" minX="97" minY="218" width="100" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.063231714849999995" green="0.54584008029999997" blue="0.85010258839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="DONE">
@@ -461,6 +670,36 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="DoneInsuranceDetailsbtnClick:" destination="mWM-qP-bhY" eventType="touchUpInside" id="45g-6Z-Vjw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.92941176469999998" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8yp-Fa-vuI">
+                                        <rect key="frame" x="10" y="10" width="300" height="680"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehz-yk-VAu">
+                                                <frame key="frameInset" minX="-11" minY="180" height="216" maxX="-9"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="499154702.06767702">
+                                                    <!--2016-10-26 06:05:02 +0000-->
+                                                </date>
+                                            </datePicker>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pD-Re-qRM">
+                                                <frame key="frameInset" minX="51" minY="404" width="48" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancelTapped:" destination="mWM-qP-bhY" eventType="touchUpInside" id="aEQ-tl-mP4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acu-kx-tye">
+                                                <frame key="frameInset" minX="218" minY="399" width="37" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Done"/>
+                                                <connections>
+                                                    <action selector="doneTapped:" destination="mWM-qP-bhY" eventType="touchUpInside" id="gJE-eB-AS4"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -493,8 +732,19 @@
                         <outlet property="ViewLiscenceDetails" destination="Lag-wu-Qi1" id="uZx-NE-uTw"/>
                         <outlet property="ViewRegDetails" destination="dWa-aL-MB1" id="4hg-MZ-zYS"/>
                         <outlet property="ViewVehicleDetails" destination="tl6-Jx-Gp2" id="ieX-Cs-eVs"/>
+                        <outlet property="acceptTapped" destination="fZF-MH-DdZ" id="aCX-Mi-T1m"/>
+                        <outlet property="agreementScroll" destination="hfo-Dl-ew8" id="Dov-5w-hpY"/>
+                        <outlet property="agreementView" destination="pkF-gs-CW0" id="LMP-Ys-deE"/>
+                        <outlet property="btnInsurance" destination="0Lk-WG-ONX" id="dQ2-cT-MhW"/>
+                        <outlet property="btnLiscence" destination="Cns-Wc-Mct" id="UdH-Jf-mU9"/>
                         <outlet property="btnRegister" destination="mWx-v9-58o" id="pJm-VL-deo"/>
-                        <outlet property="scrlview" destination="XsU-s5-nuP" id="Jhc-3n-xEr"/>
+                        <outlet property="btnSave" destination="ylk-QX-DmC" id="V32-4L-iey"/>
+                        <outlet property="btnVehicle" destination="R49-kn-Jff" id="1xU-l2-zIJ"/>
+                        <outlet property="dateCancel" destination="0pD-Re-qRM" id="ACz-E0-a9x"/>
+                        <outlet property="datePickerView" destination="8yp-Fa-vuI" id="G44-pg-kz0"/>
+                        <outlet property="dateView" destination="Ehz-yk-VAu" id="G4f-1r-kGZ"/>
+                        <outlet property="declineTapped" destination="Vu0-ma-5sd" id="Bcu-UF-XAs"/>
+                        <outlet property="doneBtn" destination="acu-kx-tye" id="dPj-hy-iBV"/>
                         <outlet property="tbAddress1" destination="vTA-QP-094" id="Huf-5s-4kY"/>
                         <outlet property="tbAddress2" destination="h4n-nz-A9Z" id="swC-28-U6p"/>
                         <outlet property="tbDatefrom" destination="giA-yY-JOG" id="hnV-if-1wR"/>
@@ -520,10 +770,10 @@
                         <outlet property="tbVehicleModel" destination="0TS-kZ-4Rh" id="bVW-9l-iWI"/>
                         <outlet property="tbYearofManufacture" destination="LJZ-8Z-iGt" id="NFL-DT-xId"/>
                         <outlet property="tbcity" destination="gSl-yg-8Oe" id="8Ej-fC-IiQ"/>
-                        <outlet property="tbdob" destination="diL-cf-RhS" id="x7P-1s-Oa2"/>
                         <outlet property="tbemail" destination="oi4-vF-bSY" id="fhH-b1-nFY"/>
                         <outlet property="tbstate" destination="Cm8-bM-Gwo" id="Wv2-DC-rsV"/>
                         <outlet property="tbzip" destination="yPO-Be-B6o" id="NDK-AU-dbu"/>
+                        <outlet property="termAgreement" destination="ySS-7J-gw7" id="OcD-FO-x5P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0aT-j7-zbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -548,13 +798,106 @@
             </objects>
             <point key="canvasLocation" x="346.5" y="158.5"/>
         </scene>
+        <!--Driverbank Table View Controller-->
+        <scene sceneID="OKk-f6-dbj">
+            <objects>
+                <tableViewController storyboardIdentifier="newDriveBankView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vIt-DT-HPB" customClass="driverbankTableViewController" customModule="BZRide" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" id="LPR-fT-bGU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="4Lu-Q4-HSg">
+                                <rect key="frame" x="0.0" y="28" width="375" height="74"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Lu-Q4-HSg" id="ZrR-n8-KJf">
+                                    <frame key="frameInset" width="375" height="73"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zYU-BG-gxn">
+                                            <frame key="frameInset" minX="43" minY="21" width="312" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="my7-Yd-0Uj">
+                                <rect key="frame" x="0.0" y="102" width="375" height="74"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="my7-Yd-0Uj" id="C9Y-mV-cBY">
+                                    <frame key="frameInset" width="375" height="73"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nlP-MW-9Vo">
+                                            <frame key="frameInset" minX="43" minY="21" width="312" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="qKf-XF-iMY">
+                                <rect key="frame" x="0.0" y="176" width="375" height="74"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qKf-XF-iMY" id="iaj-qM-LhC">
+                                    <frame key="frameInset" width="375" height="73"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6DI-9G-1ZE">
+                                            <frame key="frameInset" minX="43" minY="21" width="312" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="hrB-t2-EG4">
+                                <rect key="frame" x="0.0" y="250" width="375" height="74"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hrB-t2-EG4" id="MBJ-Xv-Wal">
+                                    <frame key="frameInset" width="375" height="73"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="owq-Kv-zaK">
+                                            <frame key="frameInset" minX="43" minY="21" width="312" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="vIt-DT-HPB" id="Q7P-sg-rmJ"/>
+                            <outlet property="delegate" destination="vIt-DT-HPB" id="FmH-Ne-uDa"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQj-FG-1nu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="346.5" y="894.5"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="1.png" width="512" height="512"/>
+        <image name="homeimage" width="16" height="16"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="adP-Rw-hs1"/>
+        <segue reference="1zq-Lq-rL9"/>
     </inferredMetricsTieBreakers>
 </document>

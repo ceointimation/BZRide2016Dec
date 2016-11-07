@@ -16,6 +16,14 @@
 		7104571A1D94FABC006DF6AC /* BZRideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710457191D94FABC006DF6AC /* BZRideTests.swift */; };
 		710457251D94FABC006DF6AC /* BZRideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710457241D94FABC006DF6AC /* BZRideUITests.swift */; };
 		710457331D94FF67006DF6AC /* DriverRegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710457321D94FF67006DF6AC /* DriverRegViewController.swift */; };
+		715ADF721DD097CE00836A53 /* driverbankTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ADF711DD097CE00836A53 /* driverbankTableViewController.swift */; };
+		715ADF971DD0B3C800836A53 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 715ADF8E1DD0B3C800836A53 /* SVIndefiniteAnimatedView.m */; };
+		715ADF981DD0B3C800836A53 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 715ADF901DD0B3C800836A53 /* SVProgressAnimatedView.m */; };
+		715ADF991DD0B3C800836A53 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 715ADF921DD0B3C800836A53 /* SVProgressHUD.bundle */; };
+		715ADF9A1DD0B3C800836A53 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 715ADF941DD0B3C800836A53 /* SVProgressHUD.m */; };
+		715ADF9B1DD0B3C800836A53 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 715ADF961DD0B3C800836A53 /* SVRadialGradientLayer.m */; };
+		716A2FA71DC8622A00997481 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 716A2FA61DC8622A00997481 /* 1.png */; };
+		716A2FAC1DC8DD6E00997481 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 716A2FAB1DC8DD6E00997481 /* background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,20 @@
 		710457241D94FABC006DF6AC /* BZRideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BZRideUITests.swift; sourceTree = "<group>"; };
 		710457261D94FABC006DF6AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		710457321D94FF67006DF6AC /* DriverRegViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverRegViewController.swift; sourceTree = "<group>"; };
+		715ADF711DD097CE00836A53 /* driverbankTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = driverbankTableViewController.swift; sourceTree = "<group>"; };
+		715ADF8C1DD0B3C700836A53 /* BZRide-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BZRide-Bridging-Header.h"; sourceTree = "<group>"; };
+		715ADF8D1DD0B3C800836A53 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVIndefiniteAnimatedView.h"; sourceTree = "<group>"; };
+		715ADF8E1DD0B3C800836A53 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVIndefiniteAnimatedView.m"; sourceTree = "<group>"; };
+		715ADF8F1DD0B3C800836A53 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVProgressAnimatedView.h; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVProgressAnimatedView.h"; sourceTree = "<group>"; };
+		715ADF901DD0B3C800836A53 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVProgressAnimatedView.m; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVProgressAnimatedView.m"; sourceTree = "<group>"; };
+		715ADF911DD0B3C800836A53 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SVProgressHUD-Prefix.pch"; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		715ADF921DD0B3C800836A53 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVProgressHUD.bundle"; sourceTree = "<group>"; };
+		715ADF931DD0B3C800836A53 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVProgressHUD.h"; sourceTree = "<group>"; };
+		715ADF941DD0B3C800836A53 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVProgressHUD.m"; sourceTree = "<group>"; };
+		715ADF951DD0B3C800836A53 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVRadialGradientLayer.h"; sourceTree = "<group>"; };
+		715ADF961DD0B3C800836A53 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVRadialGradientLayer.m; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVRadialGradientLayer.m"; sourceTree = "<group>"; };
+		716A2FA61DC8622A00997481 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = ../../../../../Downloads/1.png; sourceTree = "<group>"; };
+		716A2FAB1DC8DD6E00997481 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = ../../../../../Downloads/background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +123,11 @@
 		710457001D94FABC006DF6AC /* BZRide */ = {
 			isa = PBXGroup;
 			children = (
+				715ADF8B1DD0AE2E00836A53 /* SVProgressHUD */,
 				710457011D94FABC006DF6AC /* AppDelegate.swift */,
+				716A2FA51DC8620800997481 /* Images */,
 				710457031D94FABC006DF6AC /* ViewController.swift */,
+				715ADF711DD097CE00836A53 /* driverbankTableViewController.swift */,
 				710457051D94FABC006DF6AC /* Main.storyboard */,
 				710457321D94FF67006DF6AC /* DriverRegViewController.swift */,
 				7104570B1D94FABC006DF6AC /* Assets.xcassets */,
@@ -129,6 +154,33 @@
 				710457261D94FABC006DF6AC /* Info.plist */,
 			);
 			path = BZRideUITests;
+			sourceTree = "<group>";
+		};
+		715ADF8B1DD0AE2E00836A53 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				715ADF8D1DD0B3C800836A53 /* SVIndefiniteAnimatedView.h */,
+				715ADF8E1DD0B3C800836A53 /* SVIndefiniteAnimatedView.m */,
+				715ADF8F1DD0B3C800836A53 /* SVProgressAnimatedView.h */,
+				715ADF901DD0B3C800836A53 /* SVProgressAnimatedView.m */,
+				715ADF911DD0B3C800836A53 /* SVProgressHUD-Prefix.pch */,
+				715ADF921DD0B3C800836A53 /* SVProgressHUD.bundle */,
+				715ADF931DD0B3C800836A53 /* SVProgressHUD.h */,
+				715ADF941DD0B3C800836A53 /* SVProgressHUD.m */,
+				715ADF951DD0B3C800836A53 /* SVRadialGradientLayer.h */,
+				715ADF961DD0B3C800836A53 /* SVRadialGradientLayer.m */,
+				715ADF8C1DD0B3C700836A53 /* BZRide-Bridging-Header.h */,
+			);
+			name = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		716A2FA51DC8620800997481 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				716A2FA61DC8622A00997481 /* 1.png */,
+				716A2FAB1DC8DD6E00997481 /* background.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +251,7 @@
 				TargetAttributes = {
 					710456FD1D94FABC006DF6AC = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					710457141D94FABC006DF6AC = {
@@ -238,6 +291,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				716A2FA71DC8622A00997481 /* 1.png in Resources */,
+				715ADF991DD0B3C800836A53 /* SVProgressHUD.bundle in Resources */,
+				716A2FAC1DC8DD6E00997481 /* background.jpg in Resources */,
 				7104570F1D94FABC006DF6AC /* LaunchScreen.storyboard in Resources */,
 				7104570C1D94FABC006DF6AC /* Assets.xcassets in Resources */,
 				710457071D94FABC006DF6AC /* Main.storyboard in Resources */,
@@ -266,9 +322,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7104570A1D94FABC006DF6AC /* BZRide.xcdatamodeld in Sources */,
+				715ADF9B1DD0B3C800836A53 /* SVRadialGradientLayer.m in Sources */,
+				715ADF9A1DD0B3C800836A53 /* SVProgressHUD.m in Sources */,
 				710457331D94FF67006DF6AC /* DriverRegViewController.swift in Sources */,
 				710457041D94FABC006DF6AC /* ViewController.swift in Sources */,
+				715ADF981DD0B3C800836A53 /* SVProgressAnimatedView.m in Sources */,
 				710457021D94FABC006DF6AC /* AppDelegate.swift in Sources */,
+				715ADF721DD097CE00836A53 /* driverbankTableViewController.swift in Sources */,
+				715ADF971DD0B3C800836A53 /* SVIndefiniteAnimatedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,10 +481,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BZRide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kyeesha.BZRide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BZRide/BZRide-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -432,10 +496,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BZRide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kyeesha.BZRide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BZRide/BZRide-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -513,6 +579,7 @@
 				7104572B1D94FABC006DF6AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7104572C1D94FABC006DF6AC /* Build configuration list for PBXNativeTarget "BZRideTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +588,7 @@
 				7104572E1D94FABC006DF6AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7104572F1D94FABC006DF6AC /* Build configuration list for PBXNativeTarget "BZRideUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +597,7 @@
 				710457311D94FABC006DF6AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

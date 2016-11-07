@@ -8,13 +8,24 @@
 
 import UIKit
 
-class DriverRegViewController: UIViewController {
+class DriverRegViewController: UIViewController,UITextFieldDelegate{
     
+    var textId = 1
     
     @IBOutlet var ViewRegDetails : UIView!
-     @IBOutlet var ViewVehicleDetails : UIView!
-     @IBOutlet var ViewLiscenceDetails : UIView!
-     @IBOutlet var ViewInsuranceDetails : UIView!
+    @IBOutlet var ViewVehicleDetails : UIView!
+    @IBOutlet var ViewLiscenceDetails : UIView!
+    @IBOutlet var ViewInsuranceDetails : UIView!
+    @IBOutlet var datePickerView: UIView!
+    @IBOutlet var agreementView: UIView!
+    @IBOutlet var agreementScroll: UIScrollView!
+    @IBOutlet var termAgreement: UITextView!
+    @IBOutlet var declineTapped: UIButton!
+    @IBOutlet var acceptTapped: UIButton!
+    
+    @IBOutlet var dateView: UIDatePicker!
+    @IBOutlet var doneBtn: UIButton!
+    @IBOutlet var dateCancel: UIButton!
     
     @IBOutlet var tbFstName: UITextField!
     @IBOutlet var tbMidName: UITextField!
@@ -25,14 +36,13 @@ class DriverRegViewController: UIViewController {
     @IBOutlet var tbAddress1: UITextField!
     @IBOutlet var tbAddress2: UITextField!
     @IBOutlet var tbPh: UITextField!
-    @IBOutlet var tbdob: UITextField!
+   // @IBOutlet var tbdob: UITextField!
     @IBOutlet var btnRegister: UIButton!
-    
     @IBOutlet var tbcity: UITextField!
-    
     @IBOutlet var tbstate: UITextField!
-    
     @IBOutlet var tbzip: UITextField!
+    //@IBOutlet var tbssn: UITextField!
+    
     @IBOutlet var tbNumberPlateNumber: UITextField!
     @IBOutlet var tbRegistrationState: UITextField!
     @IBOutlet var tbDateofRegistrtation: UITextField!
@@ -56,13 +66,11 @@ class DriverRegViewController: UIViewController {
     @IBOutlet var tbDateofexpiryInsu: UITextField!
     @IBOutlet var btnInsurance: UIButton!
     
-    @IBOutlet var btnRegisterDone: UIButton!
+    //@IBOutlet var btnRegisterDone: UIButton!
     @IBOutlet var btnVehicleDone: UIButton!
     @IBOutlet var btnLiscenceDone: UIButton!
     @IBOutlet var btnInsuranceDone: UIButton!
-    
-
-    
+    @IBOutlet var btnSave: UIButton!
     
     @IBOutlet var ScrlViewDriverReg1: UIScrollView!
     
@@ -70,20 +78,162 @@ class DriverRegViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       ScrlViewDriverReg1.contentSize.height=750
-       scrlview.contentSize.height=670
-        
-        
+        //tbdob.delegate = self
+        datePickerView.isHidden=true
+        ScrlViewDriverReg1.contentSize.height=840
+        agreementView.isHidden=true
         ShowRegistrationView(self)
         
-       // ViewRegDetails.isHidden=true
-       // ViewVehicleDetails.isHidden=true
-       // ViewLiscenceDetails.isHidden=true
-        //ViewInsuranceDetails.isHidden=true
+        let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(self.tapBlurButton(_:)))
+        let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(self.tapBlurButton(_:)))
+        
+        let tapGesture3 = UITapGestureRecognizer(target: self, action: #selector(self.tapBlurButton(_:)))
+        let tapGesture4 = UITapGestureRecognizer(target: self, action: #selector(self.tapBlurButton(_:)))
+        let tapGesture5 = UITapGestureRecognizer(target: self, action: #selector(self.tapBlurButton(_:)))
+        let tapGesture6 = UITapGestureRecognizer(target: self, action: #selector(self.tapBlurButton(_:)))
+        
+        self.ViewRegDetails.addGestureRecognizer(tapGesture1)
+        
+        self.ViewVehicleDetails.addGestureRecognizer(tapGesture2)
+        self.ViewLiscenceDetails.addGestureRecognizer(tapGesture3)
+        self.ViewInsuranceDetails.addGestureRecognizer(tapGesture4)
+        self.datePickerView.addGestureRecognizer(tapGesture5)
+        self.agreementView.addGestureRecognizer(tapGesture6)
+    }
+    
+    func tapBlurButton(_ sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+        print("Please Help!")
+    }
+    
+    // text field dob editing
+    /*func textFieldDidBeginEditing(_ tbdob: UITextField) {
+        ViewRegDetails.isHidden=true
+        datePickerView.isHidden=false
+        btnRegister.isHidden=true
+        btnVehicle.isHidden=true
+        btnLiscence.isHidden=true
+        btnInsurance.isHidden=true
+        btnSave.isHidden=true
+        textId = 0
+    }*/
+    
+    @IBAction func regDateView(_ sender: AnyObject) {
+        ViewVehicleDetails.isHidden=true
+        datePickerView.isHidden=false
+        textId = 1
         
     }
+    
+    @IBAction func expiryDateView(_ sender: AnyObject) {
+        ViewVehicleDetails.isHidden=true
+        datePickerView.isHidden=false
+        textId = 2
+    }
+    @IBAction func licIssDate(_ sender: AnyObject) {
+        ViewLiscenceDetails.isHidden=true
+        datePickerView.isHidden=false
+        textId = 3
+    }
+    @IBAction func licExpDate(_ sender: AnyObject) {
+        ViewLiscenceDetails.isHidden=true
+        datePickerView.isHidden=false
+        textId = 4
+    }
+    @IBAction func insuIssDate(_ sender: AnyObject) {
+        ViewInsuranceDetails.isHidden=true
+        datePickerView.isHidden=false
+        textId = 5
+    }
+    @IBAction func insuExpDate(_ sender: AnyObject) {
+        ViewInsuranceDetails.isHidden=true
+        datePickerView.isHidden=false
+        textId = 6
+    }
+    
+    // Date picker done button
+    @IBAction func doneTapped(_ sender: AnyObject) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        let strDate = dateFormatter.string(from: dateView.date)
+        if(textId == 0)
+        {
+           /* self.tbdob.text = strDate
+            datePickerView.isHidden=true
+            ViewRegDetails.isHidden=false
+            btnRegister.isHidden=false
+            btnVehicle.isHidden=false
+            btnLiscence.isHidden=false
+            btnInsurance.isHidden=false
+            btnSave.isHidden=false*/
+        }
+        else if(textId == 1)
+        {
+            self.tbDateofRegistrtation.text = strDate
+            datePickerView.isHidden=true
+            ViewVehicleDetails.isHidden=false
+        }
+        else if(textId == 2)
+        {
+            self.tbDateofexpiryVehicle.text = strDate
+            datePickerView.isHidden=true
+            ViewVehicleDetails.isHidden=false
+        }
+        else if(textId == 3)
+        {
+            self.tbDateofIssue.text = strDate
+            datePickerView.isHidden=true
+            ViewLiscenceDetails.isHidden=false
+        }
+        else if(textId == 4)
+        {
+            self.tbDateofexpiryLis.text = strDate
+            datePickerView.isHidden=true
+            ViewLiscenceDetails.isHidden=false
+        }
+        else if(textId == 5)
+        {
+            self.tbDatefrom.text = strDate
+            datePickerView.isHidden=true
+            ViewInsuranceDetails.isHidden=false
+        }
+        else if(textId == 6)
+        {
+            self.tbDateofexpiryInsu.text = strDate
+            datePickerView.isHidden=true
+            ViewInsuranceDetails.isHidden=false
+        }
+     }
 
+    // Date picker cancel button
+    @IBAction func cancelTapped(_ sender: AnyObject) {
+        if(textId == 0)
+        {
+            datePickerView.isHidden=true
+            ViewRegDetails.isHidden=false
+            btnRegister.isHidden=false
+            btnVehicle.isHidden=false
+            btnLiscence.isHidden=false
+            btnInsurance.isHidden=false
+            btnSave.isHidden=false
+        }
+        else if(textId == 1 || textId == 2)
+        {
+            datePickerView.isHidden=true
+            ViewVehicleDetails.isHidden=false
+        }
+        else if(textId == 3 || textId == 4)
+        {
+            datePickerView.isHidden=true
+            ViewLiscenceDetails.isHidden=false
+        }
+        else if(textId == 5 || textId == 6)
+        {
+            datePickerView.isHidden=true
+            ViewInsuranceDetails.isHidden=false
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -91,40 +241,68 @@ class DriverRegViewController: UIViewController {
     
    
     @IBAction func ShowRegistrationView(_ sender: AnyObject) {
-         ViewRegDetails.isHidden=false
+        ViewRegDetails.isHidden=false
         ViewVehicleDetails.isHidden=true
-         ViewLiscenceDetails.isHidden=true
-       ViewInsuranceDetails.isHidden=true
+        ViewLiscenceDetails.isHidden=true
+        ViewInsuranceDetails.isHidden=true
+        datePickerView.isHidden=true
+        btnRegister.isHidden=false
+        btnVehicle.isHidden=false
+        btnLiscence.isHidden=false
+        btnInsurance.isHidden=false
+        btnSave.isHidden=false
+        tbFstName.becomeFirstResponder()
     }
     
     @IBAction func ShowVehicleDetails(_ sender: AnyObject) {
-        
         ViewRegDetails.isHidden=true
         ViewVehicleDetails.isHidden=false
         ViewLiscenceDetails.isHidden=true
         ViewInsuranceDetails.isHidden=true
+        datePickerView.isHidden=true
+        btnRegister.isHidden=true
+        btnVehicle.isHidden=true
+        btnLiscence.isHidden=true
+        btnInsurance.isHidden=true
+        btnSave.isHidden=true
+        tbNumberPlateNumber.becomeFirstResponder()
         
-    }
+}
     
     @IBAction func ShowLiscenseDetails(_ sender: AnyObject) {
         ViewRegDetails.isHidden=true
         ViewVehicleDetails.isHidden=true
         ViewLiscenceDetails.isHidden=false
         ViewInsuranceDetails.isHidden=true
+        datePickerView.isHidden=true
+        btnRegister.isHidden=true
+        btnVehicle.isHidden=true
+        btnLiscence.isHidden=true
+        btnInsurance.isHidden=true
+        btnSave.isHidden=true
+        tbLiscenseNumber.becomeFirstResponder()
     }
     @IBAction func ShowInsuranceDetails(_ sender: AnyObject) {
         ViewRegDetails.isHidden=true
         ViewVehicleDetails.isHidden=true
         ViewLiscenceDetails.isHidden=true
-        ViewInsuranceDetails.isHidden=false    }
+        ViewInsuranceDetails.isHidden=false
+        datePickerView.isHidden=true
+        btnRegister.isHidden=true
+        btnVehicle.isHidden=true
+        btnLiscence.isHidden=true
+        btnInsurance.isHidden=true
+        btnSave.isHidden=true
+        tbInsuranceCompany.becomeFirstResponder()
+    }
     
     
-    @IBAction func DoneRegistrationbtnClick(_ sender: AnyObject) {
+   /* @IBAction func DoneRegistrationbtnClick(_ sender: AnyObject) {
         
         if tbFstName.text == "" || tbMidName.text == "" || tbLastName.text == ""  || tbemail.text == "" || tbPW.text == "" || tbPWConfrm.text == "" || tbAddress1.text == "" || tbAddress2.text == "" || tbcity.text == "" || tbstate.text == "" || tbzip.text == "" ||
             tbPh.text == "" || tbdob.text == "" {
             
-            Validation()
+            //Validation()
             
         }
         else{
@@ -143,33 +321,34 @@ class DriverRegViewController: UIViewController {
             }
         }
         
-    }
+    }*/
     
     @IBAction func DoneVehicleDetailsbtnClick(_ sender: AnyObject) {
 
-        if tbNumberPlateNumber.text == "" || tbRegistrationState.text == ""  || tbDateofRegistrtation.text == "" || tbDateofexpiryVehicle.text == ""  || 		tbYearofManufacture.text == "" || tbVehicleModel.text == ""  || tbVehicleMake.text == "" || tbVehicleColor.text == "" {
-            
-            Validation()
-            
-        }
-        else{
-            
-                ShowLiscenseDetails(self)
-            
-        }
-        
+        if tbNumberPlateNumber.text == "" || tbRegistrationState.text == ""  || tbDateofRegistrtation.text == "" || tbDateofexpiryVehicle.text == ""  || 		tbYearofManufacture.text == "" || tbVehicleModel.text == ""  || tbVehicleMake.text == "" || tbVehicleColor.text == ""
+            {
+                tbNumberPlateNumber.becomeFirstResponder()
+                displayAlert(messageToDisplay: "Please fill Vehicle Details")
+            }
+       else{
+                ShowRegistrationView(self)
+            tbFstName.becomeFirstResponder()
+            }
     }
     
     @IBAction func DoneLiscenceDetailsbtnClick(_ sender: AnyObject) {
         
         if tbLiscenseNumber.text == "" || tbStateissued.text == ""  || tbDateofIssue.text == "" || tbDateofexpiryLis.text == ""  {
             
-            Validation()
+            tbLiscenseNumber.becomeFirstResponder()
+            displayAlert(messageToDisplay: "Please fill Liscense Details")
             
         }
         else{
             
-            ShowInsuranceDetails(self)
+           ShowRegistrationView(self)
+            tbFstName.becomeFirstResponder()
+            // ShowInsuranceDetails(self)
             
         }
         
@@ -178,235 +357,289 @@ class DriverRegViewController: UIViewController {
     @IBAction func DoneInsuranceDetailsbtnClick(_ sender: AnyObject) {
         
         if tbInsuranceCompany.text == "" || tbInsuranceNumber.text == ""  || tbDatefrom.text == "" || tbDateofexpiryInsu.text == ""  {
-            
-            Validation()
+           tbInsuranceCompany.becomeFirstResponder()
+           displayAlert(messageToDisplay: "Please fill Insurance Details")
             
         }
         else{
-            
+            tbFstName.becomeFirstResponder()
             ShowRegistrationView(self)
-            
         }
         
     }
     
     
+    // Email Validation function
+    func isEmailAddress(emailAddressString: String) -> Bool{
+        var returnvalue = true
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        do{
+            let regex = try NSRegularExpression(pattern:emailRegEx)
+            let nsString = emailAddressString as NSString
+            let result = regex.matches(in:emailAddressString,range:NSRange(location:0,length:nsString.length))
+            if result.count == 0
+            {
+                returnvalue = false
+            }
+        }catch let error as NSError{
+            print("Invalid regex:\(error.localizedDescription)")
+            returnvalue = false
+        }
+        return returnvalue
+    }
     
     
-    @IBAction func SaveDriver(sender: AnyObject) {
-        
-        if tbFstName.text == "" || tbLastName.text == ""  || tbemail.text == "" || tbPW.text == "" || tbPWConfrm.text == "" || tbAddress1.text == "" || tbAddress2.text == "" || tbPh.text == "" || tbNumberPlateNumber.text == "" || tbRegistrationState.text == ""  || tbDateofRegistrtation.text == "" || tbDateofexpiryVehicle.text == "" || tbYearofManufacture.text == "" || tbVehicleModel.text == ""  || tbVehicleMake.text == "" || tbVehicleColor.text=="" || tbLiscenseNumber.text == "" || tbStateissued.text == ""  || tbDateofIssue.text == "" || tbDateofexpiryLis.text == "" || tbInsuranceCompany.text == "" || tbInsuranceNumber.text == ""  || tbDatefrom.text == "" || tbDateofexpiryInsu.text == "" {
-            
-            Validation()
-            
+    // Display Alert Message if any wrong data
+   
+    
+    
+    
+    // validate mobile number
+    func validateMobile(value: String) -> Bool {
+        let PHONE_REGEX = "^\\d{10}$"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
+        let result =  phoneTest.evaluate(with: value)
+        return result
+    }
+    
+    
+    
+    // validate zip code
+    func validateZip(value: String) -> Bool {
+        let ZIP_REGEX = "^\\d{6}$"
+        let zipTest = NSPredicate(format: "SELF MATCHES %@", ZIP_REGEX)
+        let result =  zipTest.evaluate(with: value)
+        return result
+    }
+    
+    
+    // validate password length
+    func PwdLenth(password: String) -> Bool {
+        if password.characters.count < 7{
+            return false
         }
         else{
-         if tbPW.text != tbPWConfrm.text{
-         
-         let myAlert = UIAlertView()
-         //myAlert.title = "Title"
-         myAlert.message = "Password mismatch"
-         myAlert.addButton(withTitle: "Ok")
-         myAlert.delegate = self
-         myAlert.show()
-         
-         }
-         else{
-            
-            /***********AAAAAAA************/
-            
-           
-            var request = URLRequest(url: URL(string: "http://bzride.com/bzride/RegisterDriver.php")!)
-            request.httpMethod = "POST"
-
-            
-            let Registration="firstName="+tbFstName.text!+"&middleName="+tbMidName.text!+"&lastName="+tbLastName.text!+" "
-            let Registration1=Registration+"&email="+tbemail.text!+"&password="+tbPW.text!+"&address1="+tbAddress1.text!+""
-            let Registration2=Registration1+"&address2="+tbAddress2.text!+"&city="+tbcity.text!+"&state="+tbstate.text!+"&zip="+tbzip.text!+"&phone="+tbPh.text!+"&dob="+tbdob.text!+"&ssn=123&deviceId=1&deviceType=i"
-            
-            let vehDetails="&vModel="+tbVehicleModel.text!+"&vMake="+tbVehicleMake.text!+"&vColor="+tbVehicleColor.text!+"&vYear="+tbYearofManufacture.text!+""
-            let vehDetails1 = vehDetails+"&vNumber="+tbNumberPlateNumber.text!+"&vDateRegistered="+tbDateofRegistrtation.text!+"&vStateRegistered="+tbRegistrationState.text!+" "
-            let vehDetails2 = vehDetails1+"&vExpiryDate="+tbDateofexpiryVehicle.text!+""
-            
-            let vehInsu="&insCompany="+tbInsuranceCompany.text!+"&insPolicyNumber="+tbInsuranceNumber.text!+"&insValidFromDate="+tbDatefrom.text!+"&insExpDate="+tbDateofexpiryInsu.text!+""
-            
-            let vehLIC="&licenseNumber="+tbLiscenseNumber.text!+"&licenceStateIssued="+tbStateissued.text!+"&licenseDateIssued="+tbDateofIssue.text!+"&licenseExpDate="+tbDateofexpiryLis.text!+""
-            
-            
-            let postString = Registration2 + vehDetails2 + vehInsu + vehLIC
-            
-            //print("postString is ==============\(postString)")
-            
-            
-            /*
-             
-             String retData = "";
-             retData += "&firstName=" + bzDriverData.FirstName;
-             retData += "&middleName=" + bzDriverData.MiddleName;
-             retData += "&lastName=" + bzDriverData.LastName;
-             retData += "&email=" + bzDriverData.Email;
-             retData += "&password=" + bzDriverData.Password;
-             retData += "&address1=" + bzDriverData.Address1;
-             retData += "&address2=" + bzDriverData.Address2;
-             retData += "&city=" + bzDriverData.City;       //todo
-             retData += "&state=" + bzDriverData.State;     //todo
-             retData += "&zip=" + bzDriverData.Zip;         //todo
-             
-             retData += "&phone=" + bzDriverData.PhoneNumber;
-             retData += "&dob=" + bzDriverData.dob;         //todo
-             
-             retData += "&ssn=" + bzDriverData.SSN;
-             retData += "&currentlat=" + bzDriverData.currentlat;   //todo
-             retData += "&currentlong=" + bzDriverData.currentlong;     //todo
-             retData += "&deviceType=A";
-             retData += "&devicetoken=x";                                  //todo
-             retData += "&cardType=" + bzDriverData.cardData.cardType;      //todo
-             retData += "&cardProvider=" + bzDriverData.cardData.cardVendor;        //todo
-             
-             retData += "&cardBillingAddress1=" + bzDriverData.cardData.cardBillingAddress1;        //todo
-             retData += "&cardBillingAddress2=" + bzDriverData.cardData.cardBillingAddress2;        //todo
-             retData += "&cardToken=" +  bzDriverData.cardData.cardToken;                           //todo
-             
-             // Bank info
-             retData += "&BankName=" + "testbank";                  //todo
-             retData += "&AccountToken=" + "bzzbbz";                //todo
-             // Insurance Info
-             retData += "&insCompany=" + bzDriverData.driverInsuranceInfo.insuranceCompany;
-             retData += "&insPolicyNumber=" + bzDriverData.driverInsuranceInfo.insuranceNumber;
-             retData += "&insValidFromDate=" + bzDriverData.driverInsuranceInfo.insurancedateFrom;
-             retData += "&insExpDate=" + bzDriverData.driverInsuranceInfo.insurancedateOfExpiry;
-             //license Info
-             retData += "&licenseNumber=" + bzDriverData.driverLicenseInfo.licenseNumber;
-             retData += "&licenceStateIssued=" + bzDriverData.driverLicenseInfo.licensestateIssued;
-             retData += "&licenseDateIssued=" + bzDriverData.driverLicenseInfo.licensedateOfIssue;
-             retData += "&licenseExpDate=" + bzDriverData.driverLicenseInfo.licensedateofExpiry;
-             
-             //vehicle Reg Info
-             retData += "&vNumber=" + bzDriverData.driverVehRegInfo.vehicleNumberPlateNumber;
-             retData += "&vStateRegistered=" + bzDriverData.driverVehRegInfo.vehicleRegistrationState;
-             retData += "&vDateRegistered=" + bzDriverData.driverVehRegInfo.vehicledateOfRegistration;
-             retData += "&vExpiryDate=" + bzDriverData.driverVehRegInfo.vehicledateOfExpiry;
-             
-             // vehicle model info
-             retData += "&vYear=" + bzDriverData.driverVehicleInfo.vehicleYearOfManufacture;
-             retData += "&vModel=" + bzDriverData.driverVehicleInfo.vehicleModel;
-             retData += "&vMake=" + bzDriverData.driverVehicleInfo.vehicleMake;
-             retData += "&vColor=" + bzDriverData.driverVehicleInfo.vehicleColor;
-             
-             In another service call update bank details calling UpdateInitialBankInfo.php
-             add param "&driverID=<id>" returned from above first register driver service
-             retData += "&AccountType=" +"individual";
-             retData += "&BankName=" + bzDriverData.driverBankInfo.BankName;
-             retData += "&accountholdername=" + bzDriverData.driverBankInfo.BankAccountHolderName;
-             retData += "&routingnumber=" + bzDriverData.driverBankInfo.BankAccountRoutingNumber;
-             retData += "&accountnumber=" + bzDriverData.driverBankInfo.BankAccountNumber;
-             
-             
- */
-            
-            request.httpBody = postString.data(using: .utf8)
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                    print("error=\(error)")
-                    return
-                }
-                
-                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // checking http errors
-                    print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                    print("response = \(response)")
-                }
-                
-                let responseString = String(data: data, encoding: .utf8)
-                print("responseString = \(responseString)")
-            }
-            task.resume()
-            
-            
-            
-            /************AAAAA**********/
-            
-         /*
-         
-         var request = NSMutableURLRequest(URL: NSURL(string: "http://bzride.com/bzride/RegisterDriver.php")!)
-         var session = NSURLSession.sharedSession()
-         request.HTTPMethod = "POST"
-         
-         var params = ["FirstName":tbFstName.text!, "LastName":tbLastName.text!,"email":tbemail.text!, "Password":tbPW.text!,"Address1":tbAddress1.text!, "Address2":tbAddress2.text!, "Address1":tbPh.text!] as Dictionary<String, String>
-         
-         var err: NSError?
-         request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
-         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-         request.addValue("application/json", forHTTPHeaderField: "Accept")
-         
-         var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-         printResponse;:  (response)")
-         var strData = NSString(data: data!, encoding: NSUTF8StringEncoding)
-         print("Body: \(strData)")
-         var err: NSError?
-         var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as? NSDictionary
-         
-         // Did the JSONObjectWithData constructor return an error? If so, log the error to the console
-         if(err != nil) {
-         printrr!.localizedDescription;)
-         let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
-         print("Error could not parse JSON: '\(jsonStr)'")
-         }
-         else {
-         // The JSONObjectWithData constructor didn't return an error. But, we should still
-         // check and make sure that json has a value using optional binding.
-         if let parseJSON = json {
-         // Okay, the parsedJSON is here, let's get the value for 'success' out of it
-         var success = parseJSON["status"] as? String
-         //println("Succes: \(success)")
-         
-         if success == "T"{
-         // println("Succes")
-         let myAlert = UIAlertView()
-         //myAlert.title = "Title"
-         myAlert.message = "Successfully Registered"
-         myAlert.addButtonWithTitle("Ok")
-         myAlert.delegate = self
-         myAlert.show()
-         }
-         else{
-         let myAlert = UIAlertView()
-         //myAlert.title = "Title"
-         myAlert.message = "Please Try Again"
-         myAlert.addButtonWithTitle("Ok")
-         myAlert.delegate = self
-         myAlert.show()
-         }
-         
-         
-         }
-         else {
-         // Woa, okay the json object was nil, something went worng. Maybe the server isn't running?
-         let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
-         print("Error could not parse JSON: \(jsonStr)")
-         }
-         }
-         })
-         
-         task.resume()
-         // return true
-         
-         
-         // let myAlert = UIAlertView()
-         //myAlert.title = "Title"
-         //myAlert.message = "Successfully Registered"
-         //myAlert.addButtonWithTitle("Ok")
-         //myAlert.delegate = self
-         //myAlert.show()
-            
-            */
-         }
-         
-         }
-        
-        
+            return true
+        }
     }
     
-    func Validation() {
+    
+    
+    // validate password mismatch
+    func PasswordSame(password: String , confirmpassword : String) -> Bool {
+        if password == confirmpassword{
+            return true
+        }
+        else{
+            return false
+        }
+    }
+
+    
+    
+    @IBAction func declineTappedAction(_ sender: AnyObject) {
+        agreementView.isHidden=true
+        ScrlViewDriverReg1.isHidden=false
+        ShowRegistrationView(self)
+    }
+    
+    @IBAction func acceptTappedAction(_ sender: AnyObject) {
+       
+        SVProgressHUD.show(withStatus: "Registering Driver")
+        
+        var request = URLRequest(url: URL(string: "http://bzride.com/bzride/RegisterDriver.php")!)
+        request.httpMethod = "POST"
+        
+        let Registration="firstName="+tbFstName.text!+"&middleName="+tbMidName.text!+"&lastName="+tbLastName.text!+""
+        let Registration1=Registration+"&email="+tbemail.text!+"&password="+tbPW.text!+"&address1="+tbAddress1.text!+""
+        let Registration2=Registration1+"&address2="+tbAddress2.text!+"&city="+tbcity.text!+"&state="+tbstate.text!+"&zip="+tbzip.text!+"&phone="+tbPh.text!
+        let Registration3=Registration2+"&currentlat=aa&currentlong=bb&deviceType=a&devicetoken=1&cardType=d&cardProvider=m&cardBillingAddress1=mattathil&cardBillingAddress2=chotani&cardBillingCity=kochi&cardBillingState=asd&cardBillingZip=9999&cardToken=12&BankName=sss&AccountToken=696"
+        
+         let vehInsu="&insCompany="+tbInsuranceCompany.text!+"&insPolicyNumber="+tbInsuranceNumber.text!+"&insValidFromDate="+tbDatefrom.text!+"&insExpDate="+tbDateofexpiryInsu.text!
+        
+        let vehLIC="&licenseNumber="+tbLiscenseNumber.text!+"&licenceStateIssued="+tbStateissued.text!+"&licenseDateIssued="+tbDateofIssue.text!+"&licenseExpDate="+tbDateofexpiryLis.text!
+        
+        let vehDetails1="&vNumber="+tbNumberPlateNumber.text!+"&vDateRegistered="+tbDateofRegistrtation.text!+"&vStateRegistered="+tbRegistrationState.text!
+        let vehDetails2 = vehDetails1+"&vExpiryDate="+tbDateofexpiryVehicle.text!
+        
+        let vehDetails="&vModel="+tbVehicleModel.text!+"&vMake="+tbVehicleMake.text!+"&vColor="+tbVehicleColor.text!+"&vYear="+tbYearofManufacture.text!+"&deviceId=i"
+        
+        let postString=Registration3+vehInsu+vehLIC+vehDetails2+vehDetails
+       
+        
+       // print("postString is ==============\(postString)")
+        
+        
+        
+        request.httpBody = postString.data(using: .utf8)
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {                                                 // check for fundamental networking error
+                print("error=\(error)")
+                return
+            }
+            
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // checking http errors
+                print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                print("response = \(response)")
+            }
+            
+            let responseString = String(data: data, encoding: .utf8)
+            print("responseString = \(responseString)")
+            
+            let responseData = responseString?.data(using: .utf8)
+            do{
+                let dict:Dictionary<String,String>= try JSONSerialization.jsonObject(with: responseData!, options:[]) as!Dictionary	<String,String>
+                let status = dict["status"]
+
+               // let id = dict["Id"]
+                
+                if(status == "S")
+                {
+                    SVProgressHUD.dismiss()
+                    let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newDriveBankView") as! driverbankTableViewController
+                    self.navigationController?.pushViewController(secondViewController, animated: true)
+                    print("Successssss............")
+                    
+                }
+                else{
+                    SVProgressHUD.dismiss()
+                     let myAlert = UIAlertView()
+                     myAlert.message = "User with given phone already registered. Registration failed"
+                     myAlert.addButton(withTitle: "Ok")
+                     myAlert.delegate = self
+                     myAlert.show()
+
+                }
+                
+               // print("status response = \(status)")
+                
+            }
+            catch let error as NSError{
+            print("error = \(error)")
+            }
+            
+        }
+        task.resume()
+}
+    func displayAlert(messageToDisplay:String){
+        let alertController = UIAlertController(title:"",message:messageToDisplay,preferredStyle:.alert)
+        
+        let OkAction = UIAlertAction(title:"OK", style:.default)
+        alertController.addAction(OkAction)
+        self.present(alertController,animated:true,completion:nil)
+    }
+    func convertStringToDictionary(text: String) -> [String:AnyObject]? {
+        if let data = text.data(using: String.Encoding.utf8) {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject]
+            } catch let error as NSError {
+                print(error)
+            }
+        }
+        return nil
+    }
+
+    @IBAction func SaveDriver(sender: AnyObject) {
+        agreementView.isHidden=true
+        var checkValue = 0
+       if tbFstName.text == "" || tbMidName.text == "" || tbLastName.text == ""  || tbemail.text == "" || tbPW.text == "" || tbPWConfrm.text == "" || tbAddress1.text == "" || tbAddress2.text == "" || tbcity.text == "" || tbstate.text == "" || tbzip.text == "" || tbPh.text == ""
+        {
+            checkValue = 1
+            tbFstName.becomeFirstResponder()
+            displayAlert(messageToDisplay: "Please fill Registrations Details")
+            ShowRegistrationView(self)
+        }
+       else if tbNumberPlateNumber.text == "" || tbRegistrationState.text == ""  || tbDateofRegistrtation.text == "" || tbDateofexpiryVehicle.text == ""  || 		tbYearofManufacture.text == "" || tbVehicleModel.text == ""  || tbVehicleMake.text == "" || tbVehicleColor.text == ""
+       {
+        checkValue = 1
+        tbNumberPlateNumber.becomeFirstResponder()
+        displayAlert(messageToDisplay: "Please fill Vehicle Details")
+        ShowVehicleDetails(self)
+        }
+        
+       else if tbLiscenseNumber.text == "" || tbStateissued.text == ""  || tbDateofIssue.text == "" || tbDateofexpiryLis.text == ""  {
+        checkValue = 1
+        tbLiscenseNumber.becomeFirstResponder()
+        displayAlert(messageToDisplay: "Please fill Liscense Details")
+        ShowLiscenseDetails(self)
+        
+        }
+        
+        else if tbInsuranceCompany.text == "" || tbInsuranceNumber.text == ""  || tbDatefrom.text == "" || tbDateofexpiryInsu.text == ""  {
+            checkValue = 1
+            tbInsuranceCompany.becomeFirstResponder()
+            displayAlert(messageToDisplay: "Please fill Insurance Details")
+            ShowInsuranceDetails(self)
+            
+        }
+        else
+       {
+        
+        let provideEmailAddress = tbemail.text
+        let isEmailValid = isEmailAddress(emailAddressString:provideEmailAddress!)
+        if isEmailValid != true {
+            checkValue = 1
+            tbemail.becomeFirstResponder()
+            displayAlert(messageToDisplay: "Invalid Mail ID")
+            ShowRegistrationView(self)
+        }
+        
+        let providePwordchk = tbPW.text
+        let provideConfirmPword = tbPWConfrm.text
+        let isConfirmPwordValid = PasswordSame(password:providePwordchk!,confirmpassword:provideConfirmPword!)
+        if isConfirmPwordValid != true{
+            checkValue = 1
+            tbPW.becomeFirstResponder()
+            displayAlert(messageToDisplay: "Password Mismatch")
+            ShowRegistrationView(self)
+        }
+
+        let provideMobile = tbPh.text
+        let isMobValid = validateMobile(value:provideMobile!)
+        if isMobValid != true{
+            checkValue = 1
+            tbPh.becomeFirstResponder()
+            displayAlert(messageToDisplay: "Incorrect Mobile No")
+            ShowRegistrationView(self)
+        }
+        
+        let provideZip = tbzip.text
+        let isZipValid = validateZip(value:provideZip!)
+        if isZipValid != true{
+            checkValue = 1
+            tbzip.becomeFirstResponder()
+            displayAlert(messageToDisplay: "Incorrect Zip Code")
+            ShowRegistrationView(self)
+            }
+        
+         else{
+            
+            if checkValue == 0
+            {
+            agreementView.isHidden=false
+            ScrlViewDriverReg1.isHidden=true
+            ViewRegDetails.isHidden=true
+            ViewVehicleDetails.isHidden=true
+            ViewLiscenceDetails.isHidden=true
+            ViewInsuranceDetails.isHidden=true
+            datePickerView.isHidden=true
+            btnRegister.isHidden=true
+            btnVehicle.isHidden=true
+            btnLiscence.isHidden=true
+            btnInsurance.isHidden=true
+            btnSave.isHidden=true
+            }
+            else{
+                ShowRegistrationView(self)
+            }
+           }
+         
+         }
+    }
+    
+    }
+    
+    /*func Validation() {
         
         let myAlert = UIAlertView()
         //myAlert.title = "Title"
@@ -414,6 +647,6 @@ class DriverRegViewController: UIViewController {
         myAlert.addButton(withTitle: "Ok")
         myAlert.delegate = self
         myAlert.show()
-    }
+    }*/
 
-}
+//}K

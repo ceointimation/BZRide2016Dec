@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func fineCheck(_ sender: AnyObject) {
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newDriveBankView") as! driverbankTableViewController
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+    }
 
 }
 
