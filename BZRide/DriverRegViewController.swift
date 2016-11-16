@@ -11,7 +11,7 @@ import UIKit
 class DriverRegViewController: UIViewController,UITextFieldDelegate{
     
     var textId = 1
-    
+  
     @IBOutlet var ViewRegDetails : UIView!
     @IBOutlet var ViewVehicleDetails : UIView!
     @IBOutlet var ViewLiscenceDetails : UIView!
@@ -103,7 +103,7 @@ class DriverRegViewController: UIViewController,UITextFieldDelegate{
     
     func tapBlurButton(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
-        print("Please Help!")
+        //print("Please Help!")
     }
     
     // text field dob editing
@@ -442,7 +442,7 @@ class DriverRegViewController: UIViewController,UITextFieldDelegate{
         ScrlViewDriverReg1.isHidden=false
         ShowRegistrationView(self)
     }
-    
+
     @IBAction func acceptTappedAction(_ sender: AnyObject) {
        
         SVProgressHUD.show(withStatus: "Registering Driver")
@@ -484,39 +484,43 @@ class DriverRegViewController: UIViewController,UITextFieldDelegate{
             }
             
             let responseString = String(data: data, encoding: .utf8)
-            print("responseString = \(responseString)")
+           // print("responseString = \(responseString)")
             
             let responseData = responseString?.data(using: .utf8)
             do{
                 let dict:Dictionary<String,String>= try JSONSerialization.jsonObject(with: responseData!, options:[]) as!Dictionary	<String,String>
                 let status = dict["status"]
-
-               // let id = dict["Id"]
-                
-                if(status == "S")
+                let id = dict["Id"]
+             
+               if(status == "S")
                 {
                     SVProgressHUD.dismiss()
                     let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "newDriveBankView") as! driverbankTableViewController
-                    self.navigationController?.pushViewController(secondViewController, animated: true)
-                    print("Successssss............")
-                    
+                        secondViewController.myStringValue = id
+                        self.navigationController?.pushViewController(secondViewController, animated: true)
                 }
-                else{
+                else if(status == "F"){
                     SVProgressHUD.dismiss()
-                     let myAlert = UIAlertView()
-                     myAlert.message = "User with given phone already registered. Registration failed"
+                    let myAlert = UIAlertView()
+                     myAlert.message = "User with given phone already registered"
                      myAlert.addButton(withTitle: "Ok")
                      myAlert.delegate = self
                      myAlert.show()
-
+               
+                    }
+               else{
+                SVProgressHUD.dismiss()
+                let myAlert = UIAlertView()
+                myAlert.message = "Network Error"
+                myAlert.addButton(withTitle: "Ok")
+                myAlert.delegate = self
+                myAlert.show()
                 }
                 
-               // print("status response = \(status)")
-                
-            }
-            catch let error as NSError{
-            print("error = \(error)")
-            }
+             }
+             catch let error as NSError{
+             print("error = \(error)")
+             }
             
         }
         task.resume()
@@ -540,7 +544,7 @@ class DriverRegViewController: UIViewController,UITextFieldDelegate{
     }
 
     @IBAction func SaveDriver(sender: AnyObject) {
-        agreementView.isHidden=true
+       agreementView.isHidden=true
         var checkValue = 0
        if tbFstName.text == "" || tbMidName.text == "" || tbLastName.text == ""  || tbemail.text == "" || tbPW.text == "" || tbPWConfrm.text == "" || tbAddress1.text == "" || tbAddress2.text == "" || tbcity.text == "" || tbstate.text == "" || tbzip.text == "" || tbPh.text == ""
         {
