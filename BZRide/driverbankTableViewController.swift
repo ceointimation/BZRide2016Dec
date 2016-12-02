@@ -50,7 +50,6 @@ class driverbankTableViewController: UITableViewController {
 
     
     @IBAction func doneBankTapped(_ sender: AnyObject) {
-        print("The value of myStringValue is: \(myStringValue!)")
         if bankName.text == "" || accNumber.text == "" || accHolderName.text == ""  || routeNumber.text == ""
         {
            displayAlert(messageToDisplay: "Please fill Bank Details")
@@ -102,39 +101,29 @@ class driverbankTableViewController: UITableViewController {
                     do{
                         let dict:Dictionary<String,String>= try JSONSerialization.jsonObject(with: responseData!, options:[]) as!Dictionary	<String,String>
                         let status = dict["status"]
+                        let info = dict["info"]
                         
                         if(status == "S")
                         {
                             SVProgressHUD.dismiss()
-                            let myAlert = UIAlertView()
-                            myAlert.message = "Bank Registered Successfully"
-                            myAlert.addButton(withTitle: "Ok")
-                            myAlert.delegate = self
-                            myAlert.show()
+                           /* let alertController = UIAlertController(title:"",message:info,preferredStyle:.alert)
+                            let OkAction = UIAlertAction(title:"OK", style:.default)
+                            alertController.addAction(OkAction)
+                            self.present(alertController,animated:true,completion:nil)*/
+                            
                             let firstViewController = self.storyboard?.instantiateViewController(withIdentifier: "firstView") as! ViewController
                             self.navigationController?.pushViewController(firstViewController, animated: true)
                             
 
                         }
-                         else if(status == "F")
+                         else
                         {
-                            let myAlert = UIAlertView()
-                            myAlert.message = "Invalid Routing Number"
-                            myAlert.addButton(withTitle: "Ok")
-                            myAlert.delegate = self
-                            myAlert.show()
+                            SVProgressHUD.dismiss()
+                           let alertController = UIAlertController(title:"",message:info,preferredStyle:.alert)
+                           let OkAction = UIAlertAction(title:"OK", style:.default)
+                            alertController.addAction(OkAction)
+                            self.present(alertController,animated:true,completion:nil)
                         }
-                        else{
-                           // SVProgressHUD.dismiss()
-                            let myAlert = UIAlertView()
-                            myAlert.message = "Bank Registration Failed"
-                            myAlert.addButton(withTitle: "Ok")
-                            myAlert.delegate = self
-                            myAlert.show()
-                        }
-                        
-                        // print("status response = \(status)")
-                        
                     }
                     catch let error as NSError{
                         print("error = \(error)")
@@ -142,9 +131,6 @@ class driverbankTableViewController: UITableViewController {
                     
                 }
                 task.resume()
-
-                
-                
             }
         }
 

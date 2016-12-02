@@ -12,16 +12,20 @@ class DriverRegViewController: UIViewController,UITextFieldDelegate{
     
     var textId = 1
   
+    @IBOutlet var webViewHtml: UIWebView!
+   
+   
     @IBOutlet var ViewRegDetails : UIView!
     @IBOutlet var ViewVehicleDetails : UIView!
     @IBOutlet var ViewLiscenceDetails : UIView!
     @IBOutlet var ViewInsuranceDetails : UIView!
     @IBOutlet var datePickerView: UIView!
     @IBOutlet var agreementView: UIView!
-    @IBOutlet var agreementScroll: UIScrollView!
-    @IBOutlet var termAgreement: UITextView!
-    @IBOutlet var declineTapped: UIButton!
-    @IBOutlet var acceptTapped: UIButton!
+   // @IBOutlet var agreementScroll: UIScrollView!
+    //@IBOutlet var termAgreement: UITextView!
+   // @IBOutlet var declineTapped: UIButton!
+   // @IBOutlet var acceptTapped: UIButton!
+   // @IBOutlet var acceptButton: UIButton!
     
     @IBOutlet var dateView: UIDatePicker!
     @IBOutlet var doneBtn: UIButton!
@@ -84,6 +88,11 @@ class DriverRegViewController: UIViewController,UITextFieldDelegate{
         agreementView.isHidden=true
         ShowRegistrationView(self)
         
+          webViewHtml.loadRequest(URLRequest(url: URL(fileURLWithPath: Bundle.main.path(forResource: "myHtml", ofType: "html")!)))
+       
+        let backButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(DriverRegViewController.goBack))
+        navigationItem.leftBarButtonItem = backButton
+        
         let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(self.tapBlurButton(_:)))
         let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(self.tapBlurButton(_:)))
         
@@ -100,23 +109,40 @@ class DriverRegViewController: UIViewController,UITextFieldDelegate{
         self.datePickerView.addGestureRecognizer(tapGesture5)
         self.agreementView.addGestureRecognizer(tapGesture6)
     }
+    func goBack(){
+        dismiss(animated: true, completion: nil)
+    }
     
     func tapBlurButton(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
         //print("Please Help!")
     }
     
-    // text field dob editing
-    /*func textFieldDidBeginEditing(_ tbdob: UITextField) {
-        ViewRegDetails.isHidden=true
-        datePickerView.isHidden=false
-        btnRegister.isHidden=true
-        btnVehicle.isHidden=true
-        btnLiscence.isHidden=true
-        btnInsurance.isHidden=true
-        btnSave.isHidden=true
-        textId = 0
-    }*/
+
+    
+    func webViewDidFinishLoad(_ webView : UIWebView)
+    {
+        let button = UIButton()
+        let a=webViewHtml.scrollView.contentSize.height
+        button.frame = CGRect(x: 25, y: a-50, width: 111, height: 36)  //set frame
+        button.backgroundColor =  UIColor.blue
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.setTitle("ACCEPT", for: .normal)
+        button.tag = 1
+        button.addTarget(self, action: #selector(acceptButtonTapped), for: .touchUpInside)
+        self.webViewHtml.scrollView.addSubview(button)
+        
+        let btn = UIButton()
+        let b = webViewHtml.scrollView.contentSize.height
+        btn.frame = CGRect(x: 240, y: b-50, width: 111, height: 36)  //set frame
+        btn.setTitle("DECLINE", for: .normal)  //set button title
+        btn.setTitleColor(UIColor.white, for: .normal) //set button title color
+        btn.backgroundColor = UIColor.blue
+        btn.tag = 1 // set button tag
+        btn.addTarget(self, action: #selector(declineTappedAction), for: .touchUpInside) //add button action
+        self.webViewHtml.scrollView.addSubview(btn)
+    }
+
     
     @IBAction func regDateView(_ sender: AnyObject) {
         ViewVehicleDetails.isHidden=true
@@ -443,8 +469,8 @@ class DriverRegViewController: UIViewController,UITextFieldDelegate{
         ShowRegistrationView(self)
     }
 
-    @IBAction func acceptTappedAction(_ sender: AnyObject) {
-       
+    @IBAction func acceptButtonTapped(_ sender: AnyObject) {
+        
         SVProgressHUD.show(withStatus: "Registering Driver")
         
         var request = URLRequest(url: URL(string: "http://bzride.com/bzride/RegisterDriver.php")!)
@@ -491,6 +517,7 @@ class DriverRegViewController: UIViewController,UITextFieldDelegate{
                 let dict:Dictionary<String,String>= try JSONSerialization.jsonObject(with: responseData!, options:[]) as!Dictionary	<String,String>
                 let status = dict["status"]
                 let id = dict["Id"]
+                let info = dict["info"]
              
                if(status == "S")
                 {
@@ -499,24 +526,13 @@ class DriverRegViewController: UIViewController,UITextFieldDelegate{
                         secondViewController.myStringValue = id
                         self.navigationController?.pushViewController(secondViewController, animated: true)
                 }
-                else if(status == "F"){
-                    SVProgressHUD.dismiss()
-                    let myAlert = UIAlertView()
-                     myAlert.message = "User with given phone already registered"
-                     myAlert.addButton(withTitle: "Ok")
-                     myAlert.delegate = self
-                     myAlert.show()
-               
-                    }
-               else{
+               else {
                 SVProgressHUD.dismiss()
-                let myAlert = UIAlertView()
-                myAlert.message = "Network Error"
-                myAlert.addButton(withTitle: "Ok")
-                myAlert.delegate = self
-                myAlert.show()
+                let alertController = UIAlertController(title:"",message:info,preferredStyle:.alert)
+                let OkAction = UIAlertAction(title:"OK", style:.default)
+                alertController.addAction(OkAction)
+                self.present(alertController,animated:true,completion:nil)
                 }
-                
              }
              catch let error as NSError{
              print("error = \(error)")
@@ -632,6 +648,10 @@ class DriverRegViewController: UIViewController,UITextFieldDelegate{
             btnLiscence.isHidden=true
             btnInsurance.isHidden=true
             btnSave.isHidden=true
+                
+               /* let thirdViewController = self.storyboard?.instantiateViewController(withIdentifier: "newAgreementView") as! agreementViewController
+                 self.navigationController?.pushViewController(thirdViewController, animated: true)*/
+                
             }
             else{
                 ShowRegistrationView(self)

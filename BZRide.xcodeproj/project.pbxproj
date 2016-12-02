@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3419FA42390BCAA470735E90 /* Pods_BZRideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82F36F611EBC597C58029A6 /* Pods_BZRideTests.framework */; };
 		710457021D94FABC006DF6AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710457011D94FABC006DF6AC /* AppDelegate.swift */; };
 		710457041D94FABC006DF6AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710457031D94FABC006DF6AC /* ViewController.swift */; };
 		710457071D94FABC006DF6AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 710457051D94FABC006DF6AC /* Main.storyboard */; };
@@ -16,14 +17,19 @@
 		7104571A1D94FABC006DF6AC /* BZRideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710457191D94FABC006DF6AC /* BZRideTests.swift */; };
 		710457251D94FABC006DF6AC /* BZRideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710457241D94FABC006DF6AC /* BZRideUITests.swift */; };
 		710457331D94FF67006DF6AC /* DriverRegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710457321D94FF67006DF6AC /* DriverRegViewController.swift */; };
+		71275BA61DDCACF300090053 /* riderRegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71275BA51DDCACF300090053 /* riderRegisterTableViewController.swift */; };
 		715ADF721DD097CE00836A53 /* driverbankTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ADF711DD097CE00836A53 /* driverbankTableViewController.swift */; };
-		715ADF971DD0B3C800836A53 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 715ADF8E1DD0B3C800836A53 /* SVIndefiniteAnimatedView.m */; };
-		715ADF981DD0B3C800836A53 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 715ADF901DD0B3C800836A53 /* SVProgressAnimatedView.m */; };
-		715ADF991DD0B3C800836A53 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 715ADF921DD0B3C800836A53 /* SVProgressHUD.bundle */; };
-		715ADF9A1DD0B3C800836A53 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 715ADF941DD0B3C800836A53 /* SVProgressHUD.m */; };
-		715ADF9B1DD0B3C800836A53 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 715ADF961DD0B3C800836A53 /* SVRadialGradientLayer.m */; };
-		716A2FA71DC8622A00997481 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 716A2FA61DC8622A00997481 /* 1.png */; };
-		716A2FAC1DC8DD6E00997481 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 716A2FAB1DC8DD6E00997481 /* background.jpg */; };
+		7171E03D1DE563A000FE4EAA /* loginDriverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7171E03C1DE563A000FE4EAA /* loginDriverTableViewController.swift */; };
+		7809A9001DF0583000DD41A0 /* RiderCreditCardDetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7809A8FF1DF0583000DD41A0 /* RiderCreditCardDetTableViewController.swift */; };
+		78F7FCB11DE6DBE700D8D92E /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F7FCA81DE6DBE700D8D92E /* SVIndefiniteAnimatedView.m */; };
+		78F7FCB21DE6DBE700D8D92E /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F7FCAA1DE6DBE700D8D92E /* SVProgressAnimatedView.m */; };
+		78F7FCB31DE6DBE700D8D92E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 78F7FCAC1DE6DBE700D8D92E /* SVProgressHUD.bundle */; };
+		78F7FCB41DE6DBE700D8D92E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F7FCAE1DE6DBE700D8D92E /* SVProgressHUD.m */; };
+		78F7FCB51DE6DBE700D8D92E /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F7FCB01DE6DBE700D8D92E /* SVRadialGradientLayer.m */; };
+		78F7FCB71DE6E20300D8D92E /* myHtml.html in Resources */ = {isa = PBXBuildFile; fileRef = 78F7FCB61DE6E20300D8D92E /* myHtml.html */; };
+		78F7FCB91DE6EF2E00D8D92E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 78F7FCB81DE6EF2E00D8D92E /* 1.png */; };
+		7F03A0113F675FFE46AAEB81 /* Pods_BZRideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C57801551CC53F0A5D3EBEE /* Pods_BZRideUITests.framework */; };
+		D38BDEE32004B67E01538AC5 /* Pods_BZRide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485B7383D4C6A507B7F186FA /* Pods_BZRide.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BAA33901976FD9E2CAE86EB /* Pods-BZRideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BZRideTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BZRideTests/Pods-BZRideTests.release.xcconfig"; sourceTree = "<group>"; };
+		24181805EFC7200290543F13 /* Pods-BZRide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BZRide.release.xcconfig"; path = "Pods/Target Support Files/Pods-BZRide/Pods-BZRide.release.xcconfig"; sourceTree = "<group>"; };
+		2CE5154976A6623C9CCCD18F /* Pods-BZRideUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BZRideUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BZRideUITests/Pods-BZRideUITests.release.xcconfig"; sourceTree = "<group>"; };
+		485B7383D4C6A507B7F186FA /* Pods_BZRide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BZRide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C57801551CC53F0A5D3EBEE /* Pods_BZRideUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BZRideUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		710456FE1D94FABC006DF6AC /* BZRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BZRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		710457011D94FABC006DF6AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		710457031D94FABC006DF6AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,20 +70,27 @@
 		710457241D94FABC006DF6AC /* BZRideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BZRideUITests.swift; sourceTree = "<group>"; };
 		710457261D94FABC006DF6AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		710457321D94FF67006DF6AC /* DriverRegViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverRegViewController.swift; sourceTree = "<group>"; };
+		71275BA51DDCACF300090053 /* riderRegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = riderRegisterTableViewController.swift; sourceTree = "<group>"; };
 		715ADF711DD097CE00836A53 /* driverbankTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = driverbankTableViewController.swift; sourceTree = "<group>"; };
 		715ADF8C1DD0B3C700836A53 /* BZRide-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BZRide-Bridging-Header.h"; sourceTree = "<group>"; };
-		715ADF8D1DD0B3C800836A53 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVIndefiniteAnimatedView.h"; sourceTree = "<group>"; };
-		715ADF8E1DD0B3C800836A53 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVIndefiniteAnimatedView.m"; sourceTree = "<group>"; };
-		715ADF8F1DD0B3C800836A53 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVProgressAnimatedView.h; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVProgressAnimatedView.h"; sourceTree = "<group>"; };
-		715ADF901DD0B3C800836A53 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVProgressAnimatedView.m; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVProgressAnimatedView.m"; sourceTree = "<group>"; };
-		715ADF911DD0B3C800836A53 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SVProgressHUD-Prefix.pch"; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
-		715ADF921DD0B3C800836A53 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVProgressHUD.bundle"; sourceTree = "<group>"; };
-		715ADF931DD0B3C800836A53 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVProgressHUD.h"; sourceTree = "<group>"; };
-		715ADF941DD0B3C800836A53 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVProgressHUD.m"; sourceTree = "<group>"; };
-		715ADF951DD0B3C800836A53 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVRadialGradientLayer.h"; sourceTree = "<group>"; };
-		715ADF961DD0B3C800836A53 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVRadialGradientLayer.m; path = "../../../../../Downloads/SVProgressHUD-master/SVProgressHUD/SVRadialGradientLayer.m"; sourceTree = "<group>"; };
-		716A2FA61DC8622A00997481 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = ../../../../../Downloads/1.png; sourceTree = "<group>"; };
-		716A2FAB1DC8DD6E00997481 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = ../../../../../Downloads/background.jpg; sourceTree = "<group>"; };
+		7171E03C1DE563A000FE4EAA /* loginDriverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginDriverTableViewController.swift; sourceTree = "<group>"; };
+		7809A8FF1DF0583000DD41A0 /* RiderCreditCardDetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderCreditCardDetTableViewController.swift; sourceTree = "<group>"; };
+		78F7FCA71DE6DBE700D8D92E /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		78F7FCA81DE6DBE700D8D92E /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		78F7FCA91DE6DBE700D8D92E /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		78F7FCAA1DE6DBE700D8D92E /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		78F7FCAB1DE6DBE700D8D92E /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		78F7FCAC1DE6DBE700D8D92E /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		78F7FCAD1DE6DBE700D8D92E /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		78F7FCAE1DE6DBE700D8D92E /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		78F7FCAF1DE6DBE700D8D92E /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		78F7FCB01DE6DBE700D8D92E /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		78F7FCB61DE6E20300D8D92E /* myHtml.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = myHtml.html; sourceTree = "<group>"; };
+		78F7FCB81DE6EF2E00D8D92E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		906E6C5FF4C33CB3F1808CA0 /* Pods-BZRide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BZRide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BZRide/Pods-BZRide.debug.xcconfig"; sourceTree = "<group>"; };
+		968E34C79D5CCFF83A96F1C3 /* Pods-BZRideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BZRideTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BZRideTests/Pods-BZRideTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D82F36F611EBC597C58029A6 /* Pods_BZRideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BZRideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDCD65A711CD3A501B066651 /* Pods-BZRideUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BZRideUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BZRideUITests/Pods-BZRideUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D38BDEE32004B67E01538AC5 /* Pods_BZRide.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3419FA42390BCAA470735E90 /* Pods_BZRideTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F03A0113F675FFE46AAEB81 /* Pods_BZRideUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +128,8 @@
 				710457181D94FABC006DF6AC /* BZRideTests */,
 				710457231D94FABC006DF6AC /* BZRideUITests */,
 				710456FF1D94FABC006DF6AC /* Products */,
+				E5BF153E2191BC586A1AB950 /* Pods */,
+				748064C0F3EECEC1695CD123 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,11 +147,15 @@
 			isa = PBXGroup;
 			children = (
 				715ADF8B1DD0AE2E00836A53 /* SVProgressHUD */,
-				710457011D94FABC006DF6AC /* AppDelegate.swift */,
 				716A2FA51DC8620800997481 /* Images */,
+				710457011D94FABC006DF6AC /* AppDelegate.swift */,
 				710457031D94FABC006DF6AC /* ViewController.swift */,
 				715ADF711DD097CE00836A53 /* driverbankTableViewController.swift */,
+				78F7FCB61DE6E20300D8D92E /* myHtml.html */,
+				71275BA51DDCACF300090053 /* riderRegisterTableViewController.swift */,
 				710457051D94FABC006DF6AC /* Main.storyboard */,
+				7809A8FF1DF0583000DD41A0 /* RiderCreditCardDetTableViewController.swift */,
+				7171E03C1DE563A000FE4EAA /* loginDriverTableViewController.swift */,
 				710457321D94FF67006DF6AC /* DriverRegViewController.swift */,
 				7104570B1D94FABC006DF6AC /* Assets.xcassets */,
 				7104570D1D94FABC006DF6AC /* LaunchScreen.storyboard */,
@@ -159,16 +186,16 @@
 		715ADF8B1DD0AE2E00836A53 /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				715ADF8D1DD0B3C800836A53 /* SVIndefiniteAnimatedView.h */,
-				715ADF8E1DD0B3C800836A53 /* SVIndefiniteAnimatedView.m */,
-				715ADF8F1DD0B3C800836A53 /* SVProgressAnimatedView.h */,
-				715ADF901DD0B3C800836A53 /* SVProgressAnimatedView.m */,
-				715ADF911DD0B3C800836A53 /* SVProgressHUD-Prefix.pch */,
-				715ADF921DD0B3C800836A53 /* SVProgressHUD.bundle */,
-				715ADF931DD0B3C800836A53 /* SVProgressHUD.h */,
-				715ADF941DD0B3C800836A53 /* SVProgressHUD.m */,
-				715ADF951DD0B3C800836A53 /* SVRadialGradientLayer.h */,
-				715ADF961DD0B3C800836A53 /* SVRadialGradientLayer.m */,
+				78F7FCA71DE6DBE700D8D92E /* SVIndefiniteAnimatedView.h */,
+				78F7FCA81DE6DBE700D8D92E /* SVIndefiniteAnimatedView.m */,
+				78F7FCA91DE6DBE700D8D92E /* SVProgressAnimatedView.h */,
+				78F7FCAA1DE6DBE700D8D92E /* SVProgressAnimatedView.m */,
+				78F7FCAB1DE6DBE700D8D92E /* SVProgressHUD-Prefix.pch */,
+				78F7FCAC1DE6DBE700D8D92E /* SVProgressHUD.bundle */,
+				78F7FCAD1DE6DBE700D8D92E /* SVProgressHUD.h */,
+				78F7FCAE1DE6DBE700D8D92E /* SVProgressHUD.m */,
+				78F7FCAF1DE6DBE700D8D92E /* SVRadialGradientLayer.h */,
+				78F7FCB01DE6DBE700D8D92E /* SVRadialGradientLayer.m */,
 				715ADF8C1DD0B3C700836A53 /* BZRide-Bridging-Header.h */,
 			);
 			name = SVProgressHUD;
@@ -177,10 +204,32 @@
 		716A2FA51DC8620800997481 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				716A2FA61DC8622A00997481 /* 1.png */,
-				716A2FAB1DC8DD6E00997481 /* background.jpg */,
+				78F7FCB81DE6EF2E00D8D92E /* 1.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		748064C0F3EECEC1695CD123 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				485B7383D4C6A507B7F186FA /* Pods_BZRide.framework */,
+				D82F36F611EBC597C58029A6 /* Pods_BZRideTests.framework */,
+				6C57801551CC53F0A5D3EBEE /* Pods_BZRideUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5BF153E2191BC586A1AB950 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				906E6C5FF4C33CB3F1808CA0 /* Pods-BZRide.debug.xcconfig */,
+				24181805EFC7200290543F13 /* Pods-BZRide.release.xcconfig */,
+				968E34C79D5CCFF83A96F1C3 /* Pods-BZRideTests.debug.xcconfig */,
+				1BAA33901976FD9E2CAE86EB /* Pods-BZRideTests.release.xcconfig */,
+				DDCD65A711CD3A501B066651 /* Pods-BZRideUITests.debug.xcconfig */,
+				2CE5154976A6623C9CCCD18F /* Pods-BZRideUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,9 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 710457291D94FABC006DF6AC /* Build configuration list for PBXNativeTarget "BZRide" */;
 			buildPhases = (
+				446AB12590319F17A62A3E67 /* [CP] Check Pods Manifest.lock */,
 				710456FA1D94FABC006DF6AC /* Sources */,
 				710456FB1D94FABC006DF6AC /* Frameworks */,
 				710456FC1D94FABC006DF6AC /* Resources */,
+				49F1931775B193A907D5BBCB /* [CP] Embed Pods Frameworks */,
+				8C4B6C1D366353DE44841E3F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,9 +259,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7104572C1D94FABC006DF6AC /* Build configuration list for PBXNativeTarget "BZRideTests" */;
 			buildPhases = (
+				085276B7E7D7A73F41A6BF78 /* [CP] Check Pods Manifest.lock */,
 				710457111D94FABC006DF6AC /* Sources */,
 				710457121D94FABC006DF6AC /* Frameworks */,
 				710457131D94FABC006DF6AC /* Resources */,
+				BA6EE233179855F0F733973E /* [CP] Embed Pods Frameworks */,
+				EC2604BEF0956AE1A9621705 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,9 +280,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7104572F1D94FABC006DF6AC /* Build configuration list for PBXNativeTarget "BZRideUITests" */;
 			buildPhases = (
+				6BAFBD340D0D3CDB430CD78F /* [CP] Check Pods Manifest.lock */,
 				7104571C1D94FABC006DF6AC /* Sources */,
 				7104571D1D94FABC006DF6AC /* Frameworks */,
 				7104571E1D94FABC006DF6AC /* Resources */,
+				3A0F038A01EC88DAE2D85AC6 /* [CP] Embed Pods Frameworks */,
+				088FA3CD257BBB7E8B52F1D3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,10 +349,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				716A2FA71DC8622A00997481 /* 1.png in Resources */,
-				715ADF991DD0B3C800836A53 /* SVProgressHUD.bundle in Resources */,
-				716A2FAC1DC8DD6E00997481 /* background.jpg in Resources */,
+				78F7FCB31DE6DBE700D8D92E /* SVProgressHUD.bundle in Resources */,
+				78F7FCB71DE6E20300D8D92E /* myHtml.html in Resources */,
 				7104570F1D94FABC006DF6AC /* LaunchScreen.storyboard in Resources */,
+				78F7FCB91DE6EF2E00D8D92E /* 1.png in Resources */,
 				7104570C1D94FABC006DF6AC /* Assets.xcassets in Resources */,
 				710457071D94FABC006DF6AC /* Main.storyboard in Resources */,
 			);
@@ -316,20 +374,161 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		085276B7E7D7A73F41A6BF78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		088FA3CD257BBB7E8B52F1D3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BZRideUITests/Pods-BZRideUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A0F038A01EC88DAE2D85AC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BZRideUITests/Pods-BZRideUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		446AB12590319F17A62A3E67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		49F1931775B193A907D5BBCB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BZRide/Pods-BZRide-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BAFBD340D0D3CDB430CD78F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8C4B6C1D366353DE44841E3F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BZRide/Pods-BZRide-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA6EE233179855F0F733973E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BZRideTests/Pods-BZRideTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC2604BEF0956AE1A9621705 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BZRideTests/Pods-BZRideTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		710456FA1D94FABC006DF6AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7104570A1D94FABC006DF6AC /* BZRide.xcdatamodeld in Sources */,
-				715ADF9B1DD0B3C800836A53 /* SVRadialGradientLayer.m in Sources */,
-				715ADF9A1DD0B3C800836A53 /* SVProgressHUD.m in Sources */,
 				710457331D94FF67006DF6AC /* DriverRegViewController.swift in Sources */,
+				7171E03D1DE563A000FE4EAA /* loginDriverTableViewController.swift in Sources */,
+				78F7FCB11DE6DBE700D8D92E /* SVIndefiniteAnimatedView.m in Sources */,
 				710457041D94FABC006DF6AC /* ViewController.swift in Sources */,
-				715ADF981DD0B3C800836A53 /* SVProgressAnimatedView.m in Sources */,
+				7809A9001DF0583000DD41A0 /* RiderCreditCardDetTableViewController.swift in Sources */,
+				78F7FCB21DE6DBE700D8D92E /* SVProgressAnimatedView.m in Sources */,
+				71275BA61DDCACF300090053 /* riderRegisterTableViewController.swift in Sources */,
+				78F7FCB41DE6DBE700D8D92E /* SVProgressHUD.m in Sources */,
 				710457021D94FABC006DF6AC /* AppDelegate.swift in Sources */,
 				715ADF721DD097CE00836A53 /* driverbankTableViewController.swift in Sources */,
-				715ADF971DD0B3C800836A53 /* SVIndefiniteAnimatedView.m in Sources */,
+				78F7FCB51DE6DBE700D8D92E /* SVRadialGradientLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +678,7 @@
 		};
 		7104572A1D94FABC006DF6AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 906E6C5FF4C33CB3F1808CA0 /* Pods-BZRide.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -494,6 +694,7 @@
 		};
 		7104572B1D94FABC006DF6AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24181805EFC7200290543F13 /* Pods-BZRide.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -508,6 +709,7 @@
 		};
 		7104572D1D94FABC006DF6AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 968E34C79D5CCFF83A96F1C3 /* Pods-BZRideTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -522,6 +724,7 @@
 		};
 		7104572E1D94FABC006DF6AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BAA33901976FD9E2CAE86EB /* Pods-BZRideTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -536,6 +739,7 @@
 		};
 		710457301D94FABC006DF6AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDCD65A711CD3A501B066651 /* Pods-BZRideUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = BZRideUITests/Info.plist;
@@ -549,6 +753,7 @@
 		};
 		710457311D94FABC006DF6AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CE5154976A6623C9CCCD18F /* Pods-BZRideUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = BZRideUITests/Info.plist;
