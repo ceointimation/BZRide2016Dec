@@ -12,7 +12,7 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
  
     var creditCardNum =  STPPaymentCardTextField()
     var holderNameCrd =  UITextField()
-    //var emailCrd =  UITextField()
+    var emailCrd =  UITextField()
     var add1Crd =  UITextField()
     var add2Crd =  UITextField()
     var cityCrd =  UITextField()
@@ -40,12 +40,12 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
         holderNameCrd.backgroundColor =  UIColor.white
         holderNameCrd.placeholder = "   Account holder name"
         
-       /* emailCrd.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
+        emailCrd.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
         emailCrd.backgroundColor =  UIColor.white
-        let result = UserDefaults.standard.value(forKey: "dict")
-        //emailCrd.text = result as! String?
-        print("result = \(result)")
-        //emailCrd.placeholder = "   Email"*/
+    
+        let defaults = UserDefaults.standard
+        let mailKey = defaults.string(forKey: "emailKey")
+        emailCrd.text = mailKey
         
         add1Crd.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
         add1Crd.backgroundColor =  UIColor.white
@@ -96,7 +96,7 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 8
+        return 9
     }
 
    /* func tableView(tableView: UITableView,
@@ -116,39 +116,39 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
             cell.addSubview(holderNameCrd)
             
         }
-       /* else if(indexPath.row == 2)
+        else if(indexPath.row == 2)
         {
             cell.addSubview(emailCrd)
             
-        }*/
-        else if(indexPath.row == 2)
+        }
+        else if(indexPath.row == 3)
         {
             
             cell.addSubview(add1Crd)
            
         }
-        else if(indexPath.row == 3)
-        {
-            cell.addSubview(add2Crd)
-            
-        }
         else if(indexPath.row == 4)
         {
-            
-            cell.addSubview(cityCrd)
+            cell.addSubview(add2Crd)
             
         }
         else if(indexPath.row == 5)
         {
             
-            cell.addSubview(stateCrd)
+            cell.addSubview(cityCrd)
+            
         }
         else if(indexPath.row == 6)
         {
             
-            cell.addSubview(zipCrd)
+            cell.addSubview(stateCrd)
         }
         else if(indexPath.row == 7)
+        {
+            
+            cell.addSubview(zipCrd)
+        }
+        else if(indexPath.row == 8)
         {
             
             cell.addSubview(doneButton)
@@ -216,23 +216,26 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
             displayAlert(messageToDisplay: "Incorrect Zip Code")
         }
       }
-    let hldname:[String] = [holderNameCrd.text!]
-    UserDefaults.standard.set(hldname, forKey: "hldname")
+   
     
-    let add1:[String] = [add1Crd.text!]
-    UserDefaults.standard.set(add1, forKey: "add1")
+ 
+    let accHolder = UserDefaults.standard
+    accHolder.set(holderNameCrd.text!, forKey: "holderKey")
     
-    let add2:[String] = [add2Crd.text!]
-    UserDefaults.standard.set(add2, forKey: "add2")
+    let add1C = UserDefaults.standard
+    add1C.set(add1Crd.text!, forKey: "add1Key")
     
-    let cityC:[String] = [cityCrd.text!]
-    UserDefaults.standard.set(cityC, forKey: "cityC")
+    let add2C = UserDefaults.standard
+    add2C.set(add2Crd.text!, forKey: "add2Key")
     
-    let stateC:[String] = [stateCrd.text!]
-    UserDefaults.standard.set(stateC, forKey: "stateC")
+    let cityC = UserDefaults.standard
+    cityC.set(cityCrd.text!, forKey: "cityKey")
     
-    let zipC:[String] = [zipCrd.text!]
-    UserDefaults.standard.set(zipC, forKey: "zipC")
+    let stateC = UserDefaults.standard
+    stateC.set(stateCrd.text!, forKey: "stateKey")
+    
+    let zipC = UserDefaults.standard
+    zipC.set(zipCrd.text!, forKey: "zipKey")
 
     
     

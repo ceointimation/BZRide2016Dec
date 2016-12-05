@@ -52,15 +52,17 @@ class riderRegisterTableViewController: UITableViewController {
     
     @IBAction func cardTap(_ sender: AnyObject) {
         
-       /* let provideEmailAddress = rdEmail.text
+       let provideEmailAddress = rdEmail.text
         let isEmailValid = isEmailAddress(emailAddressString:provideEmailAddress!)
         if isEmailValid != true {
             rdEmail.becomeFirstResponder()
             displayAlert(messageToDisplay: "Invalid Mail ID")
-        }*/
+        }
+       
+       let defaults = UserDefaults.standard
+       defaults.set(rdEmail.text!, forKey: "emailKey")
+       
         
-        let dict:[String] = [rdEmail.text!]
-        UserDefaults.standard.set(dict, forKey: "dict")
     }
     
     
@@ -210,7 +212,76 @@ class riderRegisterTableViewController: UITableViewController {
              }
                else
             {
-                displayAlert(messageToDisplay: "Routing to PHP")
+                var retData = "firstName="+rdFirstName.text!
+                retData += "&middleName="+rdMiddleName.text!
+                retData += "&lastName="+rdLastName.text!
+                retData += "&email="+rdEmail.text!
+                retData += "&password="+rdPassword.text!
+                retData += "&address1="+rdAddress1.text!
+                retData += "&address2="+rdAddress2.text!
+                retData += "&city="+rdCity.text!
+                retData += "&state="+rdState.text!
+                retData += "&zip="+rdZip.text!
+                retData += "&phone="+rdPhoneNumber.text!
+                retData += "&status=A&deviceId=I&deviceType=a&devicetoken=1&cardType=d&cardProvider=m&cardBillingAddress1=mattathil&cardBillingAddress2=chotani&cardBillingCity=kochi&cardBillingState=asd&cardBillingZip=9999&cardToken=12"
+                
+                let postString=retData
+                
+                var request = URLRequest(url: URL(string: "http://bzride.com/bzride/RegisterRider.php")!)
+                request.httpMethod = "POST"
+                
+                 print("postString is ==============\(postString)")
+                
+                request.httpBody = postString.data(using: .utf8)
+                let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                    guard let data = data, error == nil else {                                                 // check for fundamental networking error
+                        print("error=\(error)")
+                        return
+                    }
+                    
+                    if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // checking http errors
+                        print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                        print("response = \(response)")
+                    }
+                    
+                    let responseString = String(data: data, encoding: .utf8)
+                    print("responseString = \(responseString)")
+                    
+                    let responseData = responseString?.data(using: .utf8)
+                    do{
+                        let dict:Dictionary<String,String>= try JSONSerialization.jsonObject(with: responseData!, options:[]) as!Dictionary	<String,String>
+                        let status = dict["status"]
+                        let info = dict["info"]
+                        
+                        if(status == "S")
+                        {
+                            SVProgressHUD.dismiss()
+                             let alertController = UIAlertController(title:"",message:info,preferredStyle:.alert)
+                             let OkAction = UIAlertAction(title:"OK", style:.default)
+                             alertController.addAction(OkAction)
+                             self.present(alertController,animated:true,completion:nil)
+                            
+                           /* let firstViewController = self.storyboard?.instantiateViewController(withIdentifier: "firstView") as! ViewController
+                            self.navigationController?.pushViewController(firstViewController, animated: true)*/
+                            
+                            
+                        }
+                        else
+                        {
+                            SVProgressHUD.dismiss()
+                            let alertController = UIAlertController(title:"",message:info,preferredStyle:.alert)
+                            let OkAction = UIAlertAction(title:"OK", style:.default)
+                            alertController.addAction(OkAction)
+                            self.present(alertController,animated:true,completion:nil)
+                        }
+                    }
+                    catch let error as NSError{
+                        print("error = \(error)")
+                    }
+                    
+                }
+                task.resume()
+                
             }
             
           }
