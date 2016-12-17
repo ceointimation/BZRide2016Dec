@@ -21,6 +21,13 @@
 		715ADF721DD097CE00836A53 /* driverbankTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ADF711DD097CE00836A53 /* driverbankTableViewController.swift */; };
 		7171E03D1DE563A000FE4EAA /* loginDriverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7171E03C1DE563A000FE4EAA /* loginDriverTableViewController.swift */; };
 		7809A9001DF0583000DD41A0 /* RiderCreditCardDetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7809A8FF1DF0583000DD41A0 /* RiderCreditCardDetTableViewController.swift */; };
+		78259AC91DFA6ECB0055A93C /* DriverVehicleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78259AC81DFA6ECA0055A93C /* DriverVehicleTableViewController.swift */; };
+		78259ACB1DFA7B9F0055A93C /* VehicleRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78259ACA1DFA7B9F0055A93C /* VehicleRegistrationTableViewController.swift */; };
+		78259ACD1DFA805C0055A93C /* InsuranceRegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78259ACC1DFA805C0055A93C /* InsuranceRegisterTableViewController.swift */; };
+		78259ACF1DFA86570055A93C /* LicenseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78259ACE1DFA86570055A93C /* LicenseTableViewController.swift */; };
+		78E218A11E01B7250044EA61 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E218A01E01B7250044EA61 /* DatePickerViewController.swift */; };
+		78F5901C1E042F5100FE5EE0 /* conditiondsAndTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5901B1E042F5100FE5EE0 /* conditiondsAndTermsViewController.swift */; };
+		78F7C30C1DF95FF600238064 /* DriverRegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7C30B1DF95FF600238064 /* DriverRegisterTableViewController.swift */; };
 		78F7FCB11DE6DBE700D8D92E /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F7FCA81DE6DBE700D8D92E /* SVIndefiniteAnimatedView.m */; };
 		78F7FCB21DE6DBE700D8D92E /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F7FCAA1DE6DBE700D8D92E /* SVProgressAnimatedView.m */; };
 		78F7FCB31DE6DBE700D8D92E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 78F7FCAC1DE6DBE700D8D92E /* SVProgressHUD.bundle */; };
@@ -75,6 +82,13 @@
 		715ADF8C1DD0B3C700836A53 /* BZRide-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BZRide-Bridging-Header.h"; sourceTree = "<group>"; };
 		7171E03C1DE563A000FE4EAA /* loginDriverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginDriverTableViewController.swift; sourceTree = "<group>"; };
 		7809A8FF1DF0583000DD41A0 /* RiderCreditCardDetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderCreditCardDetTableViewController.swift; sourceTree = "<group>"; };
+		78259AC81DFA6ECA0055A93C /* DriverVehicleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverVehicleTableViewController.swift; sourceTree = "<group>"; };
+		78259ACA1DFA7B9F0055A93C /* VehicleRegistrationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleRegistrationTableViewController.swift; sourceTree = "<group>"; };
+		78259ACC1DFA805C0055A93C /* InsuranceRegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsuranceRegisterTableViewController.swift; sourceTree = "<group>"; };
+		78259ACE1DFA86570055A93C /* LicenseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseTableViewController.swift; sourceTree = "<group>"; };
+		78E218A01E01B7250044EA61 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		78F5901B1E042F5100FE5EE0 /* conditiondsAndTermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = conditiondsAndTermsViewController.swift; sourceTree = "<group>"; };
+		78F7C30B1DF95FF600238064 /* DriverRegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverRegisterTableViewController.swift; sourceTree = "<group>"; };
 		78F7FCA71DE6DBE700D8D92E /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		78F7FCA81DE6DBE700D8D92E /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
 		78F7FCA91DE6DBE700D8D92E /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
@@ -154,6 +168,13 @@
 				78F7FCB61DE6E20300D8D92E /* myHtml.html */,
 				71275BA51DDCACF300090053 /* riderRegisterTableViewController.swift */,
 				710457051D94FABC006DF6AC /* Main.storyboard */,
+				78F5901B1E042F5100FE5EE0 /* conditiondsAndTermsViewController.swift */,
+				78E218A01E01B7250044EA61 /* DatePickerViewController.swift */,
+				78259ACE1DFA86570055A93C /* LicenseTableViewController.swift */,
+				78259ACC1DFA805C0055A93C /* InsuranceRegisterTableViewController.swift */,
+				78259ACA1DFA7B9F0055A93C /* VehicleRegistrationTableViewController.swift */,
+				78259AC81DFA6ECA0055A93C /* DriverVehicleTableViewController.swift */,
+				78F7C30B1DF95FF600238064 /* DriverRegisterTableViewController.swift */,
 				7809A8FF1DF0583000DD41A0 /* RiderCreditCardDetTableViewController.swift */,
 				7171E03C1DE563A000FE4EAA /* loginDriverTableViewController.swift */,
 				710457321D94FF67006DF6AC /* DriverRegViewController.swift */,
@@ -521,13 +542,20 @@
 				710457331D94FF67006DF6AC /* DriverRegViewController.swift in Sources */,
 				7171E03D1DE563A000FE4EAA /* loginDriverTableViewController.swift in Sources */,
 				78F7FCB11DE6DBE700D8D92E /* SVIndefiniteAnimatedView.m in Sources */,
+				78259ACB1DFA7B9F0055A93C /* VehicleRegistrationTableViewController.swift in Sources */,
+				78E218A11E01B7250044EA61 /* DatePickerViewController.swift in Sources */,
 				710457041D94FABC006DF6AC /* ViewController.swift in Sources */,
 				7809A9001DF0583000DD41A0 /* RiderCreditCardDetTableViewController.swift in Sources */,
 				78F7FCB21DE6DBE700D8D92E /* SVProgressAnimatedView.m in Sources */,
+				78F5901C1E042F5100FE5EE0 /* conditiondsAndTermsViewController.swift in Sources */,
 				71275BA61DDCACF300090053 /* riderRegisterTableViewController.swift in Sources */,
+				78259ACD1DFA805C0055A93C /* InsuranceRegisterTableViewController.swift in Sources */,
+				78F7C30C1DF95FF600238064 /* DriverRegisterTableViewController.swift in Sources */,
+				78259ACF1DFA86570055A93C /* LicenseTableViewController.swift in Sources */,
 				78F7FCB41DE6DBE700D8D92E /* SVProgressHUD.m in Sources */,
 				710457021D94FABC006DF6AC /* AppDelegate.swift in Sources */,
 				715ADF721DD097CE00836A53 /* driverbankTableViewController.swift in Sources */,
+				78259AC91DFA6ECB0055A93C /* DriverVehicleTableViewController.swift in Sources */,
 				78F7FCB51DE6DBE700D8D92E /* SVRadialGradientLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

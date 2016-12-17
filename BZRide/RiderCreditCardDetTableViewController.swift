@@ -9,10 +9,12 @@ var holderNameCrd =  UITextField()//
 import UIKit
 
 class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCardTextFieldDelegate {
- 
+    
+    var checkFlag:Int?
+    
     var creditCardNum =  STPPaymentCardTextField()
     var holderNameCrd =  UITextField()
-    var emailCrd =  UITextField()
+    //var emailCrd =  UITextField()
     var add1Crd =  UITextField()
     var add2Crd =  UITextField()
     var cityCrd =  UITextField()
@@ -38,40 +40,68 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
         
         holderNameCrd.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
         holderNameCrd.backgroundColor =  UIColor.white
-        holderNameCrd.placeholder = "   Account holder name"
+        holderNameCrd.placeholder = "Account holder name"
         
-        emailCrd.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
+        /*emailCrd.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
         emailCrd.backgroundColor =  UIColor.white
     
         let defaults = UserDefaults.standard
         let mailKey = defaults.string(forKey: "emailKey")
-        emailCrd.text = mailKey
+        emailCrd.text = mailKey*/
         
         add1Crd.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
         add1Crd.backgroundColor =  UIColor.white
-        add1Crd.placeholder = "   Card billing add1"
+        add1Crd.placeholder = "Card billing add1"
         
         add2Crd.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
         add2Crd.backgroundColor =  UIColor.white
-        add2Crd.placeholder = "   Card billing add2"
+        add2Crd.placeholder = "Card billing add2"
         
         cityCrd.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
         cityCrd.backgroundColor =  UIColor.white
-        cityCrd.placeholder = "   City"
+        cityCrd.placeholder = "City"
         
         stateCrd.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
         stateCrd.backgroundColor =  UIColor.white
-        stateCrd.placeholder = "   State"
+        stateCrd.placeholder = "State"
         
         zipCrd.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
         zipCrd.backgroundColor =  UIColor.white
-        zipCrd.placeholder = "   Zip"
+        zipCrd.placeholder = "Zip"
         
         doneButton.frame = CGRect(x: 60, y: 15, width:a-120, height: Int(36.00))  //set frame
         doneButton.backgroundColor =  UIColor.blue
         doneButton.setTitleColor(UIColor.white, for: .normal)
         doneButton.setTitle("DONE", for: .normal)
         doneButton.addTarget(self, action: #selector(doneButtonTap), for: .touchUpInside)
+        if (checkFlag == 2)
+        {
+            
+            let accHldrName = UserDefaults.standard
+            let accHldrNameValue = accHldrName.string(forKey: "holderKey")
+            holderNameCrd.text = accHldrNameValue
+            
+            let adder1Rid = UserDefaults.standard
+            let adder1RidKeyValue = adder1Rid.string(forKey: "add1Key")
+            add1Crd.text = adder1RidKeyValue
+            
+            let adder2Rid = UserDefaults.standard
+            let adder2RidKeyValue = adder2Rid.string(forKey: "add2Key")
+            add2Crd.text = adder2RidKeyValue
+            
+            let cityRide = UserDefaults.standard
+            let cityRideValue = cityRide.string(forKey: "cityKey")
+            cityCrd.text = cityRideValue
+            
+            let stateRide = UserDefaults.standard
+            let stateRideKeyValue = stateRide.string(forKey: "stateKey")
+            stateCrd.text = stateRideKeyValue
+            
+            let zipRide = UserDefaults.standard
+            let zipRideKeyValue = zipRide.string(forKey: "zipKey")
+            zipCrd.text = zipRideKeyValue
+        }
+
      
     }
     
@@ -96,7 +126,7 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 9
+        return 8
     }
 
    /* func tableView(tableView: UITableView,
@@ -116,39 +146,39 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
             cell.addSubview(holderNameCrd)
             
         }
-        else if(indexPath.row == 2)
+      /*  else if(indexPath.row == 2)
         {
             cell.addSubview(emailCrd)
             
-        }
-        else if(indexPath.row == 3)
+        }*/
+        else if(indexPath.row == 2)
         {
             
             cell.addSubview(add1Crd)
            
         }
-        else if(indexPath.row == 4)
+        else if(indexPath.row == 3)
         {
             cell.addSubview(add2Crd)
             
         }
-        else if(indexPath.row == 5)
+        else if(indexPath.row == 4)
         {
             
             cell.addSubview(cityCrd)
             
         }
-        else if(indexPath.row == 6)
+        else if(indexPath.row == 5)
         {
             
             cell.addSubview(stateCrd)
         }
-        else if(indexPath.row == 7)
+        else if(indexPath.row == 6)
         {
             
             cell.addSubview(zipCrd)
         }
-        else if(indexPath.row == 8)
+        else if(indexPath.row == 7)
         {
             
             cell.addSubview(doneButton)
@@ -236,6 +266,10 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
     
     let zipC = UserDefaults.standard
     zipC.set(zipCrd.text!, forKey: "zipKey")
+        
+    let riderRegViewController = self.storyboard?.instantiateViewController(withIdentifier: "newRiderRegView") as! riderRegisterTableViewController
+    riderRegViewController.myStringValue = 2
+    self.navigationController?.pushViewController(riderRegViewController, animated: true)
 
     
     

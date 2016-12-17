@@ -10,6 +10,9 @@ import UIKit
 
 class riderRegisterTableViewController: UITableViewController {
 
+    
+    var myStringValue:Int?
+    
     @IBOutlet var rdFirstName: UITextField!
     @IBOutlet var rdMiddleName: UITextField!
     @IBOutlet var rdLastName: UITextField!
@@ -25,8 +28,7 @@ class riderRegisterTableViewController: UITableViewController {
     
     @IBOutlet var cardDetailsBtn: UIButton!
     @IBOutlet var riderRegister: UIButton!
-    
-    
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,60 @@ class riderRegisterTableViewController: UITableViewController {
         
         let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(self.tapBlurButton(_:)))
         self.tableView.addGestureRecognizer(tapGesture1)
+  
+       if (myStringValue == 2)
+        {
+        
+        let fName = UserDefaults.standard
+        let fnameKeyValue = fName.string(forKey: "fnameKey")
+        rdFirstName.text = fnameKeyValue
+            
+        let mName = UserDefaults.standard
+        let mnameKeyValue = mName.string(forKey: "mnameKey")
+        rdMiddleName.text = mnameKeyValue
+        
+        let lName = UserDefaults.standard
+        let lnameKeyValue = lName.string(forKey: "lnameKey")
+        rdLastName.text = lnameKeyValue
+            
+        let emailReg = UserDefaults.standard
+        let mailKey = emailReg.string(forKey: "emailKey")
+        rdEmail.text = mailKey
+            
+        let passReg = UserDefaults.standard
+        let passKeyValue = passReg.string(forKey: "passKey")
+        rdPassword.text = passKeyValue
+            
+        let cpassReg = UserDefaults.standard
+        let cpassKeyValue = cpassReg.string(forKey: "cPassKey")
+        rdConfirmPassword.text = cpassKeyValue
+            
+        let adder1Reg = UserDefaults.standard
+        let adder1KeyValue = adder1Reg.string(forKey: "adder1Key")
+        rdAddress1.text = adder1KeyValue
+           
+        let adder2Reg = UserDefaults.standard
+        let adder2KeyValue = adder2Reg.string(forKey: "adder2Key")
+        rdAddress2.text = adder2KeyValue
+            
+        let cityRReg = UserDefaults.standard
+        let cityKeyValue = cityRReg.string(forKey: "cityRdKey")
+        rdCity.text = cityKeyValue
+            
+        let stateRReg = UserDefaults.standard
+        let stateKeyValue = stateRReg.string(forKey: "stateRdKey")
+        rdState.text = stateKeyValue
+            
+        let phoneRReg = UserDefaults.standard
+        let phoneKeyValue = phoneRReg.string(forKey: "phnKey")
+        rdPhoneNumber.text = phoneKeyValue
+            
+        let zipRReg = UserDefaults.standard
+        let zipKeyValue = zipRReg.string(forKey: "zipRdKey")
+        rdZip.text = zipKeyValue
+        }
+        
+        
     }
     func tapBlurButton(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
@@ -59,9 +115,45 @@ class riderRegisterTableViewController: UITableViewController {
             displayAlert(messageToDisplay: "Invalid Mail ID")
         }
        
-       let defaults = UserDefaults.standard
-       defaults.set(rdEmail.text!, forKey: "emailKey")
+        let fName = UserDefaults.standard
+        fName.set(rdFirstName.text!, forKey: "fnameKey")
+        
+        let mName = UserDefaults.standard
+        mName.set(rdMiddleName.text!, forKey: "mnameKey")
+        
+        let lName = UserDefaults.standard
+        lName.set(rdLastName.text!, forKey: "lnameKey")
+        
+        let defaults = UserDefaults.standard
+        defaults.set(rdEmail.text!, forKey: "emailKey")
        
+        let pass = UserDefaults.standard
+        pass.set(rdPassword.text!, forKey: "passKey")
+        
+        let cPass = UserDefaults.standard
+        cPass.set(rdConfirmPassword.text!, forKey: "cPassKey")
+        
+        let adder1 = UserDefaults.standard
+        adder1.set(rdAddress1.text!, forKey: "adder1Key")
+        
+        let adder2 = UserDefaults.standard
+        adder2.set(rdAddress2.text!, forKey: "adder2Key")
+        
+        let cityR = UserDefaults.standard
+        cityR.set(rdCity.text!, forKey: "cityRdKey")
+        
+        let stateR = UserDefaults.standard
+        stateR.set(rdState.text!, forKey: "stateRdKey")
+        
+        let zipR = UserDefaults.standard
+        zipR.set(rdZip.text!, forKey: "zipRdKey")
+        
+        let phoneR = UserDefaults.standard
+        phoneR.set(rdPhoneNumber.text!, forKey: "phnKey")
+        
+        let riderCardViewController = self.storyboard?.instantiateViewController(withIdentifier: "newCreditCardRider") as! RiderCreditCardDetTableViewController
+           riderCardViewController.checkFlag = myStringValue
+         self.navigationController?.pushViewController(riderCardViewController, animated: true)
         
     }
     
@@ -223,14 +315,14 @@ class riderRegisterTableViewController: UITableViewController {
                 retData += "&state="+rdState.text!
                 retData += "&zip="+rdZip.text!
                 retData += "&phone="+rdPhoneNumber.text!
-                retData += "&status=A&deviceId=I&deviceType=a&devicetoken=1&cardType=d&cardProvider=m&cardBillingAddress1=mattathil&cardBillingAddress2=chotani&cardBillingCity=kochi&cardBillingState=asd&cardBillingZip=9999&cardToken=12"
+                retData += "&status=A&deviceId=I&devicetoken=1&deviceType=a&cardType=d&cardProvider=m&cardBillingAddress1=mattathil&cardBillingAddress2=chotani&cardBillingCity=kochi&cardBillingState=asd&cardBillingZip=9999&cardToken=12"
                 
                 let postString=retData
                 
                 var request = URLRequest(url: URL(string: "http://bzride.com/bzride/RegisterRider.php")!)
                 request.httpMethod = "POST"
                 
-                 print("postString is ==============\(postString)")
+                // print("postString is ==============\(postString)")
                 
                 request.httpBody = postString.data(using: .utf8)
                 let task = URLSession.shared.dataTask(with: request) { data, response, error in
