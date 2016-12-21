@@ -12,6 +12,7 @@ class riderRegisterTableViewController: UITableViewController {
 
     
     var myStringValue:Int?
+    var success:Int = 1
     
     @IBOutlet var rdFirstName: UITextField!
     @IBOutlet var rdMiddleName: UITextField!
@@ -212,98 +213,118 @@ class riderRegisterTableViewController: UITableViewController {
     }
     
     @IBAction func registerRiderTapped(_ sender: AnyObject) {
-          if(rdFirstName.text == "")
+       
+        let provideEmailAddress = rdEmail.text
+        let isEmailValid = isEmailAddress(emailAddressString:provideEmailAddress!)
+        if isEmailValid != true {
+            displayAlert(messageToDisplay: "Invalid Mail ID")
+            rdEmail.becomeFirstResponder()
+            success = 0
+        }
+        
+        let providePwordchk = rdPassword.text
+        let provideConfirmPword = rdConfirmPassword.text
+        let isConfirmPwordValid = PasswordSame(password:providePwordchk!,confirmpassword:provideConfirmPword!)
+        if isConfirmPwordValid != true{
+            displayAlert(messageToDisplay: "Password Mismatch")
+            rdPassword.becomeFirstResponder()
+            success = 0
+        }
+        
+        let provideZip = rdZip.text
+        let isZipValid = validateZip(value:provideZip!)
+        if isZipValid != true{
+            displayAlert(messageToDisplay: "Incorrect Zip Code")
+            rdZip.becomeFirstResponder()
+            success = 0
+        }
+        
+        let provideMobile = rdPhoneNumber.text
+        let isMobValid = validateMobile(value:provideMobile!)
+        if isMobValid != true{
+            displayAlert(messageToDisplay: "Incorrect Mobile No")
+            rdPhoneNumber.becomeFirstResponder()
+            success = 0
+        }
+        if(rdFirstName.text == "")
           {
              rdFirstName.becomeFirstResponder()
              displayAlert(messageToDisplay: "Please enter First name")
+            success = 0
           }
           else if(rdMiddleName.text == "")
           {
              rdMiddleName.becomeFirstResponder()
              displayAlert(messageToDisplay: "Please enter Middle name")
+            success = 0
           }
           else if(rdLastName.text == "")
           {
              rdLastName.becomeFirstResponder()
              displayAlert(messageToDisplay: "Please enter Last name")
+            success = 0
           }
           else if(rdEmail.text == "")
           {
             rdEmail.becomeFirstResponder()
             displayAlert(messageToDisplay: "Please enter Email")
+            success = 0
           }
           else if(rdPassword.text == "")
           {
             rdPassword.becomeFirstResponder()
             displayAlert(messageToDisplay: "Please enter Password")
+            success = 0
           }
           else if(rdConfirmPassword.text == "")
           {
             rdConfirmPassword.becomeFirstResponder()
             displayAlert(messageToDisplay: "Please enter Confirm password")
+            success = 0
           }
           else if(rdAddress1.text == "")
           {
             rdAddress1.becomeFirstResponder()
             displayAlert(messageToDisplay: "Please enter Address1")
+            success = 0
           }
           else if(rdAddress2.text == "")
           {
             rdAddress2.becomeFirstResponder()
             displayAlert(messageToDisplay: "Please enter Address2")
+            success = 0
           }
           else if(rdCity.text == "")
           {
             rdCity.becomeFirstResponder()
             displayAlert(messageToDisplay: "Please enter City")
+            success = 0
           }
           else if(rdState.text == "")
           {
             rdState.becomeFirstResponder()
             displayAlert(messageToDisplay: "Please enter State")
+            success = 0
           }
           else if(rdZip.text == "")
           {
             rdZip.becomeFirstResponder()
             displayAlert(messageToDisplay: "Please enter Zip")
+            success = 0
           }
           else if(rdPhoneNumber.text == "")
           {
             rdPhoneNumber.becomeFirstResponder()
             displayAlert(messageToDisplay: "Please enter Phone number")
+            success = 0
           }
+        
           else
           {
-            let provideEmailAddress = rdEmail.text
-            let isEmailValid = isEmailAddress(emailAddressString:provideEmailAddress!)
-            if isEmailValid != true {
-                rdEmail.becomeFirstResponder()
-                displayAlert(messageToDisplay: "Invalid Mail ID")
-            }
-            
-            let providePwordchk = rdPassword.text
-            let provideConfirmPword = rdConfirmPassword.text
-            let isConfirmPwordValid = PasswordSame(password:providePwordchk!,confirmpassword:provideConfirmPword!)
-            if isConfirmPwordValid != true{
-                rdPassword.becomeFirstResponder()
-                displayAlert(messageToDisplay: "Password Mismatch")
-            }
-            
-            let provideZip = rdZip.text
-            let isZipValid = validateZip(value:provideZip!)
-            if isZipValid != true{
-                rdZip.becomeFirstResponder()
-                displayAlert(messageToDisplay: "Incorrect Zip Code")
-            }
-
-            let provideMobile = rdPhoneNumber.text
-            let isMobValid = validateMobile(value:provideMobile!)
-            if isMobValid != true{
-                rdPhoneNumber.becomeFirstResponder()
-                displayAlert(messageToDisplay: "Incorrect Mobile No")
-             }
-               else
+            success = 1
+            if(success == 1)
             {
+                SVProgressHUD.show(withStatus: "Registering Rider")
                 var retData = "firstName="+rdFirstName.text!
                 retData += "&middleName="+rdMiddleName.text!
                 retData += "&lastName="+rdLastName.text!
@@ -315,6 +336,25 @@ class riderRegisterTableViewController: UITableViewController {
                 retData += "&state="+rdState.text!
                 retData += "&zip="+rdZip.text!
                 retData += "&phone="+rdPhoneNumber.text!
+                
+                
+                let adder1Rid = UserDefaults.standard
+                let adder1RidKeyValue = adder1Rid.string(forKey: "add1Key")
+                
+                let adder2Rid = UserDefaults.standard
+                let adder2RidKeyValue = adder2Rid.string(forKey: "add2Key")
+                
+                let cityRide = UserDefaults.standard
+                let cityRideValue = cityRide.string(forKey: "cityKey")
+                
+                let stateRide = UserDefaults.standard
+                let stateRideKeyValue = stateRide.string(forKey: "stateKey")
+                                
+                let zipRide = UserDefaults.standard
+                let zipRideKeyValue = zipRide.string(forKey: "zipKey")
+                
+                
+                
                 retData += "&status=A&deviceId=I&devicetoken=1&deviceType=a&cardType=d&cardProvider=m&cardBillingAddress1=mattathil&cardBillingAddress2=chotani&cardBillingCity=kochi&cardBillingState=asd&cardBillingZip=9999&cardToken=12"
                 
                 let postString=retData
@@ -322,7 +362,7 @@ class riderRegisterTableViewController: UITableViewController {
                 var request = URLRequest(url: URL(string: "http://bzride.com/bzride/RegisterRider.php")!)
                 request.httpMethod = "POST"
                 
-                // print("postString is ==============\(postString)")
+                 print("postString is ==============\(postString)")
                 
                 request.httpBody = postString.data(using: .utf8)
                 let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -348,13 +388,9 @@ class riderRegisterTableViewController: UITableViewController {
                         if(status == "S")
                         {
                             SVProgressHUD.dismiss()
-                             let alertController = UIAlertController(title:"",message:info,preferredStyle:.alert)
-                             let OkAction = UIAlertAction(title:"OK", style:.default)
-                             alertController.addAction(OkAction)
-                             self.present(alertController,animated:true,completion:nil)
-                            
-                           /* let firstViewController = self.storyboard?.instantiateViewController(withIdentifier: "firstView") as! ViewController
-                            self.navigationController?.pushViewController(firstViewController, animated: true)*/
+                                                       
+                            let firstViewController = self.storyboard?.instantiateViewController(withIdentifier: "firstView") as! ViewController
+                            self.navigationController?.pushViewController(firstViewController, animated: true)
                             
                             
                         }
@@ -373,10 +409,7 @@ class riderRegisterTableViewController: UITableViewController {
                     
                 }
                 task.resume()
-                
-            }
-            
           }
-        
-    }
+        }
+       }
 }

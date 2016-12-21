@@ -1,4 +1,4 @@
-var holderNameCrd =  UITextField()//
+//
 //  RiderCreditCardDetTableViewController.swift
 //  BZRide
 //
@@ -8,19 +8,22 @@ var holderNameCrd =  UITextField()//
 
 import UIKit
 
-class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCardTextFieldDelegate {
+class RiderCreditCardDetTableViewController: UITableViewController {
     
     var checkFlag:Int?
     
-    var creditCardNum =  STPPaymentCardTextField()
+    var creditCardNum =  UITextField()
     var holderNameCrd =  UITextField()
-    //var emailCrd =  UITextField()
     var add1Crd =  UITextField()
     var add2Crd =  UITextField()
     var cityCrd =  UITextField()
     var stateCrd =  UITextField()
     var zipCrd =  UITextField()
+    var monthCrd =  UITextField()
+    var yearCrd =  UITextField()
+    var cvcCrd =  UITextField()
     var doneButton = UIButton()
+    
    
     override func viewDidLoad() {
        
@@ -35,19 +38,15 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
         navigationItem.leftBarButtonItem = backButton
         
          let a = Int(UIScreen.main.bounds.size.width)
+       
          creditCardNum.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
          creditCardNum.backgroundColor =  UIColor.white
+         creditCardNum .keyboardType = UIKeyboardType.numberPad
+         creditCardNum.placeholder = "Credit card number"
         
         holderNameCrd.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
         holderNameCrd.backgroundColor =  UIColor.white
         holderNameCrd.placeholder = "Account holder name"
-        
-        /*emailCrd.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
-        emailCrd.backgroundColor =  UIColor.white
-    
-        let defaults = UserDefaults.standard
-        let mailKey = defaults.string(forKey: "emailKey")
-        emailCrd.text = mailKey*/
         
         add1Crd.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
         add1Crd.backgroundColor =  UIColor.white
@@ -67,7 +66,24 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
         
         zipCrd.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
         zipCrd.backgroundColor =  UIColor.white
+        zipCrd.keyboardType = UIKeyboardType.numberPad
         zipCrd.placeholder = "Zip"
+        
+        monthCrd.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
+        monthCrd.backgroundColor =  UIColor.white
+        monthCrd .keyboardType = UIKeyboardType.numberPad
+        monthCrd.placeholder = "Month"
+        
+        yearCrd.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
+        yearCrd.backgroundColor =  UIColor.white
+        yearCrd .keyboardType = UIKeyboardType.numberPad
+        yearCrd.placeholder = "Year"
+        
+        cvcCrd.frame = CGRect(x: 40, y: 12, width: a-80, height: Int(40.00));
+        cvcCrd.backgroundColor =  UIColor.white
+        cvcCrd.isSecureTextEntry = true
+        cvcCrd .keyboardType = UIKeyboardType.numberPad
+        cvcCrd.placeholder = "Cvc"
         
         doneButton.frame = CGRect(x: 60, y: 15, width:a-120, height: Int(36.00))  //set frame
         doneButton.backgroundColor =  UIColor.blue
@@ -76,6 +92,9 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
         doneButton.addTarget(self, action: #selector(doneButtonTap), for: .touchUpInside)
         if (checkFlag == 2)
         {
+            let creditCardNumb = UserDefaults.standard
+            let creditCardNumKeyValue = creditCardNumb.string(forKey: "creditCardNumKey")
+            creditCardNum.text = creditCardNumKeyValue
             
             let accHldrName = UserDefaults.standard
             let accHldrNameValue = accHldrName.string(forKey: "holderKey")
@@ -100,10 +119,23 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
             let zipRide = UserDefaults.standard
             let zipRideKeyValue = zipRide.string(forKey: "zipKey")
             zipCrd.text = zipRideKeyValue
+            
+            let monthRide = UserDefaults.standard
+            let monthRideKeyValue = monthRide.string(forKey: "monthRideKey")
+            monthCrd.text = monthRideKeyValue
+            
+            let yearRide = UserDefaults.standard
+            let yearRideKeyValue = yearRide.string(forKey: "yearRideKey")
+            yearCrd.text = yearRideKeyValue
+            
+            let cvcRide = UserDefaults.standard
+            let cvcRideKeyValue = cvcRide.string(forKey: "cvcRideKey")
+            cvcCrd.text = cvcRideKeyValue
         }
 
      
     }
+
     
         func tapBlurButton(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
@@ -126,7 +158,7 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 8
+        return 11
     }
 
    /* func tableView(tableView: UITableView,
@@ -146,11 +178,6 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
             cell.addSubview(holderNameCrd)
             
         }
-      /*  else if(indexPath.row == 2)
-        {
-            cell.addSubview(emailCrd)
-            
-        }*/
         else if(indexPath.row == 2)
         {
             
@@ -181,6 +208,24 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
         else if(indexPath.row == 7)
         {
             
+            cell.addSubview(monthCrd)
+        }
+
+        else if(indexPath.row == 8)
+        {
+            
+            cell.addSubview(yearCrd)
+        }
+
+        else if(indexPath.row == 9)
+        {
+            
+            cell.addSubview(cvcCrd)
+        }
+
+        else if(indexPath.row == 10)
+        {
+            
             cell.addSubview(doneButton)
         }
         
@@ -207,7 +252,12 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
         return result
     }
  @IBAction func doneButtonTap(_ sender: AnyObject) {
-        if(holderNameCrd.text == "")
+        if(creditCardNum.text == "")
+        {
+            creditCardNum.becomeFirstResponder()
+            displayAlert(messageToDisplay: "Please enter Credit card number")
+        }
+        else if(holderNameCrd.text == "")
         {
             holderNameCrd.becomeFirstResponder()
             displayAlert(messageToDisplay: "Please enter Account Holder name")
@@ -237,6 +287,21 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
             zipCrd.becomeFirstResponder()
             displayAlert(messageToDisplay: "Please enter Zip")
         }
+        else if(monthCrd.text == "")
+        {
+            monthCrd.becomeFirstResponder()
+            displayAlert(messageToDisplay: "Please enter Month")
+        }
+        else if(yearCrd.text == "")
+        {
+            yearCrd.becomeFirstResponder()
+            displayAlert(messageToDisplay: "Please enter Year")
+        }
+        else if(cvcCrd.text == "")
+        {
+            cvcCrd.becomeFirstResponder()
+            displayAlert(messageToDisplay: "Please enter Cvc")
+        }
         else
         {
             let provideZip = zipCrd.text
@@ -248,7 +313,9 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
       }
    
     
- 
+    let creditCard = UserDefaults.standard
+    creditCard.set(creditCardNum.text!, forKey: "creditCardNumKey")
+    
     let accHolder = UserDefaults.standard
     accHolder.set(holderNameCrd.text!, forKey: "holderKey")
     
@@ -266,6 +333,15 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
     
     let zipC = UserDefaults.standard
     zipC.set(zipCrd.text!, forKey: "zipKey")
+    
+    let monthC = UserDefaults.standard
+    monthC.set(zipCrd.text!, forKey: "monthRideKey")
+    
+    let yearC = UserDefaults.standard
+    yearC.set(zipCrd.text!, forKey: "yearRideKey")
+    
+    let cvcC = UserDefaults.standard
+    cvcC.set(zipCrd.text!, forKey: "cvcRideKey")
         
     let riderRegViewController = self.storyboard?.instantiateViewController(withIdentifier: "newRiderRegView") as! riderRegisterTableViewController
     riderRegViewController.myStringValue = 2
@@ -318,5 +394,5 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
         // Pass the selected object to the new view controller.
     }
     */
-
+  
 }
