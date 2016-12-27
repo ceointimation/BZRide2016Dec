@@ -1174,15 +1174,19 @@
                                             <frame key="frameInset" width="375" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="   Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MiV-St-OXz">
-                                                    <frame key="frameInset" minX="44" minY="9" width="280" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="   Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MiV-St-OXz">
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MiV-St-OXz" secondAttribute="bottom" constant="-2" id="aMQ-tJ-RaP"/>
+                                                <constraint firstItem="MiV-St-OXz" firstAttribute="leading" secondItem="MOM-wH-FYU" secondAttribute="leadingMargin" constant="36" id="pUx-DD-iCi"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="MiV-St-OXz" secondAttribute="trailing" constant="43" id="twv-6H-nlz"/>
+                                                <constraint firstItem="MiV-St-OXz" firstAttribute="top" secondItem="MOM-wH-FYU" secondAttribute="topMargin" constant="1" id="zTJ-tK-AAx"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
@@ -1193,26 +1197,31 @@
                                             <frame key="frameInset" width="375" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="   Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="914-33-JE4">
-                                                    <frame key="frameInset" minX="44" minY="9" width="280" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="   Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="914-33-JE4">
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="914-33-JE4" firstAttribute="leading" secondItem="yvX-ZZ-Brm" secondAttribute="leadingMargin" constant="36" id="3vj-go-dZa"/>
+                                                <constraint firstItem="914-33-JE4" firstAttribute="top" secondItem="yvX-ZZ-Brm" secondAttribute="topMargin" constant="1" id="Wdz-yt-GgR"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="914-33-JE4" secondAttribute="trailing" constant="43" id="e05-5M-8ac"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="914-33-JE4" secondAttribute="bottom" constant="-2" id="gPQ-9D-SZQ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="cJO-eN-nY0">
                                         <rect key="frame" x="0.0" y="209" width="375" height="97"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cJO-eN-nY0" id="gfz-kw-PEH">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="cJO-eN-nY0" id="gfz-kw-PEH">
                                             <frame key="frameInset" width="375" height="97"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Lv-HR-2VK">
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Lv-HR-2VK">
+                                                    <frame key="frameInset" minX="105" minY="25" width="164" height="46"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="164" id="zaY-As-JGp"/>
@@ -1223,9 +1232,10 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="0Lv-HR-2VK" firstAttribute="top" secondItem="gfz-kw-PEH" secondAttribute="topMargin" constant="7" id="N0K-lQ-VM3"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="0Lv-HR-2VK" secondAttribute="bottom" constant="28" id="YYQ-Hg-Upt"/>
-                                                <constraint firstItem="0Lv-HR-2VK" firstAttribute="leading" secondItem="gfz-kw-PEH" secondAttribute="leadingMargin" constant="94" id="mV1-uu-Ak2"/>
+                                                <constraint firstItem="0Lv-HR-2VK" firstAttribute="leading" secondItem="gfz-kw-PEH" secondAttribute="leadingMargin" constant="97" id="XeG-gz-OzJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0Lv-HR-2VK" secondAttribute="bottom" constant="18" id="ik0-Rx-oBB"/>
+                                                <constraint firstItem="0Lv-HR-2VK" firstAttribute="top" secondItem="gfz-kw-PEH" secondAttribute="topMargin" constant="17" id="kPi-VH-abr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0Lv-HR-2VK" secondAttribute="trailing" constant="97" id="oP6-jh-ynH"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

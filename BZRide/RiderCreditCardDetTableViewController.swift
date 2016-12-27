@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RiderCreditCardDetTableViewController: UITableViewController {
+class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCardTextFieldDelegate {
     
     var checkFlag:Int?
     
@@ -335,64 +335,56 @@ class RiderCreditCardDetTableViewController: UITableViewController {
     zipC.set(zipCrd.text!, forKey: "zipKey")
     
     let monthC = UserDefaults.standard
-    monthC.set(zipCrd.text!, forKey: "monthRideKey")
+    monthC.set(monthCrd.text!, forKey: "monthRideKey")
     
     let yearC = UserDefaults.standard
-    yearC.set(zipCrd.text!, forKey: "yearRideKey")
+    yearC.set(yearCrd.text!, forKey: "yearRideKey")
     
     let cvcC = UserDefaults.standard
-    cvcC.set(zipCrd.text!, forKey: "cvcRideKey")
+    cvcC.set(cvcCrd.text!, forKey: "cvcRideKey")
         
     let riderRegViewController = self.storyboard?.instantiateViewController(withIdentifier: "newRiderRegView") as! riderRegisterTableViewController
     riderRegViewController.myStringValue = 2
     self.navigationController?.pushViewController(riderRegViewController, animated: true)
-
+   
+    }
     
-    
-    }
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
+   /* @IBAction func donate(_ sender: AnyObject) {
+        // Initiate the card
+        var stripCard = STPCard()
+        
+        // Split the expiration date to extract Month & Year
+        if self.yearCrd.text?.isEmpty == false {
+            
+            let expMonth = Int(monthCrd.text!)
+            let expYear = Int(yearCrd.text!)
+            
+            // Send the card info to Strip to get the token
+            stripCard.number    = self.creditCardNum.text
+            stripCard.cvc       = self.cvcCrd.text
+            stripCard.expMonth  = UInt(expMonth!)
+            stripCard.expYear   = UInt(expYear!)
+        }
+        
+        var underlyingError: NSError?
+        stripCard.validateCardReturningError(&underlyingError)
+        if underlyingError != nil {
+            self.spinner.stopAnimating()
+            self.handleError(underlyingError!)
+            return
+        }
+        
+        STPAPIClient.shared().createToken(with: stripCard, completion: { (token, error) -> Void in
+            
+            if error != nil {
+                self.handleError(error! as NSError)
+                return
+            }
+            
+            self.postStripeToken(token!)
+        })
+    }*/
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+ 
   
 }
