@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         //STPPaymentConfiguration.shared().publishableKey = "pk_test_6pRNASCoBOKtIshFeQd4XMUh"
         Stripe.setDefaultPublishableKey("pk_test_LL1jchCoTe2qzVPx5GfwGY4o")
+        STPPaymentConfiguration.shared().publishableKey = "pk_test_LL1jchCoTe2qzVPx5GfwGY4o"
+
         // do any other necessary launch configuration
         return true
     }

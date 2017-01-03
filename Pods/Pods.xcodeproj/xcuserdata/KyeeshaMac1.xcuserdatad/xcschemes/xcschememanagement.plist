@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-BZRide.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +37,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2F7E0368946E1CE496E7A9380758D619</key>
+		<key>061AA10E5DA00DC767A5D4B17764EB07</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>537C60A525EAB6A207F7A2F841543F98</key>
+		<key>6CA8D521F3DC74D9F2494FFE35CD0AD9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8EE2B53CA8CF17C46D81511278B5A048</key>
+		<key>93EB8501327D077AD633150C2B017AEC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>93EB8501327D077AD633150C2B017AEC</key>
+		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E72544CFE6F264AC2980C58631DA47D4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

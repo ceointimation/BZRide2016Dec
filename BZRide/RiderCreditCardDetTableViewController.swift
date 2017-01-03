@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCardTextFieldDelegate {
+class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCardTextFieldDelegate{
     
     var checkFlag:Int?
     
@@ -252,41 +252,45 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
         return result
     }
  @IBAction func doneButtonTap(_ sender: AnyObject) {
+    creditCardNum.text="4242424242424242"
+    monthCrd.text="12"
+    yearCrd.text="22"
+    cvcCrd.text="123"
         if(creditCardNum.text == "")
         {
             creditCardNum.becomeFirstResponder()
             displayAlert(messageToDisplay: "Please enter Credit card number")
         }
-        else if(holderNameCrd.text == "")
-        {
-            holderNameCrd.becomeFirstResponder()
-            displayAlert(messageToDisplay: "Please enter Account Holder name")
-        }
-        else if(add1Crd.text == "")
-        {
-            add1Crd.becomeFirstResponder()
-            displayAlert(messageToDisplay: "Please enter Address1")
-        }
-        else if(add2Crd.text == "")
-        {
-            add2Crd.becomeFirstResponder()
-            displayAlert(messageToDisplay: "Please enter Address2")
-        }
-        else if(cityCrd.text == "")
-        {
-            cityCrd.becomeFirstResponder()
-            displayAlert(messageToDisplay: "Please enter City")
-        }
-        else if(stateCrd.text == "")
-        {
-            stateCrd.becomeFirstResponder()
-            displayAlert(messageToDisplay: "Please enter State")
-        }
-        else if(zipCrd.text == "")
-        {
-            zipCrd.becomeFirstResponder()
-            displayAlert(messageToDisplay: "Please enter Zip")
-        }
+//        else if(holderNameCrd.text == "")
+//        {
+//            holderNameCrd.becomeFirstResponder()
+//            displayAlert(messageToDisplay: "Please enter Account Holder name")
+//        }
+//        else if(add1Crd.text == "")
+//        {
+//            add1Crd.becomeFirstResponder()
+//            displayAlert(messageToDisplay: "Please enter Address1")
+//        }
+//        else if(add2Crd.text == "")
+//        {
+//            add2Crd.becomeFirstResponder()
+//            displayAlert(messageToDisplay: "Please enter Address2")
+//        }
+//        else if(cityCrd.text == "")
+//        {
+//            cityCrd.becomeFirstResponder()
+//            displayAlert(messageToDisplay: "Please enter City")
+//        }
+//        else if(stateCrd.text == "")
+//        {
+//            stateCrd.becomeFirstResponder()
+//            displayAlert(messageToDisplay: "Please enter State")
+//        }
+//        else if(zipCrd.text == "")
+//        {
+//            zipCrd.becomeFirstResponder()
+//            displayAlert(messageToDisplay: "Please enter Zip")
+//        }
         else if(monthCrd.text == "")
         {
             monthCrd.becomeFirstResponder()
@@ -307,8 +311,8 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
             let provideZip = zipCrd.text
             let isZipValid = validateZip(value:provideZip!)
             if isZipValid != true{
-            zipCrd.becomeFirstResponder()
-            displayAlert(messageToDisplay: "Incorrect Zip Code")
+          //  zipCrd.becomeFirstResponder()
+          //  displayAlert(messageToDisplay: "Incorrect Zip Code")
         }
       }
    
@@ -345,13 +349,13 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
         
     let riderRegViewController = self.storyboard?.instantiateViewController(withIdentifier: "newRiderRegView") as! riderRegisterTableViewController
     riderRegViewController.myStringValue = 2
-    self.navigationController?.pushViewController(riderRegViewController, animated: true)
-   
+   // self.navigationController?.pushViewController(riderRegViewController, animated: true)
+   donate()
     }
     
-   /* @IBAction func donate(_ sender: AnyObject) {
+     func donate() {
         // Initiate the card
-        var stripCard = STPCard()
+        let stripCard = STPCardParams()
         
         // Split the expiration date to extract Month & Year
         if self.yearCrd.text?.isEmpty == false {
@@ -364,26 +368,129 @@ class RiderCreditCardDetTableViewController: UITableViewController,STPPaymentCar
             stripCard.cvc       = self.cvcCrd.text
             stripCard.expMonth  = UInt(expMonth!)
             stripCard.expYear   = UInt(expYear!)
+            
         }
         
-        var underlyingError: NSError?
-        stripCard.validateCardReturningError(&underlyingError)
-        if underlyingError != nil {
-            self.spinner.stopAnimating()
-            self.handleError(underlyingError!)
-            return
-        }
+//        let underlyingError: NSError?
+//        stripCard.validateCardReturningError(&underlyingError)
+//        if underlyingError != nil {
+//           // self.spinner.stopAnimating()
+//            self.handleError(underlyingError!)
+//            return
+//        }
+   //     let token=STPToken()
+//        STPAPIClient.shared().createToken(withCard: stripCard, completion: { (token, error) -> Void in
+//            
+//            if error != nil {
+//             //   self.handleError(error! as NSError)
+//                return
+//            }
+//            print(token)
+//          //  self.postStripeToken(token!)
+//        })
+
         
-        STPAPIClient.shared().createToken(with: stripCard, completion: { (token, error) -> Void in
-            
-            if error != nil {
-                self.handleError(error! as NSError)
-                return
-            }
-            
-            self.postStripeToken(token!)
+        
+        
+        
+        STPAPIClient.shared().createToken(withCard: stripCard, completion: { (token , stripeError) in
+       // Stripe.createToken(with: stripCard, completion: { (token, stripeError) -> Void in
+
+            if let error = stripeError
+            {
+              //  self.handleError(error as NSError)
+                //return
+            } 
+           // print(error.userInfo["NSLocalizedDescription"])
+
+          //  self.postStripeToken(token!)
         })
-    }*/
+        
+        
+        
+        
+//        STPAPIClient.shared().createToken(withCard: stripCard, completion: { (token, error) -> Void in
+//            
+//            if error != nil {
+//                self.handleError(error! as NSError)
+//                return
+//            }
+//            print(token)
+//            self.postStripeToken(token!)
+//        })
+     //   STPAPIClient.shared().createToken(withCard: stripCard, completion:{ STPTokenCompletionBlock?)
+//        [[STPAPIClient sharedClient] createTokenWithCard:stripCard.cardParams
+//            completion:^(STPToken *token, NSError *error) {
+//            [self.activityIndicator stopAnimating];
+//            if (error) {
+//            [self.delegate paymentViewController:self didFinish:error];
+//            }
+//            [self.backendCharger createBackendChargeWithToken:token
+//            completion:^(STPBackendChargeResult result, NSError *error) {
+//            if (error) {
+//            [self.delegate paymentViewController:self didFinish:error];
+//            return;
+//            }
+//            //[self.delegate paymentViewController:self didFinish:nil];
+//            }];
+//            }];
+    }
+//    func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController,
+//                                            didAuthorizePayment payment: PKPayment, completion: @escaping (PKPaymentAuthorizationStatus) -> Void) {
+//        
+//        STPAPIClient.sharedClient().createToken(withCard: <#T##STPCardParams#>, completion: { (STPToken?, <#Error?#>) in
+//            <#code#>
+//        })(payment) { (token, error) in
+//            self.submitTokenToBackend(token, completion: { (error: Error?) in
+//                if let error = error {
+//                    completion(.Failure)
+//                } else {
+//                    self.paymentSucceeded = true
+//                    completion(.Success)
+//                }
+//            })
+//        }
+//    }
+//    
+//    func paymentAuthorizationViewControllerDidFinish(_ controller: PKPaymentAuthorizationViewController) {
+//        self.dismiss(animated: true, completion: {
+//            if (self.paymentSucceeded) {
+//                // show a receipt page
+//            }
+//        })
+//    }
+    
+    
+    func handleError(_ error: NSError) {
+        print(error)
+        UIAlertView(title: "Please Try Again",
+                    message: error.localizedDescription,
+                    delegate: nil,
+                    cancelButtonTitle: "OK").show()
+        
+    }
+    func postStripeToken(_ token: STPToken) {
+        
+//        let URL = "http://localhost/donate/payment.php"
+//        let params = ["stripeToken": token.tokenId,
+//                      "amount": self.amountTextField.text.toInt()!,
+//                      "currency": "usd",
+//                      "description": self.emailTextField.text]
+//
+//        let manager = AFHTTPRequestOperationManager()
+//        manager.POST(URL, parameters: params, success: { (operation, responseObject) -> Void in
+//            
+//            if let response = responseObject as? [String: String] {
+//                UIAlertView(title: response["status"],
+//                            message: response["message"],
+//                            delegate: nil,
+//                            cancelButtonTitle: "OK").show()
+//            }
+//            
+//        }) { (operation, error) -> Void in
+//            self.handleError(error!)
+//        }
+    }
 
  
   

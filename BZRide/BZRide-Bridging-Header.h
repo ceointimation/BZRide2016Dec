@@ -4,5 +4,8 @@
 
 #import "SVProgressHUD.h"
 @import Stripe;
-//#import <AFNetworking/AFNetworking.h>
+@import PassKit;
+#import <AFNetworking/AFNetworking.h>
+#import "RiderCreditCardDetailTableViewController.h"
+#import <Stripe/Stripe.h>
 

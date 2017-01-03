@@ -17,5 +17,5 @@ target 'BZRide' do
     # Pods for testing
   end
   pod 'Stripe'
-  pod 'AFNetworking', '~> 2.5.4'
+  pod 'AFNetworking'
 end

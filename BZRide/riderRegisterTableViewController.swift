@@ -40,9 +40,14 @@ class riderRegisterTableViewController: UITableViewController {
         
         let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(self.tapBlurButton(_:)))
         self.tableView.addGestureRecognizer(tapGesture1)
-  
-       if (myStringValue == 2)
+        
+        print(myStringValue)
+        
+        if (myStringValue == 2)
         {
+            
+            let checkFlag = UserDefaults.standard
+            checkFlag.set("2", forKey: "checkFlagKey")
         
         let fName = UserDefaults.standard
         let fnameKeyValue = fName.string(forKey: "fnameKey")
@@ -91,6 +96,7 @@ class riderRegisterTableViewController: UITableViewController {
         let zipRReg = UserDefaults.standard
         let zipKeyValue = zipRReg.string(forKey: "zipRdKey")
         rdZip.text = zipKeyValue
+            
         }
         
         
@@ -109,13 +115,6 @@ class riderRegisterTableViewController: UITableViewController {
     
     @IBAction func cardTap(_ sender: AnyObject) {
         
-       let provideEmailAddress = rdEmail.text
-        let isEmailValid = isEmailAddress(emailAddressString:provideEmailAddress!)
-        if isEmailValid != true {
-            rdEmail.becomeFirstResponder()
-            displayAlert(messageToDisplay: "Invalid Mail ID")
-        }
-       
         let fName = UserDefaults.standard
         fName.set(rdFirstName.text!, forKey: "fnameKey")
         
@@ -152,9 +151,9 @@ class riderRegisterTableViewController: UITableViewController {
         let phoneR = UserDefaults.standard
         phoneR.set(rdPhoneNumber.text!, forKey: "phnKey")
         
-        let riderCardViewController = self.storyboard?.instantiateViewController(withIdentifier: "newCreditCardRider") as! RiderCreditCardDetTableViewController
-           riderCardViewController.checkFlag = myStringValue
-         self.navigationController?.pushViewController(riderCardViewController, animated: true)
+      /*  let riderCardViewController = self.storyboard?.instantiateViewController(withIdentifier: "newCreditCardRiderObj") as! RiderCreditCardDetailTableViewController
+           riderCardViewController.checkFlag = myStringValue*/
+
         
     }
     
@@ -213,40 +212,10 @@ class riderRegisterTableViewController: UITableViewController {
     }
     
     @IBAction func registerRiderTapped(_ sender: AnyObject) {
-       
-        let provideEmailAddress = rdEmail.text
-        let isEmailValid = isEmailAddress(emailAddressString:provideEmailAddress!)
-        if isEmailValid != true {
-            displayAlert(messageToDisplay: "Invalid Mail ID")
-            rdEmail.becomeFirstResponder()
-            success = 0
-        }
-        
-        let providePwordchk = rdPassword.text
-        let provideConfirmPword = rdConfirmPassword.text
-        let isConfirmPwordValid = PasswordSame(password:providePwordchk!,confirmpassword:provideConfirmPword!)
-        if isConfirmPwordValid != true{
-            displayAlert(messageToDisplay: "Password Mismatch")
-            rdPassword.becomeFirstResponder()
-            success = 0
-        }
-        
-        let provideZip = rdZip.text
-        let isZipValid = validateZip(value:provideZip!)
-        if isZipValid != true{
-            displayAlert(messageToDisplay: "Incorrect Zip Code")
-            rdZip.becomeFirstResponder()
-            success = 0
-        }
-        
-        let provideMobile = rdPhoneNumber.text
-        let isMobValid = validateMobile(value:provideMobile!)
-        if isMobValid != true{
-            displayAlert(messageToDisplay: "Incorrect Mobile No")
-            rdPhoneNumber.becomeFirstResponder()
-            success = 0
-        }
-        if(rdFirstName.text == "")
+        //let zipRide = UserDefaults.standard
+        let token = UserDefaults.standard.string(forKey: "stptoken")
+        //print(token)
+          if(rdFirstName.text == "")
           {
              rdFirstName.becomeFirstResponder()
              displayAlert(messageToDisplay: "Please enter First name")
@@ -321,6 +290,42 @@ class riderRegisterTableViewController: UITableViewController {
         
           else
           {
+            let provideEmailAddress = rdEmail.text
+            let isEmailValid = isEmailAddress(emailAddressString:provideEmailAddress!)
+            
+            let providePwordchk = rdPassword.text
+            let provideConfirmPword = rdConfirmPassword.text
+            let isConfirmPwordValid = PasswordSame(password:providePwordchk!,confirmpassword:provideConfirmPword!)
+            
+            let provideZip = rdZip.text
+            let isZipValid = validateZip(value:provideZip!)
+            
+            let provideMobile = rdPhoneNumber.text
+            let isMobValid = validateMobile(value:provideMobile!)
+            
+            if isEmailValid != true {
+                displayAlert(messageToDisplay: "Invalid Mail ID")
+                rdEmail.becomeFirstResponder()
+                success = 0
+            }
+            else if isConfirmPwordValid != true{
+                displayAlert(messageToDisplay: "Password Mismatch")
+                rdPassword.becomeFirstResponder()
+                success = 0
+            }
+            else if isZipValid != true{
+                displayAlert(messageToDisplay: "Incorrect Zip Code")
+                rdZip.becomeFirstResponder()
+                success = 0
+            }
+            else if isMobValid != true{
+                displayAlert(messageToDisplay: "Incorrect Mobile No")
+                rdPhoneNumber.becomeFirstResponder()
+                success = 0
+            }
+            else
+            {
+
             success = 1
             if(success == 1)
             {
@@ -355,7 +360,7 @@ class riderRegisterTableViewController: UITableViewController {
                 
                 
                 
-                retData += "&status=A&deviceId=I&devicetoken=1&deviceType=a&cardType=d&cardProvider=m&cardBillingAddress1=mattathil&cardBillingAddress2=chotani&cardBillingCity=kochi&cardBillingState=asd&cardBillingZip=9999&cardToken=12"
+                retData += "&status=A&deviceId=I&devicetoken=1&deviceType=I&cardType=d&cardProvider=m&cardBillingAddress1="+adder1RidKeyValue!+"&cardBillingAddress2="+adder2RidKeyValue!+"&cardBillingCity="+cityRideValue!+"&cardBillingState="+stateRideKeyValue!+"&cardBillingZip="+zipRideKeyValue!+"&cardToken="+token!
                 
                 let postString=retData
                 
@@ -410,6 +415,7 @@ class riderRegisterTableViewController: UITableViewController {
                 }
                 task.resume()
           }
+            }
         }
        }
 }
