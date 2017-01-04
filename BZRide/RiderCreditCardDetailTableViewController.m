@@ -155,9 +155,9 @@ NSString *checkFlag;
     [[STPAPIClient sharedClient] createTokenWithCard:stripCard
                                           completion:^(STPToken *token, NSError *error) {
                                               
-                                              if (error) {
-                                                  //[self.delegate paymentViewController:self didFinish:error];
-                                              }
+//                                              if (error) {
+//                                                  //[self.delegate paymentViewController:self didFinish:error];
+//                                              }
                                               //  [self.backendCharger createBackendChargeWithToken:token
                                               //     completion:^(STPBackendChargeResult result, NSError *error) {
                                               //        if (error) {
@@ -166,10 +166,22 @@ NSString *checkFlag;
                                               //       }
                                               //          [self.delegate paymentViewController:self didFinish:nil];
                                               //        }];
-                                           
+                                              if (error) {
+                                                  //                                           [self handleError:error];
+                                                  NSLog(@"ERRRRR = %@",error);
+                                                  UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Please try again"
+                                                                                                   message:[NSString stringWithFormat:@"%@",error.localizedDescription]
+                                                                                                  delegate:nil
+                                                                                         cancelButtonTitle:@"OK"
+                                                                                         otherButtonTitles:nil];
+                                                  [alert show];
+                                              }
+                                              else
+                                              {
                                               [[NSUserDefaults standardUserDefaults] setObject:token.tokenId forKey:@"stptoken"];
                                               [[NSUserDefaults standardUserDefaults] synchronize];
                                                  [self dismissViewControllerAnimated:NO completion:nil];
+                                              }
                                           }];
     }
    
@@ -273,6 +285,26 @@ NSString *checkFlag;
     else
     {
         return true;
+    }
+}
+- (IBAction)logSelectedButton:(DLRadioButton *)radioButton {
+    if (radioButton.isMultipleSelectionEnabled) {
+        for (DLRadioButton *button in radioButton.selectedButtons) {
+            NSLog(@"%@ is selected.\n", button.titleLabel.text);
+        }
+    } else {
+        NSLog(@"%@ is selected.\n", radioButton.selectedButton.titleLabel.text);
+    }
+}
+
+- (IBAction)secondlogSelectedButton:(DLRadioButton *)radioButton {
+    if (radioButton.isMultipleSelectionEnabled) {
+        for (DLRadioButton *button in radioButton.selectedButtons) {
+            NSLog(@"%@ is selected.\n", button.titleLabel.text);
+            checkFlag = button.titleLabel.text;
+        }
+    } else {
+        NSLog(@"%@ is selected.\n", radioButton.selectedButton.titleLabel.text);
     }
 }
 @end

@@ -41,13 +41,13 @@ class riderRegisterTableViewController: UITableViewController {
         let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(self.tapBlurButton(_:)))
         self.tableView.addGestureRecognizer(tapGesture1)
         
-        print(myStringValue)
+        print("myStringValue = \(myStringValue)")
         
         if (myStringValue == 2)
         {
             
-            let checkFlag = UserDefaults.standard
-            checkFlag.set("2", forKey: "checkFlagKey")
+        let checkFlag = UserDefaults.standard
+        checkFlag.set("2", forKey: "checkFlagKey")
         
         let fName = UserDefaults.standard
         let fnameKeyValue = fName.string(forKey: "fnameKey")

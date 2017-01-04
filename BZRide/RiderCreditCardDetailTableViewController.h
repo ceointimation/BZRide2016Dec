@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import <DLRadioButton/DLRadioButton.h>
+#import <DLRadioButton/DLRadioButton.h>
 
 @interface RiderCreditCardDetailTableViewController : UITableViewController
 {
@@ -25,6 +25,11 @@ int checkFlag;
 @property (weak, nonatomic) IBOutlet UITextField *creditExpMonth;
 @property (weak, nonatomic) IBOutlet UITextField *creditExpYear;
 @property (weak, nonatomic) IBOutlet UITextField *creditCvv;
+@property (weak, nonatomic) IBOutlet DLRadioButton *debitBtn;
+@property (weak, nonatomic) IBOutlet DLRadioButton *creditBtn;
+@property (weak, nonatomic) IBOutlet DLRadioButton *masterBtn;
+@property (weak, nonatomic) IBOutlet DLRadioButton *visaBtn;
+@property (weak, nonatomic) IBOutlet DLRadioButton *amexBtn;
 
 
 - (IBAction)done:(UIButton *)sender;

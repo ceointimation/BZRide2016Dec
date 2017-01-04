@@ -21,6 +21,10 @@
 		715ADF721DD097CE00836A53 /* driverbankTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ADF711DD097CE00836A53 /* driverbankTableViewController.swift */; };
 		7171E03D1DE563A000FE4EAA /* loginDriverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7171E03C1DE563A000FE4EAA /* loginDriverTableViewController.swift */; };
 		78039AAA1E164DBA008CB8D8 /* RiderCreditCardDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78039AA91E164DBA008CB8D8 /* RiderCreditCardDetailTableViewController.m */; };
+		78096FF11E1D077000EFFE15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78096FF01E1D077000EFFE15 /* CoreGraphics.framework */; };
+		78096FF31E1D077900EFFE15 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78096FF21E1D077900EFFE15 /* UIKit.framework */; };
+		78096FF71E1D07D100EFFE15 /* DLRadioButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78096FEE1E1D074100EFFE15 /* DLRadioButton.framework */; };
+		78096FF81E1D07D100EFFE15 /* DLRadioButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78096FEE1E1D074100EFFE15 /* DLRadioButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7809A9001DF0583000DD41A0 /* RiderCreditCardDetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7809A8FF1DF0583000DD41A0 /* RiderCreditCardDetTableViewController.swift */; };
 		78259AC91DFA6ECB0055A93C /* DriverVehicleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78259AC81DFA6ECA0055A93C /* DriverVehicleTableViewController.swift */; };
 		78259ACB1DFA7B9F0055A93C /* VehicleRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78259ACA1DFA7B9F0055A93C /* VehicleRegistrationTableViewController.swift */; };
@@ -57,6 +61,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		78096FF91E1D07D100EFFE15 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				78096FF81E1D07D100EFFE15 /* DLRadioButton.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1BAA33901976FD9E2CAE86EB /* Pods-BZRideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BZRideTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BZRideTests/Pods-BZRideTests.release.xcconfig"; sourceTree = "<group>"; };
 		24181805EFC7200290543F13 /* Pods-BZRide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BZRide.release.xcconfig"; path = "Pods/Target Support Files/Pods-BZRide/Pods-BZRide.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +102,9 @@
 		7171E03C1DE563A000FE4EAA /* loginDriverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginDriverTableViewController.swift; sourceTree = "<group>"; };
 		78039AA81E164DBA008CB8D8 /* RiderCreditCardDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiderCreditCardDetailTableViewController.h; sourceTree = "<group>"; };
 		78039AA91E164DBA008CB8D8 /* RiderCreditCardDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RiderCreditCardDetailTableViewController.m; sourceTree = "<group>"; };
+		78096FEE1E1D074100EFFE15 /* DLRadioButton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DLRadioButton.framework; sourceTree = "<group>"; };
+		78096FF01E1D077000EFFE15 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		78096FF21E1D077900EFFE15 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7809A8FF1DF0583000DD41A0 /* RiderCreditCardDetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderCreditCardDetTableViewController.swift; sourceTree = "<group>"; };
 		78259AC81DFA6ECA0055A93C /* DriverVehicleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverVehicleTableViewController.swift; sourceTree = "<group>"; };
 		78259ACA1DFA7B9F0055A93C /* VehicleRegistrationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleRegistrationTableViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +136,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78096FF31E1D077900EFFE15 /* UIKit.framework in Frameworks */,
+				78096FF11E1D077000EFFE15 /* CoreGraphics.framework in Frameworks */,
+				78096FF71E1D07D100EFFE15 /* DLRadioButton.framework in Frameworks */,
 				D38BDEE32004B67E01538AC5 /* Pods_BZRide.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +193,7 @@
 				710457031D94FABC006DF6AC /* ViewController.swift */,
 				715ADF711DD097CE00836A53 /* driverbankTableViewController.swift */,
 				78F7FCB61DE6E20300D8D92E /* myHtml.html */,
+				78096FEE1E1D074100EFFE15 /* DLRadioButton.framework */,
 				71275BA51DDCACF300090053 /* riderRegisterTableViewController.swift */,
 				710457051D94FABC006DF6AC /* Main.storyboard */,
 				78F5901B1E042F5100FE5EE0 /* conditiondsAndTermsViewController.swift */,
@@ -238,6 +263,8 @@
 		748064C0F3EECEC1695CD123 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				78096FF21E1D077900EFFE15 /* UIKit.framework */,
+				78096FF01E1D077000EFFE15 /* CoreGraphics.framework */,
 				485B7383D4C6A507B7F186FA /* Pods_BZRide.framework */,
 				D82F36F611EBC597C58029A6 /* Pods_BZRideTests.framework */,
 				6C57801551CC53F0A5D3EBEE /* Pods_BZRideUITests.framework */,
@@ -271,6 +298,7 @@
 				710456FC1D94FABC006DF6AC /* Resources */,
 				49F1931775B193A907D5BBCB /* [CP] Embed Pods Frameworks */,
 				8C4B6C1D366353DE44841E3F /* [CP] Copy Pods Resources */,
+				78096FF91E1D07D100EFFE15 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -719,6 +747,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/BZRide",
 				);
 				INFOPLIST_FILE = BZRide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -740,6 +769,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/BZRide",
 				);
 				INFOPLIST_FILE = BZRide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

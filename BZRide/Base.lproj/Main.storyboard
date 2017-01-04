@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -475,14 +477,113 @@
                         <sections>
                             <tableViewSection id="JdI-Yy-ZOH">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="63" id="MnF-a0-SGI">
-                                        <rect key="frame" x="0.0" y="64" width="375" height="63"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="46" id="ogK-yY-3mf">
+                                        <rect key="frame" x="0.0" y="64" width="375" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MnF-a0-SGI" id="B1z-B6-S2Y">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ogK-yY-3mf" id="UYQ-7P-u4f">
+                                            <frame key="frameInset" width="375" height="46"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdB-Qx-MWE" customClass="DLRadioButton">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="dWR-4T-Zbj"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Debit">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="logSelectedButton:" destination="iD1-Dw-gag" eventType="touchUpInside" id="I9J-jE-pfX"/>
+                                                        <outletCollection property="otherButtons" destination="zpK-lV-C13" id="D82-jF-JVF"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpK-lV-C13" customClass="DLRadioButton">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="div-FT-vlE"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Credit">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="logSelectedButton:" destination="iD1-Dw-gag" eventType="touchUpInside" id="A8M-je-sgh"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jdB-Qx-MWE" firstAttribute="leading" secondItem="UYQ-7P-u4f" secondAttribute="leadingMargin" constant="25" id="5YS-MP-JWt"/>
+                                                <constraint firstItem="jdB-Qx-MWE" firstAttribute="centerY" secondItem="zpK-lV-C13" secondAttribute="centerY" id="DJj-id-fJI"/>
+                                                <constraint firstItem="zpK-lV-C13" firstAttribute="top" secondItem="UYQ-7P-u4f" secondAttribute="topMargin" constant="3" id="F2Y-xu-Pem"/>
+                                                <constraint firstItem="jdB-Qx-MWE" firstAttribute="centerY" secondItem="UYQ-7P-u4f" secondAttribute="centerY" id="Gl8-yD-sVJ"/>
+                                                <constraint firstItem="jdB-Qx-MWE" firstAttribute="baseline" secondItem="zpK-lV-C13" secondAttribute="firstBaseline" id="Jx9-eV-iaG"/>
+                                                <constraint firstItem="jdB-Qx-MWE" firstAttribute="bottom" secondItem="zpK-lV-C13" secondAttribute="bottom" id="Uuz-M4-rMH"/>
+                                                <constraint firstItem="zpK-lV-C13" firstAttribute="baseline" secondItem="jdB-Qx-MWE" secondAttribute="firstBaseline" id="d5T-A7-gdQ"/>
+                                                <constraint firstItem="zpK-lV-C13" firstAttribute="leading" secondItem="UYQ-7P-u4f" secondAttribute="leading" constant="111" id="l9o-Es-Lfa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="46" id="ZNI-sF-9zs">
+                                        <rect key="frame" x="0.0" y="110" width="375" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZNI-sF-9zs" id="1Vz-AN-C8k">
+                                            <frame key="frameInset" width="375" height="46"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wh9-3C-cSU" customClass="DLRadioButton">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="P27-Vk-Sfv"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Master">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="secondlogSelectedButton:" destination="iD1-Dw-gag" eventType="touchUpInside" id="lP7-OK-o0v"/>
+                                                        <outletCollection property="otherButtons" destination="OPK-3f-WZS" id="EjG-rI-V4Q"/>
+                                                        <outletCollection property="otherButtons" destination="9NT-55-MF6" id="BgX-Tt-UYb"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPK-3f-WZS" customClass="DLRadioButton">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="nFg-Uu-mm8"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Visa">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="secondlogSelectedButton:" destination="iD1-Dw-gag" eventType="touchUpInside" id="a6t-2I-ygo"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NT-55-MF6" customClass="DLRadioButton">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="nXz-Kp-RUW"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Amex">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="secondlogSelectedButton:" destination="iD1-Dw-gag" eventType="touchUpInside" id="HrX-gS-EKH"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wh9-3C-cSU" firstAttribute="baseline" secondItem="OPK-3f-WZS" secondAttribute="baseline" id="9c3-xb-fTJ"/>
+                                                <constraint firstItem="9NT-55-MF6" firstAttribute="leading" secondItem="wh9-3C-cSU" secondAttribute="trailing" constant="70" id="Bc0-xr-cp8"/>
+                                                <constraint firstItem="wh9-3C-cSU" firstAttribute="top" secondItem="1Vz-AN-C8k" secondAttribute="topMargin" constant="4" id="U05-Lo-rr1"/>
+                                                <constraint firstItem="OPK-3f-WZS" firstAttribute="baseline" secondItem="9NT-55-MF6" secondAttribute="baseline" id="bAQ-uz-AW2"/>
+                                                <constraint firstItem="OPK-3f-WZS" firstAttribute="leading" secondItem="1Vz-AN-C8k" secondAttribute="leading" constant="113" id="dVv-rP-Kzb"/>
+                                                <constraint firstItem="wh9-3C-cSU" firstAttribute="centerY" secondItem="1Vz-AN-C8k" secondAttribute="centerY" id="hlX-5L-XZK"/>
+                                                <constraint firstItem="wh9-3C-cSU" firstAttribute="leading" secondItem="1Vz-AN-C8k" secondAttribute="leadingMargin" constant="32" id="nUG-qj-MdC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="63" id="DRE-Us-MN4">
+                                        <rect key="frame" x="0.0" y="156" width="375" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DRE-Us-MN4" id="1M4-RX-4ja">
                                             <frame key="frameInset" width="375" height="63"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vGu-aa-jv2">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hBJ-0m-0nv">
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -490,16 +591,16 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="vGu-aa-jv2" secondAttribute="trailing" constant="42" id="4bM-H3-y1J"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="vGu-aa-jv2" secondAttribute="bottom" constant="-1" id="JlF-bT-rCD"/>
-                                                <constraint firstItem="vGu-aa-jv2" firstAttribute="leading" secondItem="B1z-B6-S2Y" secondAttribute="leadingMargin" constant="36" id="WiP-lq-sCu"/>
-                                                <constraint firstItem="vGu-aa-jv2" firstAttribute="top" secondItem="B1z-B6-S2Y" secondAttribute="topMargin" constant="6" id="a4z-8B-77u"/>
+                                                <constraint firstItem="hBJ-0m-0nv" firstAttribute="top" secondItem="1M4-RX-4ja" secondAttribute="topMargin" constant="6" id="2eS-Zm-ICE"/>
+                                                <constraint firstItem="hBJ-0m-0nv" firstAttribute="leading" secondItem="1M4-RX-4ja" secondAttribute="leadingMargin" constant="36" id="alO-Oe-9Cu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hBJ-0m-0nv" secondAttribute="bottom" constant="-1" id="dKH-a1-sr5"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hBJ-0m-0nv" secondAttribute="trailing" constant="42" id="i5I-01-B9a"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="63" id="weG-gy-YWj">
-                                        <rect key="frame" x="0.0" y="127" width="375" height="63"/>
+                                        <rect key="frame" x="0.0" y="219" width="375" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="weG-gy-YWj" id="O34-cR-Hd6">
                                             <frame key="frameInset" width="375" height="63"/>
@@ -522,7 +623,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="63" id="JiR-o8-OUm">
-                                        <rect key="frame" x="0.0" y="190" width="375" height="63"/>
+                                        <rect key="frame" x="0.0" y="282" width="375" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JiR-o8-OUm" id="bMB-6o-CTd">
                                             <frame key="frameInset" width="375" height="63"/>
@@ -545,7 +646,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="63" id="PAG-H9-cnm">
-                                        <rect key="frame" x="0.0" y="253" width="375" height="63"/>
+                                        <rect key="frame" x="0.0" y="345" width="375" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PAG-H9-cnm" id="hc5-Yp-g6C">
                                             <frame key="frameInset" width="375" height="63"/>
@@ -568,7 +669,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="63" id="ZNw-Uw-Hp2">
-                                        <rect key="frame" x="0.0" y="316" width="375" height="63"/>
+                                        <rect key="frame" x="0.0" y="408" width="375" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZNw-Uw-Hp2" id="zco-yN-bI0">
                                             <frame key="frameInset" width="375" height="63"/>
@@ -591,7 +692,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="63" id="onW-bm-bZs">
-                                        <rect key="frame" x="0.0" y="379" width="375" height="63"/>
+                                        <rect key="frame" x="0.0" y="471" width="375" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="onW-bm-bZs" id="L2g-Nk-Rvv">
                                             <frame key="frameInset" width="375" height="63"/>
@@ -614,7 +715,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="63" id="UKr-hk-gRY">
-                                        <rect key="frame" x="0.0" y="442" width="375" height="63"/>
+                                        <rect key="frame" x="0.0" y="534" width="375" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UKr-hk-gRY" id="zqS-wO-Gs4">
                                             <frame key="frameInset" width="375" height="63"/>
@@ -637,7 +738,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="63" id="sWb-5W-AUx">
-                                        <rect key="frame" x="0.0" y="505" width="375" height="63"/>
+                                        <rect key="frame" x="0.0" y="597" width="375" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sWb-5W-AUx" id="JNI-bm-WGV">
                                             <frame key="frameInset" width="375" height="63"/>
@@ -660,7 +761,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="63" id="UT8-LE-TvR">
-                                        <rect key="frame" x="0.0" y="568" width="375" height="63"/>
+                                        <rect key="frame" x="0.0" y="660" width="375" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UT8-LE-TvR" id="fae-5s-I3W">
                                             <frame key="frameInset" width="375" height="63"/>
@@ -683,7 +784,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="88" id="j29-W6-xpj">
-                                        <rect key="frame" x="0.0" y="631" width="375" height="88"/>
+                                        <rect key="frame" x="0.0" y="723" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j29-W6-xpj" id="uwY-CN-Wfu">
                                             <frame key="frameInset" width="375" height="88"/>
@@ -718,21 +819,26 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="amexBtn" destination="9NT-55-MF6" id="fn9-ek-Ymy"/>
                         <outlet property="billAdd1" destination="4Ms-Sc-fgu" id="BeD-FH-1tl"/>
                         <outlet property="billAdd2" destination="f7C-qx-asq" id="FZk-fK-Lbd"/>
-                        <outlet property="cardNum" destination="vGu-aa-jv2" id="deN-A8-7mW"/>
+                        <outlet property="cardNum" destination="hBJ-0m-0nv" id="YEh-iV-JmN"/>
+                        <outlet property="creditBtn" destination="zpK-lV-C13" id="l0N-iW-XGa"/>
                         <outlet property="creditCity" destination="cpY-wJ-VoY" id="vFl-Lr-lCp"/>
                         <outlet property="creditCvv" destination="sqx-LS-XvV" id="ugR-NT-0XD"/>
                         <outlet property="creditExpMonth" destination="HIk-bg-Hsy" id="6Q4-6R-K9L"/>
                         <outlet property="creditExpYear" destination="mYB-Ee-NAb" id="gJI-lQ-nbt"/>
                         <outlet property="creditState" destination="QOm-L8-jxk" id="gf9-sl-YQ2"/>
                         <outlet property="creditZip" destination="fTw-5U-Twz" id="4Li-ct-mao"/>
+                        <outlet property="debitBtn" destination="jdB-Qx-MWE" id="Bp1-BQ-Re7"/>
+                        <outlet property="masterBtn" destination="wh9-3C-cSU" id="VpI-as-1V6"/>
                         <outlet property="riderCreditCardTable" destination="D2D-1c-I8M" id="xPw-xg-2lL"/>
+                        <outlet property="visaBtn" destination="OPK-3f-WZS" id="lmg-gj-reQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ruz-ax-IhM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3386.5" y="1052.5"/>
+            <point key="canvasLocation" x="3387.5" y="1041.5"/>
         </scene>
         <!--Driver Reg View Controller-->
         <scene sceneID="P1e-mH-cHw">

@@ -58,7 +58,7 @@
                   moduleName = "BZRide"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/KyeeshaMac1/Documents/BZRide/BZRide/RiderCreditCardDetTableViewController.swift"
-                  timestampString = "505152935.701347"
+                  timestampString = "505239133.296064"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "396"
@@ -73,7 +73,7 @@
                   moduleName = "BZRide"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/KyeeshaMac1/Documents/BZRide/BZRide/RiderCreditCardDetTableViewController.swift"
-                  timestampString = "505152935.704404"
+                  timestampString = "505239133.300003"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "399"
@@ -122,7 +122,7 @@
                   moduleName = "BZRide"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/KyeeshaMac1/Documents/BZRide/BZRide/RiderCreditCardDetTableViewController.swift"
-                  timestampString = "505152935.712353"
+                  timestampString = "505239133.3146"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "399"
@@ -137,7 +137,7 @@
                   moduleName = "BZRide"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/KyeeshaMac1/Documents/BZRide/BZRide/RiderCreditCardDetTableViewController.swift"
-                  timestampString = "505152935.714981"
+                  timestampString = "505239133.316918"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "399"
@@ -150,32 +150,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BZRide/RiderCreditCardDetailTableViewController.m"
-            timestampString = "504781317.53737"
+            filePath = "BZRide/riderRegisterTableViewController.swift"
+            timestampString = "505201614.02613"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "385"
+            endingLineNumber = "385"
+            landmarkName = "registerRiderTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BZRide/riderRegisterTableViewController.swift"
-            timestampString = "505151108.203209"
+            timestampString = "505201618.489915"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "370"
+            endingLineNumber = "370"
+            landmarkName = "registerRiderTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
