@@ -12,20 +12,39 @@
 @interface RiderCreditCardDetailTableViewController ()
 
 @end
+NSString *checkFlag;
+NSString *checkCard;
+//NSString *cardTypeVal;
+//NSString *cardProvideVal;
 
 @implementation RiderCreditCardDetailTableViewController
-NSString *checkFlag;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
 [self.tableView addGestureRecognizer:tapGestureRecognizer];
     
-   /* NSString *checkFlagVal = [[NSUserDefaults standardUserDefaults] stringForKey:@"checkFlagKey"];
-    checkFlag = checkFlagVal;*/
-    
- 
-
+    NSString *checkValue = [[NSUserDefaults standardUserDefaults] stringForKey:@"checkValueKey"];
+    if([checkValue  isEqual: @"2"])
+    {
+        NSString *cardTypeValue = [[NSUserDefaults standardUserDefaults] stringForKey:@"cardTypeKey"];
+        
+        if([cardTypeValue  isEqual: @"D"])
+           _debitBtn.selected=true;
+        else
+            _creditBtn.selected=true;
+        
+        NSString *cardProviderValue = [[NSUserDefaults standardUserDefaults] stringForKey:@"cardProviderKey"];
+        
+        if([cardProviderValue  isEqual: @"M"])
+            _masterBtn.selected=true;
+        else if([cardProviderValue  isEqual: @"V"])
+            _visaBtn.selected=true;
+        else
+            _amexBtn.selected=true;
+        
+        
     NSString *creditCard = [[NSUserDefaults standardUserDefaults] stringForKey:@"creditCardKey"];
     _cardNum.text = creditCard;
     NSString *billAddress1 = [[NSUserDefaults standardUserDefaults] stringForKey:@"add1Key"];
@@ -44,8 +63,16 @@ NSString *checkFlag;
     _creditExpYear.text = yearuser;
     NSString *cvvuser = [[NSUserDefaults standardUserDefaults] stringForKey:@"cvvKey"];
     _creditCvv.text = cvvuser;
+        
+    }
+    else{
+        _debitBtn.selected=true;
+        _masterBtn.selected=true;
+        checkFlag = @"D";
+        checkCard= @"M";
+    }
 }
-    
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -134,6 +161,9 @@ NSString *checkFlag;
     if([self validate])
  {
      [[NSUserDefaults standardUserDefaults] setObject:_cardNum.text forKey:@"creditCardKey"];
+     [[NSUserDefaults standardUserDefaults] setObject:_cardNum.text forKey:@"creditCardKey"];
+     
+     [[NSUserDefaults standardUserDefaults] setObject:_cardNum.text forKey:@"creditCardKey"];
      [[NSUserDefaults standardUserDefaults] setObject:_billAdd1.text forKey:@"add1Key"];
      [[NSUserDefaults standardUserDefaults] setObject:_billAdd2.text forKey:@"add2Key"];
      [[NSUserDefaults standardUserDefaults] setObject:_creditCity.text forKey:@"cityKey"];
@@ -142,7 +172,9 @@ NSString *checkFlag;
      [[NSUserDefaults standardUserDefaults] setObject:_creditExpMonth.text forKey:@"monthKey"];
      [[NSUserDefaults standardUserDefaults] setObject:_creditExpYear.text forKey:@"yearKey"];
      [[NSUserDefaults standardUserDefaults] setObject:_creditCvv.text forKey:@"cvvKey"];
-     [[NSUserDefaults standardUserDefaults] setObject:@"2" forKey:@"StringKey"];
+     [[NSUserDefaults standardUserDefaults] setObject:@"2" forKey:@"checkValueKey"];
+     [[NSUserDefaults standardUserDefaults] setObject:checkFlag forKey:@"cardTypeKey"];
+     [[NSUserDefaults standardUserDefaults] setObject:checkCard forKey:@"cardProviderKey"];
      
      STPCardParams *stripCard=[[STPCardParams alloc] init];
         stripCard.number = _cardNum.text;
@@ -180,7 +212,7 @@ NSString *checkFlag;
                                               {
                                               [[NSUserDefaults standardUserDefaults] setObject:token.tokenId forKey:@"stptoken"];
                                               [[NSUserDefaults standardUserDefaults] synchronize];
-                                                 [self dismissViewControllerAnimated:NO completion:nil];
+                                                  [self dismissViewControllerAnimated:YES completion:nil];
                                               }
                                           }];
     }
@@ -293,18 +325,34 @@ NSString *checkFlag;
             NSLog(@"%@ is selected.\n", button.titleLabel.text);
         }
     } else {
-        NSLog(@"%@ is selected.\n", radioButton.selectedButton.titleLabel.text);
+        if ([radioButton.selectedButton.titleLabel.text isEqual: @"Debit"])
+            checkFlag = @"D";
+
+         else
+             checkFlag = @"C";
+        //NSLog(@"%@ is selected.\n", radioButton.selectedButton.titleLabel.text);
+        NSLog(@"%@ is selected", checkFlag);
     }
-}
+    }
+
 
 - (IBAction)secondlogSelectedButton:(DLRadioButton *)radioButton {
     if (radioButton.isMultipleSelectionEnabled) {
         for (DLRadioButton *button in radioButton.selectedButtons) {
             NSLog(@"%@ is selected.\n", button.titleLabel.text);
-            checkFlag = button.titleLabel.text;
+           
         }
     } else {
-        NSLog(@"%@ is selected.\n", radioButton.selectedButton.titleLabel.text);
+        if ([radioButton.selectedButton.titleLabel.text isEqual: @"Master"])
+            checkCard = @"M";
+        
+        else if ([radioButton.selectedButton.titleLabel.text isEqual: @"Visa"])
+            checkCard = @"V";
+        else
+            checkCard = @"A";
+        //NSLog(@"%@ is selected.\n", radioButton.selectedButton.titleLabel.text);
+        NSLog(@"%@ is selected", checkCard);
+
     }
 }
 @end

@@ -2875,6 +2875,42 @@
             </objects>
             <point key="canvasLocation" x="2799.5" y="1052.5"/>
         </scene>
+        <!--ConditionsAgreement-->
+        <scene sceneID="PJ2-5U-bfG">
+            <objects>
+                <viewController storyboardIdentifier="newConditionsAgreement" title="ConditionsAgreement" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UAX-Tv-ZCQ" customClass="conditionsAgreementViewController" customModule="BZRide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6KO-lB-5hG"/>
+                        <viewControllerLayoutGuide type="bottom" id="nEx-2W-dRN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZAV-vT-gVD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Fl-xH-UMv">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="UAX-Tv-ZCQ" id="kGQ-70-nnE"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Fl-xH-UMv" firstAttribute="bottom" secondItem="nEx-2W-dRN" secondAttribute="top" id="2gg-hw-szW"/>
+                            <constraint firstItem="5Fl-xH-UMv" firstAttribute="top" secondItem="ZAV-vT-gVD" secondAttribute="top" id="UuM-5z-q30"/>
+                            <constraint firstAttribute="trailing" secondItem="5Fl-xH-UMv" secondAttribute="trailing" id="jHW-fx-z74"/>
+                            <constraint firstItem="5Fl-xH-UMv" firstAttribute="leading" secondItem="ZAV-vT-gVD" secondAttribute="leading" id="yHX-lG-bDd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="conditionView" destination="ZAV-vT-gVD" id="BOg-G4-Nf2"/>
+                        <outlet property="webViewHtmlFile" destination="5Fl-xH-UMv" id="D49-3h-eDl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ZF-3b-YiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3863.5" y="1041.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1.png" width="512" height="512"/>

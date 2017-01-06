@@ -11,7 +11,7 @@
 
 @interface RiderCreditCardDetailTableViewController : UITableViewController
 {
-int checkFlag;
+
 }
 
 
@@ -30,6 +30,7 @@ int checkFlag;
 @property (weak, nonatomic) IBOutlet DLRadioButton *masterBtn;
 @property (weak, nonatomic) IBOutlet DLRadioButton *visaBtn;
 @property (weak, nonatomic) IBOutlet DLRadioButton *amexBtn;
+
 
 
 - (IBAction)done:(UIButton *)sender;

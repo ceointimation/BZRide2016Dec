@@ -41,13 +41,11 @@ class riderRegisterTableViewController: UITableViewController {
         let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(self.tapBlurButton(_:)))
         self.tableView.addGestureRecognizer(tapGesture1)
         
-        print("myStringValue = \(myStringValue)")
+        let checkValue = UserDefaults.standard
+        checkValue.set("1", forKey: "checkValueKey")
         
         if (myStringValue == 2)
         {
-            
-        let checkFlag = UserDefaults.standard
-        checkFlag.set("2", forKey: "checkFlagKey")
         
         let fName = UserDefaults.standard
         let fnameKeyValue = fName.string(forKey: "fnameKey")
@@ -151,10 +149,6 @@ class riderRegisterTableViewController: UITableViewController {
         let phoneR = UserDefaults.standard
         phoneR.set(rdPhoneNumber.text!, forKey: "phnKey")
         
-      /*  let riderCardViewController = self.storyboard?.instantiateViewController(withIdentifier: "newCreditCardRiderObj") as! RiderCreditCardDetailTableViewController
-           riderCardViewController.checkFlag = myStringValue*/
-
-        
     }
     
     
@@ -212,10 +206,7 @@ class riderRegisterTableViewController: UITableViewController {
     }
     
     @IBAction func registerRiderTapped(_ sender: AnyObject) {
-        //let zipRide = UserDefaults.standard
-        let token = UserDefaults.standard.string(forKey: "stptoken")
-        //print(token)
-          if(rdFirstName.text == "")
+         if(rdFirstName.text == "")
           {
              rdFirstName.becomeFirstResponder()
              displayAlert(messageToDisplay: "Please enter First name")
@@ -329,93 +320,49 @@ class riderRegisterTableViewController: UITableViewController {
             success = 1
             if(success == 1)
             {
-                SVProgressHUD.show(withStatus: "Registering Rider")
-                var retData = "firstName="+rdFirstName.text!
-                retData += "&middleName="+rdMiddleName.text!
-                retData += "&lastName="+rdLastName.text!
-                retData += "&email="+rdEmail.text!
-                retData += "&password="+rdPassword.text!
-                retData += "&address1="+rdAddress1.text!
-                retData += "&address2="+rdAddress2.text!
-                retData += "&city="+rdCity.text!
-                retData += "&state="+rdState.text!
-                retData += "&zip="+rdZip.text!
-                retData += "&phone="+rdPhoneNumber.text!
+                let fName = UserDefaults.standard
+                fName.set(rdFirstName.text!, forKey: "fnameKey")
                 
+                let mName = UserDefaults.standard
+                mName.set(rdMiddleName.text!, forKey: "mnameKey")
                 
-                let adder1Rid = UserDefaults.standard
-                let adder1RidKeyValue = adder1Rid.string(forKey: "add1Key")
+                let lName = UserDefaults.standard
+                lName.set(rdLastName.text!, forKey: "lnameKey")
                 
-                let adder2Rid = UserDefaults.standard
-                let adder2RidKeyValue = adder2Rid.string(forKey: "add2Key")
+                let defaults = UserDefaults.standard
+                defaults.set(rdEmail.text!, forKey: "emailKey")
                 
-                let cityRide = UserDefaults.standard
-                let cityRideValue = cityRide.string(forKey: "cityKey")
+                let pass = UserDefaults.standard
+                pass.set(rdPassword.text!, forKey: "passKey")
                 
-                let stateRide = UserDefaults.standard
-                let stateRideKeyValue = stateRide.string(forKey: "stateKey")
-                                
-                let zipRide = UserDefaults.standard
-                let zipRideKeyValue = zipRide.string(forKey: "zipKey")
+                let cPass = UserDefaults.standard
+                cPass.set(rdConfirmPassword.text!, forKey: "cPassKey")
                 
+                let adder1 = UserDefaults.standard
+                adder1.set(rdAddress1.text!, forKey: "adder1Key")
                 
+                let adder2 = UserDefaults.standard
+                adder2.set(rdAddress2.text!, forKey: "adder2Key")
                 
-                retData += "&status=A&deviceId=I&devicetoken=1&deviceType=I&cardType=d&cardProvider=m&cardBillingAddress1="+adder1RidKeyValue!+"&cardBillingAddress2="+adder2RidKeyValue!+"&cardBillingCity="+cityRideValue!+"&cardBillingState="+stateRideKeyValue!+"&cardBillingZip="+zipRideKeyValue!+"&cardToken="+token!
+                let cityR = UserDefaults.standard
+                cityR.set(rdCity.text!, forKey: "cityRdKey")
                 
-                let postString=retData
+                let stateR = UserDefaults.standard
+                stateR.set(rdState.text!, forKey: "stateRdKey")
                 
-                var request = URLRequest(url: URL(string: "http://bzride.com/bzride/RegisterRider.php")!)
-                request.httpMethod = "POST"
+                let zipR = UserDefaults.standard
+                zipR.set(rdZip.text!, forKey: "zipRdKey")
                 
-                 print("postString is ==============\(postString)")
+                let phoneR = UserDefaults.standard
+                phoneR.set(rdPhoneNumber.text!, forKey: "phnKey")
+
                 
-                request.httpBody = postString.data(using: .utf8)
-                let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                    guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                        print("error=\(error)")
-                        return
-                    }
-                    
-                    if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // checking http errors
-                        print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                        print("response = \(response)")
-                    }
-                    
-                    let responseString = String(data: data, encoding: .utf8)
-                    print("responseString = \(responseString)")
-                    
-                    let responseData = responseString?.data(using: .utf8)
-                    do{
-                        let dict:Dictionary<String,String>= try JSONSerialization.jsonObject(with: responseData!, options:[]) as!Dictionary	<String,String>
-                        let status = dict["status"]
-                        let info = dict["info"]
-                        
-                        if(status == "S")
-                        {
-                            SVProgressHUD.dismiss()
-                                                       
-                            let firstViewController = self.storyboard?.instantiateViewController(withIdentifier: "firstView") as! ViewController
-                            self.navigationController?.pushViewController(firstViewController, animated: true)
-                            
-                            
-                        }
-                        else
-                        {
-                            SVProgressHUD.dismiss()
-                            let alertController = UIAlertController(title:"",message:info,preferredStyle:.alert)
-                            let OkAction = UIAlertAction(title:"OK", style:.default)
-                            alertController.addAction(OkAction)
-                            self.present(alertController,animated:true,completion:nil)
-                        }
-                    }
-                    catch let error as NSError{
-                        print("error = \(error)")
-                    }
-                    
+                let agreementViewController = self.storyboard?.instantiateViewController(withIdentifier: "newConditionsAgreement") as! conditionsAgreementViewController
+                self.navigationController?.pushViewController(agreementViewController, animated: true)
+         
+               
                 }
-                task.resume()
-          }
             }
-        }
+         }
        }
 }

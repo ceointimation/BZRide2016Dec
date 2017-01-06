@@ -22,7 +22,6 @@ class conditiondsAndTermsViewController: UIViewController,UIWebViewDelegate {
 
           }
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        print("Webview did finish load")
         let button = UIButton()
         let a=htmlWebView.scrollView.contentSize.height
         button.frame = CGRect(x: 25, y: a-50, width: 111, height: 36)  //set frame
