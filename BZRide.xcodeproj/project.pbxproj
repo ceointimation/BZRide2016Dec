@@ -30,6 +30,7 @@
 		78259ACB1DFA7B9F0055A93C /* VehicleRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78259ACA1DFA7B9F0055A93C /* VehicleRegistrationTableViewController.swift */; };
 		78259ACD1DFA805C0055A93C /* InsuranceRegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78259ACC1DFA805C0055A93C /* InsuranceRegisterTableViewController.swift */; };
 		78259ACF1DFA86570055A93C /* LicenseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78259ACE1DFA86570055A93C /* LicenseTableViewController.swift */; };
+		7884B2421E20D07E00462B1C /* loginRiderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7884B2411E20D07E00462B1C /* loginRiderTableViewController.swift */; };
 		78E218A11E01B7250044EA61 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E218A01E01B7250044EA61 /* DatePickerViewController.swift */; };
 		78F5901C1E042F5100FE5EE0 /* conditiondsAndTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5901B1E042F5100FE5EE0 /* conditiondsAndTermsViewController.swift */; };
 		78F7C30C1DF95FF600238064 /* DriverRegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7C30B1DF95FF600238064 /* DriverRegisterTableViewController.swift */; };
@@ -111,6 +112,7 @@
 		78259ACA1DFA7B9F0055A93C /* VehicleRegistrationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleRegistrationTableViewController.swift; sourceTree = "<group>"; };
 		78259ACC1DFA805C0055A93C /* InsuranceRegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsuranceRegisterTableViewController.swift; sourceTree = "<group>"; };
 		78259ACE1DFA86570055A93C /* LicenseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseTableViewController.swift; sourceTree = "<group>"; };
+		7884B2411E20D07E00462B1C /* loginRiderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginRiderTableViewController.swift; sourceTree = "<group>"; };
 		78E218A01E01B7250044EA61 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		78F5901B1E042F5100FE5EE0 /* conditiondsAndTermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = conditiondsAndTermsViewController.swift; sourceTree = "<group>"; };
 		78F7C30B1DF95FF600238064 /* DriverRegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverRegisterTableViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				78096FEE1E1D074100EFFE15 /* DLRadioButton.framework */,
 				71275BA51DDCACF300090053 /* riderRegisterTableViewController.swift */,
 				710457051D94FABC006DF6AC /* Main.storyboard */,
+				7884B2411E20D07E00462B1C /* loginRiderTableViewController.swift */,
 				78FF3FD51E1E7AF40045325F /* conditionsAgreementViewController.swift */,
 				78F5901B1E042F5100FE5EE0 /* conditiondsAndTermsViewController.swift */,
 				78E218A01E01B7250044EA61 /* DatePickerViewController.swift */,
@@ -592,6 +595,7 @@
 				78259ACF1DFA86570055A93C /* LicenseTableViewController.swift in Sources */,
 				78F7FCB41DE6DBE700D8D92E /* SVProgressHUD.m in Sources */,
 				710457021D94FABC006DF6AC /* AppDelegate.swift in Sources */,
+				7884B2421E20D07E00462B1C /* loginRiderTableViewController.swift in Sources */,
 				715ADF721DD097CE00836A53 /* driverbankTableViewController.swift in Sources */,
 				78259AC91DFA6ECB0055A93C /* DriverVehicleTableViewController.swift in Sources */,
 				78F7FCB51DE6DBE700D8D92E /* SVRadialGradientLayer.m in Sources */,

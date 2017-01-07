@@ -43,6 +43,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="hAx-lV-ipC" kind="modal" id="Sz8-EH-X0a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ye-zg-kk1">
                                 <color key="backgroundColor" red="0.063231714849999995" green="0.54584008029999997" blue="0.85010258839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -464,7 +467,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="app-NQ-aOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2331" y="1053"/>
+            <point key="canvasLocation" x="2425.5" y="979.5"/>
         </scene>
         <!--RiderCreditCard-->
         <scene sceneID="iHU-ER-6jX">
@@ -838,7 +841,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ruz-ax-IhM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3387.5" y="1041.5"/>
+            <point key="canvasLocation" x="3309.5" y="979.5"/>
         </scene>
         <!--Driver Reg View Controller-->
         <scene sceneID="P1e-mH-cHw">
@@ -1327,7 +1330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0aT-j7-zbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1931" y="133"/>
+            <point key="canvasLocation" x="1464" y="31"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Egt-59-snY">
@@ -1342,7 +1345,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7qz-DB-X8o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88" y="158"/>
+            <point key="canvasLocation" x="4270" y="-1492"/>
         </scene>
         <!--BZ Ride Driver Bank Details-->
         <scene sceneID="x1q-8e-hYg">
@@ -1489,7 +1492,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ait-0b-9B6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88" y="935"/>
+            <point key="canvasLocation" x="4720" y="-753"/>
         </scene>
         <!--Login Driver-->
         <scene sceneID="J7F-6n-CKY">
@@ -1509,7 +1512,7 @@
                                             <frame key="frameInset" width="375" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="   Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MiV-St-OXz">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MiV-St-OXz">
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -1587,7 +1590,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyh-Ib-ec4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1380.5" y="1052.5"/>
+            <point key="canvasLocation" x="-125" y="-768"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cMx-Re-JSF">
@@ -1605,7 +1608,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEO-G8-Ubt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1897" y="1052"/>
+            <point key="canvasLocation" x="1966.5" y="979.5"/>
         </scene>
         <!--loginDriverNav-->
         <scene sceneID="4YO-dO-PtF">
@@ -1623,7 +1626,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sCC-PB-GnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="968"/>
+            <point key="canvasLocation" x="329" y="-767"/>
         </scene>
         <!--ConditionsAndTerms-->
         <scene sceneID="jqT-xU-uLb">
@@ -1659,7 +1662,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m1Y-24-P52" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1380" y="-769"/>
+            <point key="canvasLocation" x="5136" y="-754"/>
         </scene>
         <!--Register Driver Table-->
         <scene sceneID="e60-dK-mmG">
@@ -2126,7 +2129,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oDv-za-wgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1380" y="43"/>
+            <point key="canvasLocation" x="1464" y="-753"/>
         </scene>
         <!--DriverVehicle-->
         <scene sceneID="qZC-oF-dzq">
@@ -2809,7 +2812,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ar6-dE-Er6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2299" y="-1653"/>
+            <point key="canvasLocation" x="2390" y="-1491"/>
         </scene>
         <!--VehicleRegistrationNavigation-->
         <scene sceneID="UT2-k8-wu1">
@@ -2824,7 +2827,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Pm-aB-p38" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3259" y="-1960"/>
+            <point key="canvasLocation" x="2858" y="-1491"/>
         </scene>
         <!--Insurance Navigation-->
         <scene sceneID="9Bx-Mv-dZb">
@@ -2839,7 +2842,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ffV-MQ-pud" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4185" y="-1960"/>
+            <point key="canvasLocation" x="3326" y="-1492"/>
         </scene>
         <!--License Navigation-->
         <scene sceneID="UUh-tV-Et7">
@@ -2854,7 +2857,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ads-xr-o2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5170" y="-1591"/>
+            <point key="canvasLocation" x="3794" y="-1493"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AbX-mT-Y1V">
@@ -2873,7 +2876,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsU-gE-kGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2799.5" y="1052.5"/>
+            <point key="canvasLocation" x="2868.5" y="979.5"/>
         </scene>
         <!--ConditionsAgreement-->
         <scene sceneID="PJ2-5U-bfG">
@@ -2909,7 +2912,131 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ZF-3b-YiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3863.5" y="1041.5"/>
+            <point key="canvasLocation" x="3740.5" y="979.5"/>
+        </scene>
+        <!--Login Rider-->
+        <scene sceneID="pma-nA-xFi">
+            <objects>
+                <tableViewController title="Login Rider" id="2aC-Hl-feF" customClass="loginRiderTableViewController" customModule="BZRide" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="kEv-HA-3ea">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="bg1-1B-MDu">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="55" id="PNx-9m-yyn">
+                                        <rect key="frame" x="0.0" y="99" width="375" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PNx-9m-yyn" id="SqK-fX-HJw">
+                                            <frame key="frameInset" width="375" height="55"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p1I-27-OAv">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="p1I-27-OAv" firstAttribute="leading" secondItem="SqK-fX-HJw" secondAttribute="leadingMargin" constant="36" id="BHS-4y-BYc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="p1I-27-OAv" secondAttribute="bottom" constant="-2" id="Han-rK-Qvr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="p1I-27-OAv" secondAttribute="trailing" constant="43" id="OCd-jk-hXZ"/>
+                                                <constraint firstItem="p1I-27-OAv" firstAttribute="top" secondItem="SqK-fX-HJw" secondAttribute="topMargin" constant="1" id="Vmr-KU-IwK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="55" id="I4h-pb-kfb">
+                                        <rect key="frame" x="0.0" y="154" width="375" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I4h-pb-kfb" id="exk-k4-m2Y">
+                                            <frame key="frameInset" width="375" height="55"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qFU-63-l6L">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qFU-63-l6L" secondAttribute="trailing" constant="43" id="79y-cB-plW"/>
+                                                <constraint firstItem="qFU-63-l6L" firstAttribute="top" secondItem="exk-k4-m2Y" secondAttribute="topMargin" constant="1" id="lJP-Rw-4rs"/>
+                                                <constraint firstItem="qFU-63-l6L" firstAttribute="leading" secondItem="exk-k4-m2Y" secondAttribute="leadingMargin" constant="36" id="qNM-XM-xdj"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qFU-63-l6L" secondAttribute="bottom" constant="-2" id="sSu-p4-DOi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="wbr-sY-w5y">
+                                        <rect key="frame" x="0.0" y="209" width="375" height="97"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="wbr-sY-w5y" id="sgM-IA-E3N">
+                                            <frame key="frameInset" width="375" height="97"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jE7-CX-lrI">
+                                                    <frame key="frameInset" minX="105" minY="25" width="164" height="46"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="164" id="JTD-xf-yA1"/>
+                                                    </constraints>
+                                                    <state key="normal" title="LOGIN">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="loginRiderTapped:" destination="2aC-Hl-feF" eventType="touchUpInside" id="YPB-3I-9JU"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jE7-CX-lrI" secondAttribute="bottom" constant="18" id="5dH-OH-rrZ"/>
+                                                <constraint firstItem="jE7-CX-lrI" firstAttribute="leading" secondItem="sgM-IA-E3N" secondAttribute="leadingMargin" constant="97" id="GyX-qF-u7P"/>
+                                                <constraint firstItem="jE7-CX-lrI" firstAttribute="top" secondItem="sgM-IA-E3N" secondAttribute="topMargin" constant="17" id="ZbT-7s-vYh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jE7-CX-lrI" secondAttribute="trailing" constant="97" id="yS6-Yl-GPH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="2aC-Hl-feF" id="wK4-Tr-Fbc"/>
+                            <outlet property="delegate" destination="2aC-Hl-feF" id="u1e-Kf-hTy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Rsx-I0-CNh"/>
+                    <connections>
+                        <outlet property="loginRiderBtn" destination="jE7-CX-lrI" id="Wzi-8T-wxU"/>
+                        <outlet property="riderMobile" destination="p1I-27-OAv" id="5rH-q0-Bn0"/>
+                        <outlet property="riderPassword" destination="qFU-63-l6L" id="WbS-eO-uNm"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJH-fd-cpn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-126" y="779"/>
+        </scene>
+        <!--LoginRiderNav-->
+        <scene sceneID="hz2-vI-0me">
+            <objects>
+                <navigationController title="LoginRiderNav" automaticallyAdjustsScrollViewInsets="NO" id="hAx-lV-ipC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="61M-4D-kqm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2aC-Hl-feF" kind="relationship" relationship="rootViewController" id="tmV-VE-0zS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NPB-pg-Kux" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="767"/>
         </scene>
     </scenes>
     <resources>
