@@ -10,7 +10,6 @@
 		3419FA42390BCAA470735E90 /* Pods_BZRideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82F36F611EBC597C58029A6 /* Pods_BZRideTests.framework */; };
 		710457021D94FABC006DF6AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710457011D94FABC006DF6AC /* AppDelegate.swift */; };
 		710457041D94FABC006DF6AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710457031D94FABC006DF6AC /* ViewController.swift */; };
-		710457071D94FABC006DF6AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 710457051D94FABC006DF6AC /* Main.storyboard */; };
 		7104570A1D94FABC006DF6AC /* BZRide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 710457081D94FABC006DF6AC /* BZRide.xcdatamodeld */; };
 		7104570C1D94FABC006DF6AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7104570B1D94FABC006DF6AC /* Assets.xcassets */; };
 		7104570F1D94FABC006DF6AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7104570D1D94FABC006DF6AC /* LaunchScreen.storyboard */; };
@@ -30,6 +29,10 @@
 		78259ACB1DFA7B9F0055A93C /* VehicleRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78259ACA1DFA7B9F0055A93C /* VehicleRegistrationTableViewController.swift */; };
 		78259ACD1DFA805C0055A93C /* InsuranceRegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78259ACC1DFA805C0055A93C /* InsuranceRegisterTableViewController.swift */; };
 		78259ACF1DFA86570055A93C /* LicenseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78259ACE1DFA86570055A93C /* LicenseTableViewController.swift */; };
+		785038A11E3865360029C61E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 785038A01E3865360029C61E /* SWRevealViewController.m */; };
+		785038A31E3868290029C61E /* riderMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785038A21E3868290029C61E /* riderMapViewController.swift */; };
+		785038A51E386AA70029C61E /* menuBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785038A41E386AA70029C61E /* menuBarTableViewController.swift */; };
+		785038A71E387D0F0029C61E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785038A61E387D0F0029C61E /* Main.storyboard */; };
 		7884B2421E20D07E00462B1C /* loginRiderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7884B2411E20D07E00462B1C /* loginRiderTableViewController.swift */; };
 		78E218A11E01B7250044EA61 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E218A01E01B7250044EA61 /* DatePickerViewController.swift */; };
 		78F5901C1E042F5100FE5EE0 /* conditiondsAndTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5901B1E042F5100FE5EE0 /* conditiondsAndTermsViewController.swift */; };
@@ -86,7 +89,6 @@
 		710456FE1D94FABC006DF6AC /* BZRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BZRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		710457011D94FABC006DF6AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		710457031D94FABC006DF6AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		710457061D94FABC006DF6AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		710457091D94FABC006DF6AC /* BZRide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BZRide.xcdatamodel; sourceTree = "<group>"; };
 		7104570B1D94FABC006DF6AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7104570E1D94FABC006DF6AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -112,6 +114,11 @@
 		78259ACA1DFA7B9F0055A93C /* VehicleRegistrationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleRegistrationTableViewController.swift; sourceTree = "<group>"; };
 		78259ACC1DFA805C0055A93C /* InsuranceRegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsuranceRegisterTableViewController.swift; sourceTree = "<group>"; };
 		78259ACE1DFA86570055A93C /* LicenseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseTableViewController.swift; sourceTree = "<group>"; };
+		7850389F1E3865360029C61E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		785038A01E3865360029C61E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		785038A21E3868290029C61E /* riderMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = riderMapViewController.swift; sourceTree = "<group>"; };
+		785038A41E386AA70029C61E /* menuBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuBarTableViewController.swift; sourceTree = "<group>"; };
+		785038A61E387D0F0029C61E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7884B2411E20D07E00462B1C /* loginRiderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginRiderTableViewController.swift; sourceTree = "<group>"; };
 		78E218A01E01B7250044EA61 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		78F5901B1E042F5100FE5EE0 /* conditiondsAndTermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = conditiondsAndTermsViewController.swift; sourceTree = "<group>"; };
@@ -197,9 +204,11 @@
 				710457031D94FABC006DF6AC /* ViewController.swift */,
 				715ADF711DD097CE00836A53 /* driverbankTableViewController.swift */,
 				78F7FCB61DE6E20300D8D92E /* myHtml.html */,
+				785038A61E387D0F0029C61E /* Main.storyboard */,
 				78096FEE1E1D074100EFFE15 /* DLRadioButton.framework */,
 				71275BA51DDCACF300090053 /* riderRegisterTableViewController.swift */,
-				710457051D94FABC006DF6AC /* Main.storyboard */,
+				785038A41E386AA70029C61E /* menuBarTableViewController.swift */,
+				785038A21E3868290029C61E /* riderMapViewController.swift */,
 				7884B2411E20D07E00462B1C /* loginRiderTableViewController.swift */,
 				78FF3FD51E1E7AF40045325F /* conditionsAgreementViewController.swift */,
 				78F5901B1E042F5100FE5EE0 /* conditiondsAndTermsViewController.swift */,
@@ -253,6 +262,8 @@
 				78F7FCAE1DE6DBE700D8D92E /* SVProgressHUD.m */,
 				78F7FCAF1DE6DBE700D8D92E /* SVRadialGradientLayer.h */,
 				78F7FCB01DE6DBE700D8D92E /* SVRadialGradientLayer.m */,
+				7850389F1E3865360029C61E /* SWRevealViewController.h */,
+				785038A01E3865360029C61E /* SWRevealViewController.m */,
 				715ADF8C1DD0B3C700836A53 /* BZRide-Bridging-Header.h */,
 			);
 			name = SVProgressHUD;
@@ -369,6 +380,7 @@
 				TargetAttributes = {
 					710456FD1D94FABC006DF6AC = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = NPFN3TD8B7;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
@@ -412,9 +424,9 @@
 				78F7FCB31DE6DBE700D8D92E /* SVProgressHUD.bundle in Resources */,
 				78F7FCB71DE6E20300D8D92E /* myHtml.html in Resources */,
 				7104570F1D94FABC006DF6AC /* LaunchScreen.storyboard in Resources */,
+				785038A71E387D0F0029C61E /* Main.storyboard in Resources */,
 				78F7FCB91DE6EF2E00D8D92E /* 1.png in Resources */,
 				7104570C1D94FABC006DF6AC /* Assets.xcassets in Resources */,
-				710457071D94FABC006DF6AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +592,7 @@
 				7104570A1D94FABC006DF6AC /* BZRide.xcdatamodeld in Sources */,
 				710457331D94FF67006DF6AC /* DriverRegViewController.swift in Sources */,
 				78039AAA1E164DBA008CB8D8 /* RiderCreditCardDetailTableViewController.m in Sources */,
+				785038A11E3865360029C61E /* SWRevealViewController.m in Sources */,
 				7171E03D1DE563A000FE4EAA /* loginDriverTableViewController.swift in Sources */,
 				78F7FCB11DE6DBE700D8D92E /* SVIndefiniteAnimatedView.m in Sources */,
 				78259ACB1DFA7B9F0055A93C /* VehicleRegistrationTableViewController.swift in Sources */,
@@ -594,11 +607,13 @@
 				78F7C30C1DF95FF600238064 /* DriverRegisterTableViewController.swift in Sources */,
 				78259ACF1DFA86570055A93C /* LicenseTableViewController.swift in Sources */,
 				78F7FCB41DE6DBE700D8D92E /* SVProgressHUD.m in Sources */,
+				785038A31E3868290029C61E /* riderMapViewController.swift in Sources */,
 				710457021D94FABC006DF6AC /* AppDelegate.swift in Sources */,
 				7884B2421E20D07E00462B1C /* loginRiderTableViewController.swift in Sources */,
 				715ADF721DD097CE00836A53 /* driverbankTableViewController.swift in Sources */,
 				78259AC91DFA6ECB0055A93C /* DriverVehicleTableViewController.swift in Sources */,
 				78F7FCB51DE6DBE700D8D92E /* SVRadialGradientLayer.m in Sources */,
+				785038A51E386AA70029C61E /* menuBarTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,14 +649,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		710457051D94FABC006DF6AC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				710457061D94FABC006DF6AC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7104570D1D94FABC006DF6AC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -752,13 +759,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = NPFN3TD8B7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/BZRide",
 				);
 				INFOPLIST_FILE = BZRide/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kyeesha.BZRide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -774,13 +782,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = NPFN3TD8B7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/BZRide",
 				);
 				INFOPLIST_FILE = BZRide/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kyeesha.BZRide;
 				PRODUCT_NAME = "$(TARGET_NAME)";

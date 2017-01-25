@@ -107,10 +107,9 @@ class loginRiderTableViewController: UITableViewController {
                         if(status == "S")
                         {
                             SVProgressHUD.dismiss()
-                           // self.displayAlert(messageToDisplay: "SUCCESS ")
-                           
-                            let firstViewController = self.storyboard?.instantiateViewController(withIdentifier: "firstView") as! ViewController
-                            self.navigationController?.pushViewController(firstViewController, animated: true)
+                            
+                            let firstController = self.storyboard?.instantiateViewController(withIdentifier: "newMenuBar") as! riderMapViewController
+                            self.navigationController?.pushViewController(firstController, animated: true)
                             
                            
                         }

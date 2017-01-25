@@ -18,4 +18,7 @@ target 'BZRide' do
   end
   pod 'Stripe'
   pod 'AFNetworking'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  pod 'GooglePlacePicker'
 end

@@ -467,7 +467,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="app-NQ-aOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2425.5" y="979.5"/>
+            <point key="canvasLocation" x="3599.5" y="979.5"/>
         </scene>
         <!--RiderCreditCard-->
         <scene sceneID="iHU-ER-6jX">
@@ -841,7 +841,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ruz-ax-IhM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3309.5" y="979.5"/>
+            <point key="canvasLocation" x="4483.5" y="979.5"/>
         </scene>
         <!--Driver Reg View Controller-->
         <scene sceneID="P1e-mH-cHw">
@@ -1492,7 +1492,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ait-0b-9B6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4720" y="-753"/>
+            <point key="canvasLocation" x="4696" y="-754"/>
         </scene>
         <!--Login Driver-->
         <scene sceneID="J7F-6n-CKY">
@@ -1608,7 +1608,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEO-G8-Ubt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1966.5" y="979.5"/>
+            <point key="canvasLocation" x="3140.5" y="979.5"/>
         </scene>
         <!--loginDriverNav-->
         <scene sceneID="4YO-dO-PtF">
@@ -1662,7 +1662,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m1Y-24-P52" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5136" y="-754"/>
+            <point key="canvasLocation" x="5116" y="-753"/>
         </scene>
         <!--Register Driver Table-->
         <scene sceneID="e60-dK-mmG">
@@ -2876,7 +2876,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsU-gE-kGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2868.5" y="979.5"/>
+            <point key="canvasLocation" x="4042.5" y="979.5"/>
         </scene>
         <!--ConditionsAgreement-->
         <scene sceneID="PJ2-5U-bfG">
@@ -2912,7 +2912,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ZF-3b-YiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3740.5" y="979.5"/>
+            <point key="canvasLocation" x="4914.5" y="979.5"/>
+        </scene>
+        <!--Rider Map View Controller-->
+        <scene sceneID="xWX-ax-EQE">
+            <objects>
+                <viewController storyboardIdentifier="newMenuBar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hJ7-NA-fpg" customClass="riderMapViewController" customModule="BZRide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yQ7-SC-dAU"/>
+                        <viewControllerLayoutGuide type="bottom" id="jQ4-vM-NBz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nl5-fr-cTC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jsh-Th-IVZ">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="nm0-hE-dNt">
+                            <inset key="imageInsets" minX="0.0" minY="-7" maxX="0.0" maxY="0.0"/>
+                            <color key="tintColor" red="0.17325954036518421" green="0.26014489246496331" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="nl5-fr-cTC" id="ywx-qX-aF3"/>
+                        <outlet property="openBtn" destination="nm0-hE-dNt" id="ME5-1I-0VN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hsY-HS-bOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="954"/>
         </scene>
         <!--Login Rider-->
         <scene sceneID="pma-nA-xFi">
@@ -2989,6 +3017,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="loginRiderTapped:" destination="2aC-Hl-feF" eventType="touchUpInside" id="YPB-3I-9JU"/>
+                                                        <segue destination="m5w-hl-VFH" kind="modal" id="7W0-dg-Rlo"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -3011,14 +3040,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Rsx-I0-CNh"/>
                     <connections>
-                        <outlet property="loginRiderBtn" destination="jE7-CX-lrI" id="Wzi-8T-wxU"/>
                         <outlet property="riderMobile" destination="p1I-27-OAv" id="5rH-q0-Bn0"/>
                         <outlet property="riderPassword" destination="qFU-63-l6L" id="WbS-eO-uNm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TJH-fd-cpn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-126" y="779"/>
+            <point key="canvasLocation" x="891" y="954"/>
         </scene>
         <!--LoginRiderNav-->
         <scene sceneID="hz2-vI-0me">
@@ -3036,12 +3064,31 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NPB-pg-Kux" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="297" y="767"/>
+            <point key="canvasLocation" x="1340" y="967"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ov0-Su-Xqw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m5w-hl-VFH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AV5-xl-d4y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hJ7-NA-fpg" kind="relationship" relationship="rootViewController" id="kPr-0h-Cz4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Svo-o5-eCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="967"/>
         </scene>
     </scenes>
     <resources>
         <image name="1.png" width="512" height="512"/>
         <image name="homeimage" width="101" height="170"/>
+        <image name="menu" width="22" height="22"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
