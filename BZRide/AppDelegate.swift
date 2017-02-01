@@ -1,3 +1,5 @@
+// IOS 9.3  TO RUN IN IPAD
+
 //
 //  AppDelegate.swift
 //  BZRide

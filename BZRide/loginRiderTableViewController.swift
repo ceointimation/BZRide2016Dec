@@ -108,7 +108,7 @@ class loginRiderTableViewController: UITableViewController {
                         {
                             SVProgressHUD.dismiss()
                             
-                            let firstController = self.storyboard?.instantiateViewController(withIdentifier: "newMenuBar") as! riderMapViewController
+                            let firstController = self.storyboard?.instantiateViewController(withIdentifier: "revealnew") as! SWRevealViewController
                             self.navigationController?.pushViewController(firstController, animated: true)
                             
                            

@@ -1337,7 +1337,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nvf-3f-DVH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hdc-x6-zpC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hdc-x6-zpC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1597,7 +1597,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9R0-7y-mNf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rx2-ik-WE5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Rx2-ik-WE5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1615,7 +1615,7 @@
             <objects>
                 <navigationController title="loginDriverNav" automaticallyAdjustsScrollViewInsets="NO" id="RXd-bH-1Yc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HOQ-Cb-4zi">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="HOQ-Cb-4zi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2118,7 +2118,7 @@
                 <navigationController title="RegisterDriverNav" automaticallyAdjustsScrollViewInsets="NO" id="7oX-gY-ltM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Driver Registration" id="2oh-ju-abs"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fcJ-i7-71Z">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fcJ-i7-71Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2804,7 +2804,7 @@
             <objects>
                 <navigationController title="Driver Vehicle Navigation" automaticallyAdjustsScrollViewInsets="NO" id="byf-8r-56E" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ju3-xJ-Cx1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ju3-xJ-Cx1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2819,7 +2819,7 @@
             <objects>
                 <navigationController title="VehicleRegistrationNavigation" automaticallyAdjustsScrollViewInsets="NO" id="gpP-Jl-UL0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hJn-5b-t6c">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hJn-5b-t6c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2834,7 +2834,7 @@
             <objects>
                 <navigationController title="Insurance Navigation" automaticallyAdjustsScrollViewInsets="NO" id="Uib-y0-OJW" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="elM-rB-NJb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="elM-rB-NJb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2849,7 +2849,7 @@
             <objects>
                 <navigationController title="License Navigation" automaticallyAdjustsScrollViewInsets="NO" id="kew-cg-31n" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rmk-7x-bmw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Rmk-7x-bmw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2865,7 +2865,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KSI-DG-69O" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="w7g-nd-xa5"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7zD-5r-LFx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7zD-5r-LFx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2922,9 +2922,16 @@
                         <viewControllerLayoutGuide type="top" id="yQ7-SC-dAU"/>
                         <viewControllerLayoutGuide type="bottom" id="jQ4-vM-NBz"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nl5-fr-cTC">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="nl5-fr-cTC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Select drop location" translatesAutoresizingMaskIntoConstraints="NO" id="KVL-B9-3i6">
+                                <frame key="frameInset" minY="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="jsh-Th-IVZ">
@@ -2934,13 +2941,36 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="mapView" destination="nl5-fr-cTC" id="ywx-qX-aF3"/>
+                        <outlet property="dropSrch" destination="KVL-B9-3i6" id="gM1-l7-4gM"/>
+                        <outlet property="mapView" destination="nl5-fr-cTC" id="y0k-W4-sBv"/>
                         <outlet property="openBtn" destination="nm0-hE-dNt" id="ME5-1I-0VN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsY-HS-bOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="954"/>
+            <point key="canvasLocation" x="-446" y="1043"/>
+        </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="EA3-YU-uyo">
+            <objects>
+                <viewController storyboardIdentifier="revealnew" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ENm-Lw-Z2n" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5nI-Nv-dyr"/>
+                        <viewControllerLayoutGuide type="bottom" id="bG7-AB-Uwx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XZ7-Tc-CaI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="m5w-hl-VFH" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="ETE-JI-Emd"/>
+                        <segue destination="3dB-uS-HFx" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="oSX-BH-QRi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j4f-8b-XZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="414" y="967"/>
         </scene>
         <!--Login Rider-->
         <scene sceneID="pma-nA-xFi">
@@ -2949,7 +2979,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="kEv-HA-3ea">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.073465876720000003" blue="0.16342622109999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="1" green="0.073465876720000003" blue="0.16342622109999999" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="bg1-1B-MDu">
                                 <cells>
@@ -2974,7 +3005,7 @@
                                                 <constraint firstItem="p1I-27-OAv" firstAttribute="top" secondItem="SqK-fX-HJw" secondAttribute="topMargin" constant="1" id="Vmr-KU-IwK"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="0.073465876720000003" blue="0.16342622109999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="55" id="I4h-pb-kfb">
                                         <rect key="frame" x="0.0" y="154" width="375" height="55"/>
@@ -2997,7 +3028,7 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="qFU-63-l6L" secondAttribute="bottom" constant="-2" id="sSu-p4-DOi"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="0.073465876720000003" blue="0.16342622109999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="wbr-sY-w5y">
                                         <rect key="frame" x="0.0" y="209" width="375" height="97"/>
@@ -3017,7 +3048,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="loginRiderTapped:" destination="2aC-Hl-feF" eventType="touchUpInside" id="YPB-3I-9JU"/>
-                                                        <segue destination="m5w-hl-VFH" kind="modal" id="7W0-dg-Rlo"/>
+                                                        <segue destination="ENm-Lw-Z2n" kind="modal" id="ZFy-Rq-b9o"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -3028,7 +3059,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="jE7-CX-lrI" secondAttribute="trailing" constant="97" id="yS6-Yl-GPH"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="0.073465876720000003" blue="0.16342622109999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -3040,6 +3071,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Rsx-I0-CNh"/>
                     <connections>
+                        <outlet property="loginRiderBtn" destination="jE7-CX-lrI" id="dxL-ug-lS4"/>
                         <outlet property="riderMobile" destination="p1I-27-OAv" id="5rH-q0-Bn0"/>
                         <outlet property="riderPassword" destination="qFU-63-l6L" id="WbS-eO-uNm"/>
                     </connections>
@@ -3053,7 +3085,7 @@
             <objects>
                 <navigationController title="LoginRiderNav" automaticallyAdjustsScrollViewInsets="NO" id="hAx-lV-ipC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="61M-4D-kqm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="61M-4D-kqm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3066,23 +3098,51 @@
             </objects>
             <point key="canvasLocation" x="1340" y="967"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="H0l-qP-nfg">
+            <objects>
+                <tableViewController id="3dB-uS-HFx" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UIv-mN-ySG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yTn-hg-DbU">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yTn-hg-DbU" id="fNg-4q-zba">
+                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3dB-uS-HFx" id="skg-29-BSF"/>
+                            <outlet property="delegate" destination="3dB-uS-HFx" id="EKo-x3-5nC"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lhT-T6-r2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47" y="225"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ov0-Su-Xqw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m5w-hl-VFH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AV5-xl-d4y">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="AV5-xl-d4y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="hJ7-NA-fpg" kind="relationship" relationship="rootViewController" id="kPr-0h-Cz4"/>
+                        <segue destination="hJ7-NA-fpg" kind="relationship" relationship="rootViewController" id="16u-K5-XcH"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Svo-o5-eCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="449" y="967"/>
+            <point key="canvasLocation" x="-48" y="1043"/>
         </scene>
     </scenes>
     <resources>
